@@ -12,5 +12,9 @@ export default defineConfig({
           assets: '/src/assets'
         },
       },
-      base: '/react_vite/',
+ server: {
+ hmr: {
+ overlay: false,
+ },
+ },
     });
