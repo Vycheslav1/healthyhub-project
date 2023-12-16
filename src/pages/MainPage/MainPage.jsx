@@ -1,7 +1,6 @@
 
-import DailyGoal from './../../components/DailyGoal';
-import Water from '';
-import Food from '';
+// import DailyGoal from './../../components/DailyGoal';
+
  
 import {
     MainHead,
@@ -28,13 +27,13 @@ export const MainPage = () => {
       </MainHead>
       <ComponentWrapper>
         <List>
-          <DailyGoal />
+          {/* <DailyGoal /> */}
         </List>
         <List>
-          <Water />
+         
         </List>
         <List>
-          <Food />
+        
         </List>
       </ComponentWrapper>
     </div>

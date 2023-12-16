@@ -11,10 +11,6 @@ export default defineConfig({
           pages: '/src/pages',
           assets: '/src/assets'
         },
-      },
- server: {
- hmr: {
- overlay: false,
- },
- },
+  },
+
     });
