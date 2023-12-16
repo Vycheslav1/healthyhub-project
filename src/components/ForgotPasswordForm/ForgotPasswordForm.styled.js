@@ -1,26 +1,25 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const FormContainer = styled.div`
+export const ForgotPasswordContainer = styled.div`
   display: flex;
-  /* background-color: #050505; */
-  /* width: 1440px; */
-  padding: 40px 150px 72px 150px;
+  padding: 40px 150px 60px 150px;
   margin: auto;
 `;
 
-export const ImageFormOne = styled.img`
-  width: 592px;
+export const ImageForgotPassword = styled.img`
+  width: 598px;
   height: 588px;
   margin-bottom: 12px;
 `;
 
-export const FormWrapper = styled.div`
+export const ForgotPasswordWrapper = styled.div`
   width: 444px;
   margin-top: 80px;
   margin-left: 104px;
 `;
-export const FormTitle = styled.h2`
+
+export const ForgotPasswordTitle = styled.h2`
   color: var(--Color-Primary-White, #fff);
   font-family: Poppins;
   font-size: 30px;
@@ -31,7 +30,8 @@ export const FormTitle = styled.h2`
   margin-bottom: 16px;
 `;
 
-export const FormDescription = styled.p`
+export const ForgotPasswordDescrip = styled.p`
+  width: 444px;
   color: var(--Color-Primary-Grey, #b6b6b6);
   font-family: Poppins;
   font-size: 22px;
@@ -42,50 +42,40 @@ export const FormDescription = styled.p`
   margin-bottom: 24px;
 `;
 
-export const Form = styled.form`
+export const ForgotPasswordFormWrapper = styled.form`
   display: flex;
   flex-direction: column;
-  width: 212px;
-  gap: 20px;
-  margin-bottom: 80px;
+  width: 192px;
+  gap: 40px;
 `;
 
-export const Label = styled.label`
-  width: 212px;
+export const ForgotPasswordLabel = styled.label`
+  width: 192px;
   height: 36px;
   display: flex;
   margin: 0;
-  /* padding: 8px 10px; */
   flex-direction: column;
   align-items: flex-start;
   border-radius: 12px;
   border: 1px solid var(--Color-Primary-Green-Lite, #e3ffa8);
   background-color: var(--Color-Primary-Black-2, #0f0f0f);
-  :hover {
-    border: none;
-    /* border: 1px solid ${({ isValid }) => (isValid ? 'blue' : 'red')}; */
-  }
 `;
 
-export const Input = styled.input`
+export const ForgotPasswordInput = styled.input`
+  width: 172px;
   background-color: transparent;
-  /* width: 212px; */
   border: none;
-  /* border: 1px solid var(--Color-Primary-Green-Lite, #E3FFA8); */
   padding: 8px 10px;
   border-radius: 12px;
   border: transparent;
   color: white;
 `;
 
-export const ButtonNext = styled.button`
-  /* display: inline-flex; */
+export const ForgotPasswordButton = styled.button`
+  width: 192px;
   padding: 8px 10px;
-  /* flex-direction: column; */
-  /* align-items: flex-start; */
-  gap: 10px;
   border-radius: 12px;
-  background-color: var(--Color-Primary-Green-Lite, #e3ffa8);
+  background: var(--Color-Primary-Green-Lite, #e3ffa8);
   color: var(--Color-Primary-Black-2, #0f0f0f);
   text-align: center;
   font-family: Poppins;
@@ -93,10 +83,15 @@ export const ButtonNext = styled.button`
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
-  margin-top: 40px;
 `;
 
-export const TextSignIn = styled.p`
+export const ForgotPasswordTextWrapper = styled.div`
+  margin-top: 220px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+`;
+export const ForgotPasswordText = styled.p`
   color: var(--Color-Primary-Grey, #b6b6b6);
   font-family: Poppins;
   font-size: 14px;
@@ -105,18 +100,13 @@ export const TextSignIn = styled.p`
   line-height: 20px;
 `;
 
-export const TextSignInWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 16px;
-`;
-
-export const NavLinkSignIn = styled(NavLink)`
+export const ForgotPasswordLink = styled(NavLink)`
+  width: 122px;
   color: var(--Color-Primary-White, #fff);
-  text-decoration: none;
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
+  text-decoration: none;
 `;

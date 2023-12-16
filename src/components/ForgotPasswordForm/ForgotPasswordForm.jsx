@@ -1,25 +1,48 @@
 import { NavLink } from 'react-router-dom';
+import one from '../../images/one.png';
+import {
+  ForgotPasswordContainer,
+  ForgotPasswordWrapper,
+  ImageForgotPassword,
+  ForgotPasswordTitle,
+  ForgotPasswordDescrip,
+  ForgotPasswordFormWrapper,
+  ForgotPasswordLabel,
+  ForgotPasswordInput,
+  ForgotPasswordButton,
+  ForgotPasswordTextWrapper,
+  ForgotPasswordText,
+  ForgotPasswordLink,
+} from './ForgotPasswordForm.styled';
 
 export const ForgotPasswordForm = () => {
   return (
-    <div>
+    <ForgotPasswordContainer>
       <div>
-        <img />
+        <ImageForgotPassword src={one} alt="Sport and fitness tracker" />
       </div>
-      <div>
-        <h2>Forgot your password</h2>
-        <p>We will send you an email with recovery instructions</p>
-        <form>
-          <label>
-            <input type="text" name="email" placeholder="E-mail" />
-          </label>
-          <button type="submit">Send</button>
-        </form>
-        <div>
-          <p>Do you already have an account?</p>
-          <NavLink to={'/signup'}>Sing up</NavLink>
-        </div>
-      </div>
-    </div>
+      <ForgotPasswordWrapper>
+        <ForgotPasswordTitle>Forgot your password</ForgotPasswordTitle>
+        <ForgotPasswordDescrip>
+          We will send you an email with recovery instructions
+        </ForgotPasswordDescrip>
+        <ForgotPasswordFormWrapper>
+          <ForgotPasswordLabel>
+            <ForgotPasswordInput
+              type="text"
+              name="email"
+              placeholder="E-mail"
+            />
+          </ForgotPasswordLabel>
+          <ForgotPasswordButton type="submit">Send</ForgotPasswordButton>
+        </ForgotPasswordFormWrapper>
+        <ForgotPasswordTextWrapper>
+          <ForgotPasswordText>
+            Do you already have an account?
+          </ForgotPasswordText>
+          <ForgotPasswordLink to={'/signin'}>Sing up</ForgotPasswordLink>
+        </ForgotPasswordTextWrapper>
+      </ForgotPasswordWrapper>
+    </ForgotPasswordContainer>
   );
 };

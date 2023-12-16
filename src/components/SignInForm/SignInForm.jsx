@@ -1,10 +1,27 @@
 import { NavLink } from 'react-router-dom';
 import { logIn } from '../../redux/auth/operations';
 import { useDispatch } from 'react-redux';
+import {
+  ImageSignIn,
+  SignInContainer,
+  SignInDescription,
+  SignInFormWrapper,
+  SignInTitle,
+  SignInLabel,
+  FormSignIn,
+  SignInInput,
+  SignInButton,
+  FootWrapperTwo,
+  FootLinkOne,
+  FootWrapperOne,
+  FootLinkTextTwo,
+  FootLinkTwo,
+} from './SignInForm.styled';
+import one from '../../images/one.png';
 
 export const SignInForm = () => {
   const dispatch = useDispatch();
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.currentTarget;
     dispatch(
@@ -16,28 +33,38 @@ export const SignInForm = () => {
     form.reset();
   };
   return (
-    <div>
+    <SignInContainer>
       <div>
-        <img />
+        <ImageSignIn src={one} alt="Sport and fitness tracker" />
       </div>
-      <div>
-        <h2>Sign in</h2>
-        <p>You need to login to use the service</p>
-        <form onSubmit={handleSubmit}>
-          <label>
-            <input type="text" name="email" placeholder="E-mail" />
-          </label>
-          <label>
-            <input type="password" name="password" placeholder="Password" />
-          </label>
-          <button type="submit">Sing in</button>
-        </form>
-        <NavLink to={'/forgot-password'}>Forgot your password?</NavLink>
-        <div>
-          <p>Do you already have an account?</p>
-          <NavLink to={'/signup'}>Sing up</NavLink>
-        </div>
-      </div>
-    </div>
+      <SignInFormWrapper>
+        <SignInTitle>Sign in</SignInTitle>
+        <SignInDescription>
+          You need to login to use the service
+        </SignInDescription>
+        <FormSignIn onSubmit={handleSubmit}>
+          <SignInLabel>
+            <SignInInput type="text" name="email" placeholder="E-mail" />
+          </SignInLabel>
+          <SignInLabel>
+            <SignInInput
+              type="password"
+              name="password"
+              placeholder="Password"
+            />
+          </SignInLabel>
+          <SignInButton type="submit">Sing in</SignInButton>
+        </FormSignIn>
+        <FootWrapperOne>
+          <FootLinkOne to={'/forgot-password'}>
+            Forgot your password?
+          </FootLinkOne>
+        </FootWrapperOne>
+        <FootWrapperTwo>
+          <FootLinkTextTwo>If you don't have an account yet?</FootLinkTextTwo>
+          <FootLinkTwo to={'/signup'}>Sing up</FootLinkTwo>
+        </FootWrapperTwo>
+      </SignInFormWrapper>
+    </SignInContainer>
   );
 };
