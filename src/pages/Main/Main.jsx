@@ -1,5 +1,5 @@
 
-// import DailyGoal from './../../components/DailyGoal';
+import DailyGoal from '../../components/DailyGoal/DailyGoal';
 
  
 import {
@@ -8,16 +8,16 @@ import {
     LinkWrapper,
     TodayLink,
     ComponentWrapper,
-    List
-} from './MainPage.styled'
+    List,
+    LowContainer
+} from './Main.styled'
 
 
-export const MainPage = () => {
+ export const Main = () => {
   return (
    <div>
       <MainHead>
         <TodayHead>Today</TodayHead>
-
         <LinkWrapper>
           <TodayLink  to="/dashboard">
             On the way to the goal
@@ -27,15 +27,19 @@ export const MainPage = () => {
       </MainHead>
       <ComponentWrapper>
         <List>
-          {/* <DailyGoal /> */}
+          <DailyGoal />
         </List>
         <List>
-         
+           {/* <Water /> */}
         </List>
         <List>
         
         </List>
       </ComponentWrapper>
+       <LowContainer>
+        {/* <DiaryOnMain />
+        <RecFoodOnMain /> */}
+      </LowContainer>
     </div>
   );
 };

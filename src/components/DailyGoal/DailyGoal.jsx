@@ -1,8 +1,8 @@
 
 import bubble from './../../Images/svg/bubble.svg';
 import milk from './../../Images/svg/milk.svg';
-import { selectGoals } from './selectors';
-import { useSelector } from 'react-redux';
+// import { selectGoals } from './selectors';
+// import { useSelector } from 'react-redux';
 
 
 import {
@@ -12,7 +12,7 @@ import {
     BubbleWrapper,
     CaloriesWrapper,
     CaloriesHead,
-    Calories,
+    // Calories,
     WaterHead,
     WaterWrapper,
     Water,
@@ -21,13 +21,13 @@ import {
 
 
 export default function DailyGoal() {
-  const { items } = useSelector(selectGoals);
+  // const { items } = useSelector(selectGoals);
 
-  if (Object.keys(items).length === 0) {
-    return;
-  }
-  const waterGoal = items.total.water.goal;
-  const caloriesGoal = items.total.calories.goal;
+  // if (Object.keys(items).length === 0) {
+  //   return;
+  // }
+  // const waterGoal = items.total.water.goal;
+  // const caloriesGoal = items.total.calories.goal;
 
   return (
     <DailyWindow>
@@ -38,7 +38,7 @@ export default function DailyGoal() {
           <img src={bubble} alt="illustration" />
           <CaloriesWrapper>
             <CaloriesHead >Calories</CaloriesHead>
-            <Calories>{caloriesGoal}</Calories>
+            {/* <Calories>{caloriesGoal}</Calories> */}
           </CaloriesWrapper>
         </BubbleWrapper>
         <BubbleWrapper>
@@ -46,7 +46,7 @@ export default function DailyGoal() {
           <WaterWrapper>
             <WaterHead>Water</WaterHead>
             <Water>
-              {waterGoal}
+              {/* {waterGoal} */}
               <WaterSpan>ml</WaterSpan>
             </Water>
           </WaterWrapper>

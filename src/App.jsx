@@ -13,10 +13,11 @@ import { ForgotPasswordPage } from '../src/pages/ForgotPasswordPage';
 import { RestrictedRoude } from './components/RestrictedRoude';
 import { PrivateRoute } from './components/PrivateRoute';
 
-// const test = import.meta.env.VITE_API_TEST;
+
+const test = import.meta.env.VITE_API_TEST;
 
 function App() {
-  // console.log(test);
+  console.log(test);
   return (
     <AppWrapper>
       <Routes>
@@ -41,13 +42,13 @@ function App() {
         />
         // <Route path="/dairy" element={<Dairy />} />
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-        {/* <Route path="/" element={<SharedLayout />}>
+         <Route path="/" element={<SharedLayout />}>
           <Route path="/first" element={<FirstPage />} />
           <Route path="/second" element={<SecondPage />}>
             <Route path=":half" element={<HalfPage />} />
           </Route>
           <Route path="*" element={<ErrorPage />} />
-        </Route> */}
+        </Route> 
       </Routes>
     </AppWrapper>
   );

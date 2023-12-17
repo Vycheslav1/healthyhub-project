@@ -87,3 +87,28 @@ export const List = styled.li`
     }
   }
 `;
+
+export const LowContainer = styled.div`
+   display: flex;
+  gap: 20px;
+  flex-direction: column;
+  width: 300px;
+  margin: 20px auto 60px auto;
+
+@media screen and (min-width: 834px) {
+ 
+    width: 780px;
+    margin-bottom: 40px;
+  
+}
+
+
+@media screen and (min-width: 1440px) {
+
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1372px;
+    margin-bottom: 52px;
+
+}
+`
