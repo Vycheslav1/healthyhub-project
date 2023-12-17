@@ -9,7 +9,6 @@ import { OnePage } from './pages/OnePage';
 import { RecommendedFood } from './pages/RecomendedFood/RecomendedFood';
 
 // const test = import.meta.env.VITE_API_TEST;
-
 function App() {
   // console.log(test);
   return (
