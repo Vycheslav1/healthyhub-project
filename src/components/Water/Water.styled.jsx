@@ -191,3 +191,11 @@ export const WaterImg = styled.img`
   margin-top: 2px;
   margin-right: 8px;
 `
+export const SrOnly = styled.span`
+  position: relative;
+  z-index: 20;
+  color: #fff;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 600;
+`

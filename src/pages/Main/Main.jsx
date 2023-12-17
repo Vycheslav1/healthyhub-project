@@ -1,6 +1,6 @@
 
 import DailyGoal from '../../components/DailyGoal/DailyGoal';
-
+import Water from '../../components/Water/Water';
  
 import {
     MainHead,
@@ -30,10 +30,10 @@ import {
           <DailyGoal />
         </List>
         <List>
-           {/* <Water /> */}
+           <Water />
         </List>
         <List>
-        
+          {/* <Food /> */}
         </List>
       </ComponentWrapper>
        <LowContainer>

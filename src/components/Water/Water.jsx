@@ -1,5 +1,8 @@
 import React from 'react';
-
+import { useSelector } from 'react-redux';
+// import { useState } from 'react';
+import { selectGoals } from './selectors'
+import addSvg from '../../Images/sprite/add.svg'
 import {
     WaterWindow,
     Head,
@@ -14,13 +17,30 @@ import {
     Left,
     LeftSpan,
     WaterButton,
-    WaterImg
+    WaterImg,
+    // SrOnly
 } from './Water.styled'
+
+
 export default function Water() {
 
-//   const waterGoal = items.total.water.goal;
-    //   const waterUsed = items.total.water.used;
-    
+//  const [openModal, setOpenModal] = useState(false);
+  const { items } = useSelector(selectGoals);
+
+
+  if (Object.keys(items).length === 0) {
+    return;
+  }
+  const waterGoal = items.total.water.goal;
+  const waterUsed = items.total.water.used;
+
+//   function progress(used, goal) {
+//     if (used >= goal) {
+//       return 100;
+//     }
+//     return Math.round((waterUsed / waterGoal) * 100);
+//   }
+
 //     switch (progress(waterUsed, waterGoal)) {
 //     case 91:
 //       walue = -18;
@@ -67,9 +87,9 @@ export default function Water() {
             //     height: `${progress(waterUsed, waterGoal)}%`,
             //   }}
             >
-              {/* <span className={css.srOnly} style={{ top: `${walue}px` }}>
-                {`${progress(waterUsed, waterGoal)}%`}
-              </span> */}
+              {/* <SrOnly style={{ top: `${walue}px` }}>
+                {`${progress(waterUsed, waterGoal)}%`} */}
+              {/* </SrOnly> */}
             </ProgressBar>
           </Progress>
         </WaterProgressBar>
@@ -77,13 +97,13 @@ export default function Water() {
           <Consumption>Water consumption</Consumption>
           <Item>
             <WaterGoal>
-              {/* {waterUsed} */}
+              {waterUsed}
               <WaterSpan>ml</WaterSpan>
             </WaterGoal>
             <Left>
               left:
               <LeftSpan>
-                {/* {waterGoal <= waterUsed ? 0 : waterGoal - waterUsed} */}
+                {waterGoal <= waterUsed ? 0 : waterGoal - waterUsed}
               </LeftSpan>
               <WaterSpan>ml</WaterSpan>
             </Left>
@@ -95,9 +115,9 @@ export default function Water() {
               waterUsed={waterUsed}
             />
           )} */}
-          {/* <WaterButton  onClick={openModalHendler}> */}
+          <WaterButton >
             <span>
-              {/* <WaterImg src={addSvg} alt="plus" /> */}
+              <WaterImg src={addSvg} alt="plus" />
             </span>
             Add water intake
           </WaterButton>
