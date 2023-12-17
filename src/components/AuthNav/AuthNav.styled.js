@@ -3,24 +3,16 @@ import styled from 'styled-components';
 
 export const AuthContainer = styled.div`
   display: flex;
-  background-color: #050505;
-  width: 1440px;
   padding: 40px 150px 72px 150px;
   margin: auto;
 `;
 export const ImageWrapper = styled.div`
   background-color: #050505;
-  /* width: 50%; */
 `;
 
 export const ImageOne = styled.img`
-  /* background-color: transparent;
-  display: flex; */
   width: 592px;
   height: 588px;
-  /* justify-content: center;
-  align-items: center;
-  flex-shrink: 0; */
 `;
 
 export const TextWrapper = styled.div`
@@ -38,6 +30,7 @@ export const TitleOne = styled.h1`
   font-style: normal;
   font-weight: 500;
   line-height: 36px;
+  margin-top: 0;
   margin-bottom: 16px;
 `;
 export const Description = styled.p`
@@ -48,6 +41,7 @@ export const Description = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 32px;
+  margin-top: 0;
   margin-bottom: 24px;
 `;
 
