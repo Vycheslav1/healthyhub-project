@@ -5,8 +5,10 @@ import SecondPage from 'pages/SecondPage/SecondPage';
 import HalfPage from 'pages/HalfPage/HalfPage';
 import ErrorPage from 'pages/ErrorPage/ErrorPage';
 import { AppWrapper } from './App.styled';
+import { lazy } from 'react';
 
 const test = import.meta.env.VITE_API_TEST;
+const DashboardPage = lazy(() => import('./pages/DashboardPage/DashboardPage'));
 
 function App() {
   console.log(test);
@@ -20,6 +22,12 @@ function App() {
           </Route>
           <Route path="*" element={<ErrorPage />} />
         </Route>
+        <Route
+          path="/dashboard"
+          element={
+            <PrivateRoute redirectTo="/signin" component={<DashboardPage />} />
+          }
+        />
       </Routes>
     </AppWrapper>
   );
