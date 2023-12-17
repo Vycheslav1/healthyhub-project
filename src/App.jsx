@@ -8,10 +8,10 @@ import { AppWrapper } from './App.styled';
 import { MainPage } from '../src/pages/MainPage';
 import { SingUpPage } from '../src/pages/SingUpPage';
 import { SingInPage } from '../src/pages/SingInPage';
-import { Dairy } from '../src/pages/Dairy';
 import { ForgotPasswordPage } from '../src/pages/ForgotPasswordPage';
 import { RestrictedRoude } from './components/RestrictedRoude';
 import { PrivateRoute } from './components/PrivateRoute';
+import { OnePage } from './pages/OnePage';
 
 
 const test = import.meta.env.VITE_API_TEST;
@@ -21,26 +21,26 @@ function App() {
   return (
     <AppWrapper>
       <Routes>
-        <Route path="/" element={<MainPage />} />
+        <Route></Route>
+        <Route path="/" element={<OnePage />} />
         <Route
           path="/signup"
           element={
             <RestrictedRoude redirectTo="/dairy" component={<SingUpPage />} />
           }
         />
-        // <Route path="/signup" element={<SingUpPage />} />
         <Route
           path="/signin"
           element={
-            <RestrictedRoude redirectTo="/dairy" component={<SingInPage />} />
+            <RestrictedRoude redirectTo="/main" component={<SingInPage />} />
           }
         />
-        // <Route path="/signin" element={<SingInPage />} />
         <Route
-          path="/dairy"
-          element={<PrivateRoute redirectTo="/signin" component={<Dairy />} />}
+          path="/main"
+          element={
+            <PrivateRoute redirectTo="/signin" component={<MainPage />} />
+          }
         />
-        // <Route path="/dairy" element={<Dairy />} />
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
          <Route path="/" element={<SharedLayout />}>
           <Route path="/first" element={<FirstPage />} />
