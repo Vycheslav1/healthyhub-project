@@ -1,12 +1,18 @@
-const RecommendedFood = () => {
+import ketogenicDiet from '../../Images/ketogenicDiet.png';
+import { RecommendedList } from '../../components/RecommendedList/RecommendedList';
+import { Img, Title, Wrapper } from './RecomendedFood.styled';
+
+export const RecommendedFood = () => {
+  // const [foodRecommended, setFoodRecommended] = useState([]);
+
   return (
     <>
-      <h1>Recommended food</h1>
-      <div>
-        <img src={'../../Images/ketogenic-diet.png'} alt="ketogenic-diet" />
-        <ul>
-          <li></li>
-        </ul>
+      <div className="container">
+        <Title>Recommended food</Title>
+        <Wrapper>
+          <Img src={ketogenicDiet} alt="ketogenic-diet" />
+          <RecommendedList />
+        </Wrapper>
       </div>
     </>
   );
