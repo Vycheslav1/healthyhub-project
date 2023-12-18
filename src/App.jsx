@@ -5,13 +5,13 @@ import SecondPage from 'pages/SecondPage/SecondPage';
 import HalfPage from 'pages/HalfPage/HalfPage';
 import ErrorPage from 'pages/ErrorPage/ErrorPage';
 import { AppWrapper } from './App.styled';
-import { MainPage } from '../src/pages/MainPage';
-import { SingUpPage } from '../src/pages/SingUpPage';
-import { SingInPage } from '../src/pages/SingInPage';
-import { ForgotPasswordPage } from '../src/pages/ForgotPasswordPage';
-import { RestrictedRoude } from './components/RestrictedRoude';
-import { PrivateRoute } from './components/PrivateRoute';
-import { OnePage } from './pages/OnePage';
+import { MainPage } from 'pages/MainPage';
+import { SingUpPage } from 'pages/SingUpPage';
+import { SingInPage } from 'pages/SingInPage';
+import { ForgotPasswordPage } from 'pages/ForgotPasswordPage';
+import { RestrictedRoude } from 'components/RestrictedRoude';
+import { PrivateRoute } from 'components/PrivateRoute';
+import { OnePage } from 'pages/OnePage';
 
 // const test = import.meta.env.VITE_API_TEST;
 
