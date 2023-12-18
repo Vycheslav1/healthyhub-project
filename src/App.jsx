@@ -12,8 +12,6 @@ import { ForgotPasswordPage } from '../src/pages/ForgotPasswordPage';
 import { RestrictedRoude } from './components/RestrictedRoude';
 import { PrivateRoute } from './components/PrivateRoute';
 import { OnePage } from './pages/OnePage';
-//import { Main } from './pages/Main/Main';
-// const test = import.meta.env.VITE_API_TEST;
 
 function App() {
   // console.log(test);
