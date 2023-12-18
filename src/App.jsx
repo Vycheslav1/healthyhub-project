@@ -14,7 +14,6 @@ import { PrivateRoute } from './components/PrivateRoute';
 import { OnePage } from './pages/OnePage';
 
 function App() {
-  // console.log(test);
   return (
     <AppWrapper>
       <Routes>
