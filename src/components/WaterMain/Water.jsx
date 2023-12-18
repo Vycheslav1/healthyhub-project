@@ -1,8 +1,11 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+// import React from 'react';
+// import { useSelector } from 'react-redux';
 // import { useState } from 'react';
-import { selectGoals } from './selectors'
+// import { selectGoals } from './selectors'
+// import AddWaterModal from '../addWaterModal/addWaterModal';
 import addSvg from '../../Images/sprite/add.svg'
+// import scrollLock from 'scroll-lock';
+
 import {
     WaterWindow,
     Head,
@@ -24,15 +27,25 @@ import {
 
 export default function Water() {
 
-//  const [openModal, setOpenModal] = useState(false);
-  const { items } = useSelector(selectGoals);
+// const [openModal, setOpenModal] = useState(false);
+//   const { items } = useSelector(selectGoals);
 
+//   const openModalHendler = () => {
+//     setOpenModal(true);
+//     scrollLock.disablePageScroll(document.body);
+//   };
 
-  if (Object.keys(items).length === 0) {
-    return;
-  }
-  const waterGoal = items.total.water.goal;
-  const waterUsed = items.total.water.used;
+//   const closeModalHendler = () => {
+//     setOpenModal(false);
+//     scrollLock.clearQueueScrollLocks();
+//     scrollLock.enablePageScroll();
+//   };
+
+//   if (Object.keys(items).length === 0) {
+//     return;
+//   }
+//   const waterGoal = items.total.water.goal;
+//   const waterUsed = items.total.water.used;
 
 //   function progress(used, goal) {
 //     if (used >= goal) {
@@ -41,7 +54,9 @@ export default function Water() {
 //     return Math.round((waterUsed / waterGoal) * 100);
 //   }
 
-//     switch (progress(waterUsed, waterGoal)) {
+//   let walue = -20;
+
+//   switch (progress(waterUsed, waterGoal)) {
 //     case 91:
 //       walue = -18;
 //       break;
@@ -76,6 +91,7 @@ export default function Water() {
 //       walue = -20;
 //   }
 
+
   return (
     <WaterWindow>
       <Head>Water</Head>
@@ -83,13 +99,14 @@ export default function Water() {
         <WaterProgressBar>
           <Progress>
             <ProgressBar
-            //   style={{
-            //     height: `${progress(waterUsed, waterGoal)}%`,
-            //   }}
+              // style={{
+              //   height: `${progress(waterUsed, waterGoal)}%`,
+              // }}
             >
               {/* <SrOnly style={{ top: `${walue}px` }}>
-                {`${progress(waterUsed, waterGoal)}%`} */}
-              {/* </SrOnly> */}
+                {`${progress(waterUsed, waterGoal)}%`} 
+              </SrOnly>  */}
+              
             </ProgressBar>
           </Progress>
         </WaterProgressBar>
@@ -97,13 +114,13 @@ export default function Water() {
           <Consumption>Water consumption</Consumption>
           <Item>
             <WaterGoal>
-              {waterUsed}
+              {/* {waterUsed} */}
               <WaterSpan>ml</WaterSpan>
             </WaterGoal>
             <Left>
               left:
               <LeftSpan>
-                {waterGoal <= waterUsed ? 0 : waterGoal - waterUsed}
+                {/* {waterGoal <= waterUsed ? 0 : waterGoal - waterUsed} */}
               </LeftSpan>
               <WaterSpan>ml</WaterSpan>
             </Left>
@@ -115,7 +132,9 @@ export default function Water() {
               waterUsed={waterUsed}
             />
           )} */}
-          <WaterButton >
+          <WaterButton
+            // onClick={openModalHendler}
+          >
             <span>
               <WaterImg src={addSvg} alt="plus" />
             </span>

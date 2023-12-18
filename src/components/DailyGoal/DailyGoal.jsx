@@ -1,8 +1,10 @@
 
+// import { useSelector } from 'react-redux';
+
 import bubble from './../../Images/svg/bubble.svg';
 import milk from './../../Images/svg/milk.svg';
-// import { selectGoals } from './selectors';
-// import { useSelector } from 'react-redux';
+// import { selectGoals } from '../../redux/usersGoal/selectors';
+
 
 
 import {
@@ -12,7 +14,7 @@ import {
     BubbleWrapper,
     CaloriesWrapper,
     CaloriesHead,
-    // Calories,
+    Calories,
     WaterHead,
     WaterWrapper,
     Water,
@@ -38,15 +40,17 @@ export default function DailyGoal() {
           <img src={bubble} alt="illustration" />
           <CaloriesWrapper>
             <CaloriesHead >Calories</CaloriesHead>
-            {/* <Calories>{caloriesGoal}</Calories> */}
+            <Calories >
+              {/* {caloriesGoal} */}
+            </Calories>
           </CaloriesWrapper>
         </BubbleWrapper>
         <BubbleWrapper>
           <img src={milk} alt="illustration" />
           <WaterWrapper>
             <WaterHead>Water</WaterHead>
-            <Water>
-              {/* {waterGoal} */}
+            <Water   >
+             {/* {waterGoal} */}
               <WaterSpan>ml</WaterSpan>
             </Water>
           </WaterWrapper>

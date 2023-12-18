@@ -1,66 +1,84 @@
 
-import styled from "styled-components";
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 
-
-export const MainHead = styled.div`
-      display: flex;
-  margin-bottom: 20px;
-  justify-content: space-between;
+export const Content = styled.div`
+  margin: 0 auto;
+  width: 320px;
+  padding: 0 10px;
 
   @media screen and (min-width: 834px) {
-     margin-bottom: 24px;
+    width: 834px;
+    padding: 0 27px;
   }
 
-   @media screen and (min-width: 1440px) {
-     margin-bottom: 16px;
+  @media screen and (min-width: 1440px) {
+    width: 1440px;
+    padding: 0 34px;
   }
 `;
 
+export const HeaderMainPage = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 
-export const TodayHead = styled.h1`
+  @media screen and (min-width: 834px) {
+    margin-bottom: 24px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 16px;
+  }
+`;
+
+export const TitlePage = styled.h1`
+  font-family: Poppins;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 36px;
   color: white;
-  font-family: Poppins;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 30px;
 
-  @media screen and (min-width: 834px) {
-    line-height: 36px;
+  @media screen and (min-width: 1440px) {
     font-size: 30px;
+    line-height: 36px;
   }
-`
-export const LinkWrapper = styled.div`
-      display: flex;
+`;
+
+export const LinkToDashboard = styled(Link)`
+  display: flex;
+  flex-direction: row;
   align-items: center;
-`
-export const TodayLink = styled(Link)`
-     display: flex;
-  align-items: center;
-  color:  #b6b6b6;
-  text-align: right;
-  font-family: Poppins;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-  text-decoration: none;
+  gap: 6px;
+ font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px;
+  color: #B6B6B6;
+  cursor: pointer;
 
   @media screen and (min-width: 834px) {
-    line-height: 22px;
     font-size: 16px;
+    line-height: 22px;
   }
 `
 
-export const ComponentWrapper = styled.div`
-   @media screen and (min-width: 834px) {
-     display: flex;
+export const TrackerList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 834px) {
     flex-wrap: wrap;
-   } 
-`
-export const List = styled.li`
+    flex-direction: row;
+  }
+`;
+
+export const Tarker = styled.li`
   flex-basis: 100%;
 
   &:not(:last-of-type) {
@@ -70,13 +88,13 @@ export const List = styled.li`
   }
 
   &:nth-child(1) {
-    @media screen and  (min-width: 1440px) {
+    @media screen and (min-width: 834px) {
       flex-basis: 328px;
     }
   }
 
   &:nth-child(2) {
-    @media screen and  (min-width: 1440px) {
+    @media screen and (min-width: 1440px) {
       flex-basis: 444px;
     }
   }
@@ -88,27 +106,13 @@ export const List = styled.li`
   }
 `;
 
-export const LowContainer = styled.div`
-   display: flex;
-  gap: 20px;
+export const Wrapper = styled.div`
+  display: flex;
   flex-direction: column;
-  width: 300px;
-  margin: 20px auto 60px auto;
+  gap: 20px;
 
-@media screen and (min-width: 834px) {
- 
-    width: 780px;
-    margin-bottom: 40px;
-  
-}
-
-
-@media screen and (min-width: 1440px) {
-
+  @media screen and (min-width: 1440px) {
     flex-direction: row;
-    justify-content: space-between;
-    width: 1372px;
-    margin-bottom: 52px;
-
-}
-`
+    flex-basis: calc((100% - 20px) / 2);
+  }
+`;
