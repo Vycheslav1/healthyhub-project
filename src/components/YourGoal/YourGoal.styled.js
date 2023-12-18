@@ -77,12 +77,14 @@ export const ButtonNextGoals = styled.button`
   /* align-items: flex-start; */
   /* gap: 10px; */
   /* margin-bottom: 20px; */
+  width: 212px;
   margin-top: 24px;
   border-radius: 12px;
   background: var(--Color-Primary-Green-Lite, #e3ffa8);
 `;
 
 export const ButtonBackGoals = styled.button`
+  width: 212px;
   color: var(--Color-Primary-Grey, #b6b6b6);
   text-align: center;
   background-color: transparent;

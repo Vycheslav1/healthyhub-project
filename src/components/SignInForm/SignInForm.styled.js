@@ -57,7 +57,7 @@ export const FormSignIn = styled.form`
 `;
 
 export const SignInLabel = styled.label`
-  width: 192px;
+  width: 212px;
   height: 36px;
   display: flex;
   margin: 0;
@@ -69,16 +69,18 @@ export const SignInLabel = styled.label`
 `;
 
 export const SignInInput = styled.input`
+  width: 192px;
   background-color: transparent;
   border: none;
   padding: 8px 10px;
   border-radius: 12px;
   border: transparent;
   color: white;
+  outline: none;
 `;
 
 export const SignInButton = styled.button`
-  width: 192px;
+  width: 212px;
   padding: 8px 10px;
   border-radius: 12px;
   background: var(--Color-Primary-Green-Lite, #e3ffa8);
@@ -90,6 +92,7 @@ export const SignInButton = styled.button`
   font-weight: 500;
   line-height: 20px;
   margin-top: 20px;
+  box-shadow: 0px 0px 5px #e3ffa8;
 `;
 
 export const FootWrapperOne = styled.div`

@@ -1,4 +1,4 @@
-import parameters from '../../Images/parameters.png';
+import parameters from '../../images/parameters.png';
 import {
   BodyParametersContainer,
   BodyParametersTitle,
@@ -32,7 +32,7 @@ export const BodyParameters = ({ formik, next, prev }) => {
         <BodyParametersDescr>
           Enter your parameters for correct performance tracking
         </BodyParametersDescr>
-        <BodyParametersForm>
+        <BodyParametersForm autoComplete="off">
           <BodyParametersWrapperLabel>
             <BodyParametersLabel>
               Height
@@ -56,9 +56,19 @@ export const BodyParameters = ({ formik, next, prev }) => {
             </BodyParametersLabel>
           </BodyParametersWrapperLabel>
           <BodyParametersButtonNext
+            style={{
+              boxShadow:
+                !formik.isValid ||
+                !formik.values.height ||
+                !formik.values.weight
+                  ? 'none'
+                  : '0px 0px 5px #e3ffa8',
+            }}
             type="button"
             onClick={validateAndMoveNext}
-            // disabled={!formik.isValid || !formik.dirty || !formik.touched}
+            disabled={
+              !formik.isValid || !formik.values.height || !formik.values.weight
+            }
           >
             Next
           </BodyParametersButtonNext>

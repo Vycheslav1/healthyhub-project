@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import one from '../../images/one.png';
 import {
   ForgotPasswordContainer,
@@ -14,8 +14,25 @@ import {
   ForgotPasswordText,
   ForgotPasswordLink,
 } from './ForgotPasswordForm.styled';
+import { useDispatch } from 'react-redux';
+import { forgotPassword } from '../../redux/auth/operations';
 
 export const ForgotPasswordForm = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleForgotPassword = (e) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    dispatch(
+      forgotPassword({
+        email: form.elements.email.value,
+      })
+    );
+    navigate('/signin');
+    form.reset();
+  };
+
   return (
     <ForgotPasswordContainer>
       <div>
@@ -26,7 +43,7 @@ export const ForgotPasswordForm = () => {
         <ForgotPasswordDescrip>
           We will send you an email with recovery instructions
         </ForgotPasswordDescrip>
-        <ForgotPasswordFormWrapper>
+        <ForgotPasswordFormWrapper onSubmit={handleForgotPassword}>
           <ForgotPasswordLabel>
             <ForgotPasswordInput
               type="text"

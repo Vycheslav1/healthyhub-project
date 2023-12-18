@@ -66,4 +66,24 @@ export const refreshUser = createAsyncThunk(
     }
   }
 );
+
 //forgot-password
+// https://nodejs-rest-api-ljp2.onrender.com/users/forgot-password
+// http://localhost:3000/users/forgot-password
+// ВІДКОРЕГУВАТИ ЕНДПОІНТ
+export const forgotPassword = createAsyncThunk(
+  'auth/forgotPassword',
+  async (credentials, thunkAPI) => {
+    try {
+      const { data } = await axios.post(
+        'http://localhost:3000/users/forgot-password',
+        credentials
+      );
+      setAuthHeader(data.token);
+      console.log(data);
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
