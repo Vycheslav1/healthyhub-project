@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import one from '../../images/one.png';
+import one from './images/one.png';
 import {
   ForgotPasswordContainer,
   ForgotPasswordWrapper,
