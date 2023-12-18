@@ -1,4 +1,4 @@
-import gender from '../../Images/gender.png';
+import gender from '../../images/gender.png';
 import {
   AgeInput,
   AgeLabel,
@@ -34,7 +34,7 @@ export const SelectGenderAge = ({ formik, next, prev }) => {
         <GenderDescription>
           Choose a goal so that we can help you effectively
         </GenderDescription>
-        <FormGenres>
+        <FormGenres autoComplete="off">
           <GenresText>Gender</GenresText>
           <GenderRadioWrapper>
             <Label>
@@ -69,8 +69,14 @@ export const SelectGenderAge = ({ formik, next, prev }) => {
             />
           </AgeLabel>
           <ButtonGenderNext
+            style={{
+              boxShadow:
+                !formik.isValid || !formik.values.gender
+                  ? 'none'
+                  : '0px 0px 5px #e3ffa8',
+            }}
             type="button"
-            // disabled={!formik.isValid || !formik.values.gender}
+            disabled={!formik.isValid || !formik.values.gender}
             onClick={validateAndMoveNext}
             // onClick={next}
           >

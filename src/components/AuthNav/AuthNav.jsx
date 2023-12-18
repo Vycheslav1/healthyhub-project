@@ -1,4 +1,4 @@
-import one from '../../Images/one.png';
+import one from '../../images/one.png';
 
 import {
   AuthContainer,

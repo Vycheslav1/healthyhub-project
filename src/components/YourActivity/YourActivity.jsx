@@ -99,6 +99,12 @@ export const YourActivity = ({ formik, prev }) => {
             {formik.errors.goal && <div>{formik.errors.goal}</div>}
           </ActivityLabelWrapper>
           <ActivityButtonSignUp
+            style={{
+              boxShadow:
+                !formik.isValid || !formik.values.activity
+                  ? 'none'
+                  : '0px 0px 5px #e3ffa8',
+            }}
             type="submit"
             // disabled={!formik.isValid || !formik.values.activity}
           >
