@@ -18,7 +18,7 @@ export const AuthNav = () => {
   return (
     <AuthContainer>
       <ImageWrapper>
-        <ImageOne src={one} alt="Sport and fitness tracker" />
+        <ImageOne src={`${one}`} alt="Sport and fitness tracker" />
       </ImageWrapper>
       <TextWrapper>
         <TitleOne>Set goals and achieve them</TitleOne>
