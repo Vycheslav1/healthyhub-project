@@ -1,4 +1,4 @@
-import parameters from '../../images/parameters.png';
+//import parameters from '../../images/parameters.png';
 import {
   BodyParametersContainer,
   BodyParametersTitle,
@@ -11,7 +11,7 @@ import {
   BodyParametersInput,
   BodyParametersButtonNext,
   BodyParametersButtonBack,
-} from './BodyParameters.styled';
+} from './BodyParameters_styled';
 
 export const BodyParameters = ({ formik, next, prev }) => {
   const validateAndMoveNext = async () => {
@@ -25,7 +25,10 @@ export const BodyParameters = ({ formik, next, prev }) => {
   return (
     <BodyParametersContainer>
       <div>
-        <ImageBodyParameters src={parameters} alt="Body parameters" />
+        <ImageBodyParameters
+          src={'/src/images/parameters.png'}
+          alt="Body parameters"
+        />
       </div>
       <BodyParametersWrapper>
         <BodyParametersTitle>Body parameters</BodyParametersTitle>

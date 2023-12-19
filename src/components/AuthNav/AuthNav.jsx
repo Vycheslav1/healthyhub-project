@@ -1,4 +1,4 @@
-import one from '../../images/one.png';
+//import one from '../../images/one.png';
 
 import {
   AuthContainer,
@@ -12,13 +12,13 @@ import {
   SignUp,
   TextWrapper,
   TitleOne,
-} from './AuthNav.styled';
+} from './AuthNav_styled';
 
 export const AuthNav = () => {
   return (
     <AuthContainer>
       <ImageWrapper>
-        <ImageOne src={one} alt="Sport and fitness tracker" />
+        <ImageOne src={'/src/images/one.png'} alt="Sport and fitness tracker" />
       </ImageWrapper>
       <TextWrapper>
         <TitleOne>Set goals and achieve them</TitleOne>

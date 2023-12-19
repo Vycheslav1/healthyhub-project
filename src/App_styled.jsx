@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import example from './assets/background.png';
 import 'normalize.css';
 
