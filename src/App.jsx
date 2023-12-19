@@ -13,7 +13,7 @@ import { RestrictedRoude } from './components/RestrictedRoude';
 import { PrivateRoute } from './components/PrivateRoute';
 import { OnePage } from './pages/OnePage';
 
-function App() {
+export default function App() {
   return (
     <AppWrapper>
       <Routes>
@@ -49,4 +49,4 @@ function App() {
     </AppWrapper>
   );
 }
-export default App;
+//export default App;
