@@ -33,9 +33,7 @@ export const SignInForm = () => {
   };
   return (
     <SignInContainer>
-      <div>
-        {/*<ImageSignIn src="images/one.png" alt="Sport and fitness tracker" />*/}
-      </div>
+      <div>{/*<ImageSignIn src={one} alt="Sport and fitness tracker" />*/}</div>
       <SignInFormWrapper>
         <SignInTitle>Sign in</SignInTitle>
         <SignInDescription>
