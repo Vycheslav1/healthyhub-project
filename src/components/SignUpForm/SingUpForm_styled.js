@@ -50,7 +50,10 @@ export const Form = styled.form`
   margin-bottom: 80px;
 `;
 
+// export const LabelWrapper = styled.div``
+
 export const Label = styled.label`
+  position: relative;
   width: 212px;
   height: 36px;
   display: flex;
@@ -59,30 +62,29 @@ export const Label = styled.label`
   flex-direction: column;
   align-items: flex-start;
   border-radius: 12px;
-  border: 1px solid var(--Color-Primary-Green-Lite, #e3ffa8);
+  /* border: 1px solid var(--Color-Primary-Green-Lite, #e3ffa8); */
   background-color: var(--Color-Primary-Black-2, #0f0f0f);
-  :hover {
-    border: none;
-    /* border: 1px solid ${({ isValid }) => (isValid ? 'blue' : 'red')}; */
-  }
 `;
 
 export const Input = styled.input`
   background-color: transparent;
-  /* width: 212px; */
   border: none;
-  /* border: 1px solid var(--Color-Primary-Green-Lite, #E3FFA8); */
   padding: 8px 10px;
   border-radius: 12px;
   border: transparent;
   color: white;
+  outline: none;
+`;
+
+export const Checkbox = styled.input`
+  position: absolute;
+  top: 30%;
+  right: 5%;
 `;
 
 export const ButtonNext = styled.button`
-  /* display: inline-flex; */
+  /* box-shadow: 0px 0px 15px #e3ffa8; */
   padding: 8px 10px;
-  /* flex-direction: column; */
-  /* align-items: flex-start; */
   gap: 10px;
   border-radius: 12px;
   background-color: var(--Color-Primary-Green-Lite, #e3ffa8);
@@ -119,4 +121,10 @@ export const NavLinkSignIn = styled(NavLink)`
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
+`;
+
+export const ErrorsMessage = styled.div`
+  color: red;
+  margin-top: 5px;
+  text-align: center;
 `;

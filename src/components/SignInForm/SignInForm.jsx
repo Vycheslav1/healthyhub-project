@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import { logIn } from '../../redux/auth/operations';
 import { useDispatch } from 'react-redux';
 import {
@@ -16,8 +15,8 @@ import {
   FootWrapperOne,
   FootLinkTextTwo,
   FootLinkTwo,
-} from './SignInForm.styled';
-import one from '../../images/one.png';
+} from './SignInForm_styled';
+//import one from '../../images/one.png';
 
 export const SignInForm = () => {
   const dispatch = useDispatch();
@@ -35,7 +34,10 @@ export const SignInForm = () => {
   return (
     <SignInContainer>
       <div>
-        <ImageSignIn src={one} alt="Sport and fitness tracker" />
+        <ImageSignIn
+          src={'/src/images/one.png'}
+          alt="Sport and fitness tracker"
+        />
       </div>
       <SignInFormWrapper>
         <SignInTitle>Sign in</SignInTitle>

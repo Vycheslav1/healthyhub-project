@@ -1,4 +1,4 @@
-import parameters from '../../Images/parameters.png';
+//import parameters from '../../images/parameters.png';
 import {
   BodyParametersContainer,
   BodyParametersTitle,
@@ -11,7 +11,7 @@ import {
   BodyParametersInput,
   BodyParametersButtonNext,
   BodyParametersButtonBack,
-} from './BodyParameters.styled';
+} from './BodyParameters_styled';
 
 export const BodyParameters = ({ formik, next, prev }) => {
   const validateAndMoveNext = async () => {
@@ -25,14 +25,17 @@ export const BodyParameters = ({ formik, next, prev }) => {
   return (
     <BodyParametersContainer>
       <div>
-        <ImageBodyParameters src={parameters} alt="Body parameters" />
+        <ImageBodyParameters
+          src={'/src/images/parameters.png'}
+          alt="Body parameters"
+        />
       </div>
       <BodyParametersWrapper>
         <BodyParametersTitle>Body parameters</BodyParametersTitle>
         <BodyParametersDescr>
           Enter your parameters for correct performance tracking
         </BodyParametersDescr>
-        <BodyParametersForm>
+        <BodyParametersForm autoComplete="off">
           <BodyParametersWrapperLabel>
             <BodyParametersLabel>
               Height
@@ -56,9 +59,19 @@ export const BodyParameters = ({ formik, next, prev }) => {
             </BodyParametersLabel>
           </BodyParametersWrapperLabel>
           <BodyParametersButtonNext
+            style={{
+              boxShadow:
+                !formik.isValid ||
+                !formik.values.height ||
+                !formik.values.weight
+                  ? 'none'
+                  : '0px 0px 5px #e3ffa8',
+            }}
             type="button"
             onClick={validateAndMoveNext}
-            // disabled={!formik.isValid || !formik.dirty || !formik.touched}
+            disabled={
+              !formik.isValid || !formik.values.height || !formik.values.weight
+            }
           >
             Next
           </BodyParametersButtonNext>

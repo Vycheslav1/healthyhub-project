@@ -1,4 +1,4 @@
-import gender from '../../Images/gender.png';
+//import gender from '../../images/gender.png';
 import {
   AgeInput,
   AgeLabel,
@@ -14,7 +14,7 @@ import {
   GenresWrapper,
   InputGenres,
   Label,
-} from './SelectGenderAge.styled';
+} from './SelectGenderAge_styled';
 
 export const SelectGenderAge = ({ formik, next, prev }) => {
   const validateAndMoveNext = async () => {
@@ -27,14 +27,17 @@ export const SelectGenderAge = ({ formik, next, prev }) => {
   return (
     <GenderContainer>
       <div>
-        <GenderImage src={gender} alt="Select gender, Age" />
+        <GenderImage
+          src={'/healthyhub-project/src/images/gender.png'}
+          alt="Select gender, Age"
+        />
       </div>
       <GenresWrapper>
         <GenresTitle>Select gender, Age</GenresTitle>
         <GenderDescription>
           Choose a goal so that we can help you effectively
         </GenderDescription>
-        <FormGenres>
+        <FormGenres autoComplete="off">
           <GenresText>Gender</GenresText>
           <GenderRadioWrapper>
             <Label>
@@ -69,8 +72,14 @@ export const SelectGenderAge = ({ formik, next, prev }) => {
             />
           </AgeLabel>
           <ButtonGenderNext
+            style={{
+              boxShadow:
+                !formik.isValid || !formik.values.gender
+                  ? 'none'
+                  : '0px 0px 5px #e3ffa8',
+            }}
             type="button"
-            // disabled={!formik.isValid || !formik.values.gender}
+            disabled={!formik.isValid || !formik.values.gender}
             onClick={validateAndMoveNext}
             // onClick={next}
           >

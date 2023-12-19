@@ -1,4 +1,4 @@
-import activity from '../../images/activity.png';
+//import activity from '../../images/activity.png';
 import {
   ActivityButtonBack,
   ActivityButtonSignUp,
@@ -10,7 +10,7 @@ import {
   ActivityLabelWrapper,
   ActivityTitle,
   ActivityWrapper,
-} from './YourActivity.styled';
+} from './YourActivity_styled';
 
 export const YourActivity = ({ formik, prev }) => {
   const handleSubmit = (e) => {
@@ -20,7 +20,7 @@ export const YourActivity = ({ formik, prev }) => {
   return (
     <ActivityContainer>
       <div>
-        <ActivityImage src={activity} alt="Your Activity" />
+        <ActivityImage src={'/src/images/activity.png'} alt="Your Activity" />
       </div>
       <ActivityWrapper>
         <ActivityTitle>Your Activity</ActivityTitle>
@@ -99,6 +99,12 @@ export const YourActivity = ({ formik, prev }) => {
             {formik.errors.goal && <div>{formik.errors.goal}</div>}
           </ActivityLabelWrapper>
           <ActivityButtonSignUp
+            style={{
+              boxShadow:
+                !formik.isValid || !formik.values.activity
+                  ? 'none'
+                  : '0px 0px 5px #e3ffa8',
+            }}
             type="submit"
             // disabled={!formik.isValid || !formik.values.activity}
           >
