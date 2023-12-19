@@ -7,16 +7,14 @@ import { Route, Routes } from 'react-router-dom';
 import { MainPage } from '../src/pages/MainPage';
 import { SingUpPage } from '../src/pages/SingUpPage';
 import { SingInPage } from '../src/pages/SingInPage';
-import { Dairy } from '../src/pages/Dairy';
 import { ForgotPasswordPage } from '../src/pages/ForgotPasswordPage';
 import { RestrictedRoude } from './components/RestrictedRoude';
 import { PrivateRoute } from './components/PrivateRoute';
 import { RecommendedFood } from './pages/RecomendedFood/RecomendedFood';
-import { RecommendedFood } from './pages/RecomendedFood/RecomendedFood';
+import { OnePage } from './pages/OnePage';
 
 // const test = import.meta.env.VITE_API_TEST;
 function App() {
-  // console.log(test);
   return (
     <Routes>
       <Route></Route>
