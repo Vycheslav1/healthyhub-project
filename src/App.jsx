@@ -45,6 +45,7 @@ export default function App() {
           </Route>
           <Route path="*" element={<ErrorPage />} />
         </Route> */}
+          <Route path="/recommended-page" element={<RecommendedFood />} />
         </Route>
       </Routes>
     </AppWrapper>
