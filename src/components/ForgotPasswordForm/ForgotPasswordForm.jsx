@@ -36,10 +36,10 @@ export const ForgotPasswordForm = () => {
   return (
     <ForgotPasswordContainer>
       <div>
-        <ImageForgotPassword
+        {/*<ImageForgotPassword
           src="images/one.png"
           alt="Sport and fitness tracker"
-        />
+  />*/}
       </div>
       <ForgotPasswordWrapper>
         <ForgotPasswordTitle>Forgot your password</ForgotPasswordTitle>

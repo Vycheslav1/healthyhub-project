@@ -98,10 +98,10 @@ export const SignUpForm = () => {
       {currentPage === 1 && (
         <FormContainer>
           <div>
-            <ImageFormOne
+            {/*<ImageFormOne
               src="images/one.png"
               alt="Sport and fitness tracker"
-            />
+      />*/}
           </div>
           <FormWrapper>
             <FormTitle>Sign up</FormTitle>
