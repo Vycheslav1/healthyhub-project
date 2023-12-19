@@ -21,7 +21,7 @@ export const YourActivity = ({ formik, prev }) => {
     <ActivityContainer>
       <div>
         <ActivityImage
-          src="/healthyhub-project/src/images/activity.png"
+          src={'/healthyhub-project/src/images/activity.png'}
           alt="Your Activity"
         />
       </div>

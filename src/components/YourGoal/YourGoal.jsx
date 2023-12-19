@@ -26,7 +26,7 @@ export const YourGoal = ({ formik, next, prev }) => {
     <GoalContainer>
       <div>
         <ImageGoals
-          src="/healthyhub-project/src/images/goals.png"
+          src={'/healthyhub-project/src/images/goals.png'}
           alt="Your goal"
         />
       </div>

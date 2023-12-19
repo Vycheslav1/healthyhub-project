@@ -37,7 +37,7 @@ export const ForgotPasswordForm = () => {
     <ForgotPasswordContainer>
       <div>
         <ImageForgotPassword
-          src="/healthyhub-project/src/images/one.png"
+          src={'/healthyhub-project/src/images/one.png'}
           alt="Sport and fitness tracker"
         />
       </div>

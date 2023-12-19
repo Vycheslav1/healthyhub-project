@@ -26,7 +26,7 @@ export const BodyParameters = ({ formik, next, prev }) => {
     <BodyParametersContainer>
       <div>
         <ImageBodyParameters
-          src="/healthyhub-project/src/images/parameters.png"
+          src={'/healthyhub-project/src/images/parameters.png'}
           alt="Body parameters"
         />
       </div>
