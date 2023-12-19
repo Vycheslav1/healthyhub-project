@@ -4,7 +4,7 @@ import 'normalize.css';
 
 export const AppWrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   /* background-image: url(${example}); */
   background-color: #050505;
   background-repeat: no-repeat;
