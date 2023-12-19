@@ -15,7 +15,7 @@ import {
   FootWrapperOne,
   FootLinkTextTwo,
   FootLinkTwo,
-} from './SignInForm.styled';
+} from './SignInForm_styled';
 //import one from '../../images/one.png';
 
 export const SignInForm = () => {

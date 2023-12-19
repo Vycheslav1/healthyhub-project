@@ -22,7 +22,7 @@ import {
   NavLinkSignIn,
   TextSignIn,
   TextSignInWrapper,
-} from './SingUpForm.styled';
+} from './SingUpForm_styled';
 //import one from '../../images/one.png';
 
 export const SignUpForm = () => {

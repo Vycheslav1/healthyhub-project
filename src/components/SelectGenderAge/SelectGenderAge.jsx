@@ -14,7 +14,7 @@ import {
   GenresWrapper,
   InputGenres,
   Label,
-} from './SelectGenderAge.styled';
+} from './SelectGenderAge_styled';
 
 export const SelectGenderAge = ({ formik, next, prev }) => {
   const validateAndMoveNext = async () => {
