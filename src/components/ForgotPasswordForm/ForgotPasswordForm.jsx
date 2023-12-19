@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import one from '../../images/one.png';
+//import one from '../../images/one.png';
 import {
   ForgotPasswordContainer,
   ForgotPasswordWrapper,
@@ -36,7 +36,10 @@ export const ForgotPasswordForm = () => {
   return (
     <ForgotPasswordContainer>
       <div>
-        <ImageForgotPassword src={one} alt="Sport and fitness tracker" />
+        <ImageForgotPassword
+          src="images/one.png"
+          alt="Sport and fitness tracker"
+        />
       </div>
       <ForgotPasswordWrapper>
         <ForgotPasswordTitle>Forgot your password</ForgotPasswordTitle>
