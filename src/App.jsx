@@ -18,30 +18,40 @@ import { RecommendedFood } from './pages/RecomendedFood/RecomendedFood';
 function App() {
   // console.log(test);
   return (
-    <Routes>
-      <Route path="/" element={<MainPage />} />
-      <Route
-        path="/signup"
-        element={
-          <RestrictedRoude redirectTo="/dairy" component={<SingUpPage />} />
-        }
-      />
-      <Route path="/signup" element={<SingUpPage />} />
-      <Route
-        path="/signin"
-        element={
-          <RestrictedRoude redirectTo="/dairy" component={<SingInPage />} />
-        }
-      />
-      <Route path="/signin" element={<SingInPage />} />
-      <Route
-        path="/dairy"
-        element={<PrivateRoute redirectTo="/signin" component={<Dairy />} />}
-      />
-      <Route path="/dairy" element={<Dairy />} />
-      <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-      <Route path="/recommended-food" element={<RecommendedFood />} />
-    </Routes>
+    <AppWrapper>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route path="/" element={<OnePage />} />
+          <Route
+            path="/signup"
+            element={
+              <RestrictedRoude redirectTo="/dairy" component={<SingUpPage />} />
+            }
+          />
+          <Route
+            path="/signin"
+            element={
+              <RestrictedRoude redirectTo="/main" component={<SingInPage />} />
+            }
+          />
+          <Route
+            path="/main"
+            element={
+              <PrivateRoute redirectTo="/signin" component={<MainPage />} />
+            }
+          />
+          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+          {/* <Route path="/" element={<SharedLayout />}>
+          <Route path="/first" element={<FirstPage />} />
+          <Route path="/second" element={<SecondPage />}>
+            <Route path=":half" element={<HalfPage />} />
+          </Route>
+          <Route path="*" element={<ErrorPage />} />
+        </Route> */}
+          <Route path="/recommended-page" element={<RecommendedFood />} />
+        </Route>
+      </Routes>
+    </AppWrapper>
   );
 }
 export default App;
