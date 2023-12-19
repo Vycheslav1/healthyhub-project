@@ -1,4 +1,4 @@
-//import parameters from '../../images/parameters.png';
+import parameters from '../../images/parameters.png';
 import {
   BodyParametersContainer,
   BodyParametersTitle,
@@ -25,10 +25,7 @@ export const BodyParameters = ({ formik, next, prev }) => {
   return (
     <BodyParametersContainer>
       <div>
-        <ImageBodyParameters
-          src={'images/parameters.png'}
-          alt="Body parameters"
-        />
+        <ImageBodyParameters src={parameters} alt="Body parameters" />
       </div>
       <BodyParametersWrapper>
         <BodyParametersTitle>Body parameters</BodyParametersTitle>
