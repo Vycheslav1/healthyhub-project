@@ -13,30 +13,39 @@ import { PrivateRoute } from './components/PrivateRoute';
 import { RecommendedFood } from './pages/RecomendedFood/RecomendedFood';
 import { OnePage } from './pages/OnePage';
 
-// const test = import.meta.env.VITE_API_TEST;
 function App() {
   return (
     <Routes>
-      <Route></Route>
-      <Route path="/" element={<OnePage />} />
-      <Route
-        path="/signup"
-        element={
-          <RestrictedRoude redirectTo="/dairy" component={<SingUpPage />} />
-        }
-      />
-      <Route
-        path="/signin"
-        element={
-          <RestrictedRoude redirectTo="/main" component={<SingInPage />} />
-        }
-      />
-      <Route
-        path="/main"
-        element={<PrivateRoute redirectTo="/signin" component={<MainPage />} />}
-      />
-      <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-      <Route path="/recommended-food" element={<RecommendedFood />} />
+      <Route path="/" element={<SharedLayout />}>
+        <Route path="/" element={<OnePage />} />
+        <Route
+          path="/signup"
+          element={
+            <RestrictedRoude redirectTo="/dairy" component={<SingUpPage />} />
+          }
+        />
+        <Route
+          path="/signin"
+          element={
+            <RestrictedRoude redirectTo="/main" component={<SingInPage />} />
+          }
+        />
+        <Route
+          path="/main"
+          element={
+            <PrivateRoute redirectTo="/signin" component={<MainPage />} />
+          }
+        />
+        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+        {/* <Route path="/" element={<SharedLayout />}>
+          <Route path="/first" element={<FirstPage />} />
+          <Route path="/second" element={<SecondPage />}>
+            <Route path=":half" element={<HalfPage />} />
+          </Route>
+          <Route path="*" element={<ErrorPage />} />
+        </Route> */}
+        <Route path="/recommended-page" element={<RecommendedFood />} />
+      </Route>
     </Routes>
   );
 }
