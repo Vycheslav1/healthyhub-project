@@ -23,7 +23,7 @@ import {
   TextSignIn,
   TextSignInWrapper,
 } from './SingUpForm_styled';
-//import one from '../../images/one.png';
+import one from '../../images/one.png';
 
 export const SignUpForm = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -98,10 +98,10 @@ export const SignUpForm = () => {
       {currentPage === 1 && (
         <FormContainer>
           <div>
-            {/*<ImageFormOne
+            <ImageFormOne
               src="images/one.png"
               alt="Sport and fitness tracker"
-      />*/}
+            />
           </div>
           <FormWrapper>
             <FormTitle>Sign up</FormTitle>

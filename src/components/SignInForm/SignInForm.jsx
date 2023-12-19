@@ -16,7 +16,7 @@ import {
   FootLinkTextTwo,
   FootLinkTwo,
 } from './SignInForm_styled';
-//import one from '../../images/one.png';
+import one from '../../images/one.png';
 
 export const SignInForm = () => {
   const dispatch = useDispatch();
@@ -33,7 +33,9 @@ export const SignInForm = () => {
   };
   return (
     <SignInContainer>
-      <div>{/*<ImageSignIn src={one} alt="Sport and fitness tracker" />*/}</div>
+      <div>
+        <ImageSignIn src={one} alt="Sport and fitness tracker" />
+      </div>
       <SignInFormWrapper>
         <SignInTitle>Sign in</SignInTitle>
         <SignInDescription>

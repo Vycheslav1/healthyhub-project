@@ -1,4 +1,4 @@
-//import goal from '../../images/goals.png';
+import goal from '../../images/goals.png';
 import {
   ButtonBackGoals,
   ButtonNextGoals,
@@ -24,7 +24,9 @@ export const YourGoal = ({ formik, next, prev }) => {
   };
   return (
     <GoalContainer>
-      <div>{/*<ImageGoals src={goal} alt="Your goal" />*/}</div>
+      <div>
+        <ImageGoals src={goal} alt="Your goal" />
+      </div>
       <GoalsWrapper>
         <TitleGoals>Your goal</TitleGoals>
         <GoalsDescription>
