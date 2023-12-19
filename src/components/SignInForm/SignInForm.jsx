@@ -16,7 +16,7 @@ import {
   FootLinkTextTwo,
   FootLinkTwo,
 } from './SignInForm.styled';
-//import one from 'images/one.png';
+//import one from '../images/one.png';
 
 export const SignInForm = () => {
   const dispatch = useDispatch();
