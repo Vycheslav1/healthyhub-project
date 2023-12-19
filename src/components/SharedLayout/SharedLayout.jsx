@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { Header } from 'components/Header/Header';
 import { Div } from './SharedLayout_styled.jsx';
 
-const SharedLayout = () => {
+export default function SharedLayout() {
   return (
     <Div>
       <Header />
@@ -12,6 +12,6 @@ const SharedLayout = () => {
       </Suspense>
     </Div>
   );
-};
+}
 
-export default SharedLayout;
+//export default SharedLayout;
