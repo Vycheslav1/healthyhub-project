@@ -1,4 +1,4 @@
-import one from '../../images/one.png';
+//import one from '../../images/one.png';
 
 import {
   AuthContainer,
@@ -18,7 +18,10 @@ export const AuthNav = () => {
   return (
     <AuthContainer>
       <ImageWrapper>
-        <ImageOne src={one} alt="Sport and fitness tracker" />
+        <ImageOne
+          src="/healthyhub-project/src/images/one.png"
+          alt="Sport and fitness tracker"
+        />
       </ImageWrapper>
       <TextWrapper>
         <TitleOne>Set goals and achieve them</TitleOne>

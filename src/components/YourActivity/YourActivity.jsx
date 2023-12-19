@@ -1,4 +1,4 @@
-import activity from '../../images/activity.png';
+//import activity from '../../images/activity.png';
 import {
   ActivityButtonBack,
   ActivityButtonSignUp,
@@ -20,7 +20,10 @@ export const YourActivity = ({ formik, prev }) => {
   return (
     <ActivityContainer>
       <div>
-        <ActivityImage src={activity} alt="Your Activity" />
+        <ActivityImage
+          src="/healthyhub-project/src/images/activity.png"
+          alt="Your Activity"
+        />
       </div>
       <ActivityWrapper>
         <ActivityTitle>Your Activity</ActivityTitle>

@@ -1,4 +1,4 @@
-import gender from '../../images/gender.png';
+//import gender from '../../images/gender.png';
 import {
   AgeInput,
   AgeLabel,
@@ -27,7 +27,10 @@ export const SelectGenderAge = ({ formik, next, prev }) => {
   return (
     <GenderContainer>
       <div>
-        <GenderImage src={gender} alt="Select gender, Age" />
+        <GenderImage
+          src="/healthyhub-project/src/images/gender.png"
+          alt="Select gender, Age"
+        />
       </div>
       <GenresWrapper>
         <GenresTitle>Select gender, Age</GenresTitle>
