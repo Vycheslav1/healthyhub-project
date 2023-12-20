@@ -11,7 +11,7 @@ import {
   BodyParametersInput,
   BodyParametersButtonNext,
   BodyParametersButtonBack,
-} from './BodyParameters_styled';
+} from './BodyParametersStyled';
 
 export const BodyParameters = ({ formik, next, prev }) => {
   const validateAndMoveNext = async () => {

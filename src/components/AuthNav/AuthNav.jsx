@@ -12,7 +12,7 @@ import {
   SignUp,
   TextWrapper,
   TitleOne,
-} from './AuthNav_styled';
+} from './AuthNavStyled';
 
 export const AuthNav = () => {
   return (

@@ -11,7 +11,7 @@ import {
   InputGoal,
   Label,
   TitleGoals,
-} from './YourGoal_styled';
+} from './YourGoalStyled';
 
 export const YourGoal = ({ formik, next, prev }) => {
   const validateAndMoveNext = async () => {

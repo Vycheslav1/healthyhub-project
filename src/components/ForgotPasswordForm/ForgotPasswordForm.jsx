@@ -13,7 +13,7 @@ import {
   ForgotPasswordTextWrapper,
   ForgotPasswordText,
   ForgotPasswordLink,
-} from './ForgotPasswordForm_styled';
+} from './ForgotPasswordFormStyled';
 import { useDispatch } from 'react-redux';
 import { forgotPassword } from '../../redux/auth/operations';
 

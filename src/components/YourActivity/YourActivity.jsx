@@ -10,7 +10,7 @@ import {
   ActivityLabelWrapper,
   ActivityTitle,
   ActivityWrapper,
-} from './YourActivity_styled';
+} from './YourActivityStyled';
 
 export const YourActivity = ({ formik, prev }) => {
   const handleSubmit = (e) => {
