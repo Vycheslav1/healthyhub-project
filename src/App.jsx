@@ -4,7 +4,7 @@ import FirstPage from 'pages/FirstPage/FirstPage';
 import SecondPage from 'pages/SecondPage/SecondPage';
 import HalfPage from 'pages/HalfPage/HalfPage';
 import ErrorPage from 'pages/ErrorPage/ErrorPage';
-import { AppWrapper } from './App_styled';
+import { AppWrapper } from './AppStyled';
 import { MainPage } from 'pages/MainPage';
 import { SingUpPage } from 'pages/SingUpPage';
 import { SingInPage } from 'pages/SingInPage';
