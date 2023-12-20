@@ -37,7 +37,7 @@ export const ForgotPasswordForm = () => {
     <ForgotPasswordContainer>
       <div>
         <ImageForgotPassword
-          src={'images/one.png'}
+          src="../images/one.png"
           alt="Sport and fitness tracker"
         />
       </div>

@@ -99,7 +99,7 @@ export const SignUpForm = () => {
         <FormContainer>
           <div>
             <ImageFormOne
-              src={'images/one.png'}
+              src="../images/one.png"
               alt="Sport and fitness tracker"
             />
           </div>

@@ -44,8 +44,8 @@ export default function App() {
             <Route path=":half" element={<HalfPage />} />
           </Route>
           <Route path="*" element={<ErrorPage />} />
-        </Route> */}
           <Route path="/recommended-page" element={<RecommendedFood />} />
+        </Route> */}
         </Route>
       </Routes>
     </AppWrapper>

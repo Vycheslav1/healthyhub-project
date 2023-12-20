@@ -27,7 +27,7 @@ export const SelectGenderAge = ({ formik, next, prev }) => {
   return (
     <GenderContainer>
       <div>
-        <GenderImage src={'images/gender.png'} alt="Select gender, Age" />
+        <GenderImage src="../images/gender.png" alt="Select gender, Age" />
       </div>
       <GenresWrapper>
         <GenresTitle>Select gender, Age</GenresTitle>
