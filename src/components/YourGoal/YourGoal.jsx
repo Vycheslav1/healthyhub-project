@@ -1,4 +1,4 @@
-//import goal from '../../images/goals.png';
+import goal from 'src/images/goals.png';
 import {
   ButtonBackGoals,
   ButtonNextGoals,
@@ -11,7 +11,7 @@ import {
   InputGoal,
   Label,
   TitleGoals,
-} from './YourGoal_styled';
+} from './YourGoalStyled';
 
 export const YourGoal = ({ formik, next, prev }) => {
   const validateAndMoveNext = async () => {
@@ -25,7 +25,7 @@ export const YourGoal = ({ formik, next, prev }) => {
   return (
     <GoalContainer>
       <div>
-        <ImageGoals src={'images/goals.png'} alt="Your goal" />
+        <ImageGoals src={goal} alt="Your goal" />
       </div>
       <GoalsWrapper>
         <TitleGoals>Your goal</TitleGoals>

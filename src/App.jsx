@@ -1,17 +1,19 @@
 import { Route, Routes } from 'react-router-dom';
-// import SharedLayout from 'components/SharedLayout/SharedLayout';
-// import FirstPage from 'pages/FirstPage/FirstPage';
-// import SecondPage from 'pages/SecondPage/SecondPage';
-// import HalfPage from 'pages/HalfPage/HalfPage';
-// import ErrorPage from 'pages/ErrorPage/ErrorPage';
-import { MainPage } from '../src/pages/MainPage';
-import { SingUpPage } from '../src/pages/SingUpPage';
-import { SingInPage } from '../src/pages/SingInPage';
-import { ForgotPasswordPage } from '../src/pages/ForgotPasswordPage';
-import { RestrictedRoude } from './components/RestrictedRoude';
-import { PrivateRoute } from './components/PrivateRoute';
-import { RecommendedFood } from './pages/RecomendedFood/RecomendedFood';
-import { OnePage } from './pages/OnePage';
+import SharedLayout from 'components/SharedLayout/SharedLayout';
+import FirstPage from 'pages/FirstPage/FirstPage';
+import SecondPage from 'pages/SecondPage/SecondPage';
+import HalfPage from 'pages/HalfPage/HalfPage';
+import ErrorPage from 'pages/ErrorPage/ErrorPage';
+import { AppWrapper } from './AppStyled';
+import { MainPage } from 'pages/MainPage';
+import { SingUpPage } from 'pages/SingUpPage';
+import { SingInPage } from 'pages/SingInPage';
+import { ForgotPasswordPage } from 'pages/ForgotPasswordPage';
+import { RestrictedRoude } from 'components/RestrictedRoude';
+import { PrivateRoute } from 'components/PrivateRoute';
+import { OnePage } from 'pages/OnePage';
+
+// const test = import.meta.env.VITE_API_TEST;
 
 function App() {
   return (
@@ -44,8 +46,8 @@ function App() {
             <Route path=":half" element={<HalfPage />} />
           </Route>
           <Route path="*" element={<ErrorPage />} />
-        </Route> */}
           <Route path="/recommended-page" element={<RecommendedFood />} />
+        </Route> */}
         </Route>
       </Routes>
     </AppWrapper>
