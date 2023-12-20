@@ -18,7 +18,10 @@ export const AuthNav = () => {
   return (
     <AuthContainer>
       <ImageWrapper>
-        <ImageOne src="./images/one.png" alt="Sport and fitness tracker" />
+        <ImageOne
+          src="./public/images/one.png"
+          alt="Sport and fitness tracker"
+        />
       </ImageWrapper>
       <TextWrapper>
         <TitleOne>Set goals and achieve them</TitleOne>
