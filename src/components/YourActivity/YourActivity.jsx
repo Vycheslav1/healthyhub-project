@@ -1,4 +1,4 @@
-//import activity from '../../images/activity.png';
+import activity from 'src/images/activity.png';
 import {
   ActivityButtonBack,
   ActivityButtonSignUp,
@@ -10,7 +10,7 @@ import {
   ActivityLabelWrapper,
   ActivityTitle,
   ActivityWrapper,
-} from './YourActivity_styled';
+} from './YourActivityStyled';
 
 export const YourActivity = ({ formik, prev }) => {
   const handleSubmit = (e) => {
@@ -20,7 +20,7 @@ export const YourActivity = ({ formik, prev }) => {
   return (
     <ActivityContainer>
       <div>
-        <ActivityImage src={'images/activity.png'} alt="Your Activity" />
+        <ActivityImage src={activity} alt="Your Activity" />
       </div>
       <ActivityWrapper>
         <ActivityTitle>Your Activity</ActivityTitle>
