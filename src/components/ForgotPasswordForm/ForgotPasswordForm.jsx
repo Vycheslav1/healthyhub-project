@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-//import one from '../../images/one.png';
+import one from 'src/images/one.png';
 import {
   ForgotPasswordContainer,
   ForgotPasswordWrapper,
@@ -13,7 +13,7 @@ import {
   ForgotPasswordTextWrapper,
   ForgotPasswordText,
   ForgotPasswordLink,
-} from './ForgotPasswordForm_styled';
+} from './ForgotPasswordFormStyled';
 import { useDispatch } from 'react-redux';
 import { forgotPassword } from '../../redux/auth/operations';
 
@@ -36,10 +36,7 @@ export const ForgotPasswordForm = () => {
   return (
     <ForgotPasswordContainer>
       <div>
-        <ImageForgotPassword
-          src={'images/one.png'}
-          alt="Sport and fitness tracker"
-        />
+        <ImageForgotPassword src={one} alt="Sport and fitness tracker" />
       </div>
       <ForgotPasswordWrapper>
         <ForgotPasswordTitle>Forgot your password</ForgotPasswordTitle>
