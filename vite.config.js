@@ -12,5 +12,5 @@ export default defineConfig({
       assets: '/src/assets',
     },
   },
-  base: '/healthyhub-project/',
+  base: '/react_vite/',
 });
