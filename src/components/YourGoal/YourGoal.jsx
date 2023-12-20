@@ -25,7 +25,7 @@ export const YourGoal = ({ formik, next, prev }) => {
   return (
     <GoalContainer>
       <div>
-        <ImageGoals src="../images/goals.png" alt="Your goal" />
+        <ImageGoals src="./images/goals.png" alt="Your goal" />
       </div>
       <GoalsWrapper>
         <TitleGoals>Your goal</TitleGoals>
