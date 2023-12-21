@@ -9,28 +9,36 @@ import { YourGoal } from 'components/YourGoal/YourGoal';
 import { register } from '../../redux/auth/operations';
 import {
   ButtonNext,
-  Checkbox,
   ErrorsMessage,
   Form,
   FormContainer,
   FormDescription,
   FormTitle,
   FormWrapper,
+  IconSpan,
   ImageFormOne,
   Input,
   Label,
   NavLinkSignIn,
+  ImageToggle,
   TextSignIn,
   TextSignInWrapper,
 } from './SingUpForm.styled';
-import one from '../../images/one.png';
+import one from 'src/images/one.png';
+import error from 'src/images/svg/error.svg';
+import correct from 'src/images/svg/correct.svg';
+import eye from 'src/images/svg/eye.svg';
+import eyeOff from 'src/images/svg/eye-off.svg';
 
 export const SignUpForm = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleCheckboxChange = () => {
+  const [isPasswordValid, setIsPasswordValid] = useState(true);
+
+  const toggleCheckboxChange = () => {
     setShowPassword(!showPassword);
+    setIsPasswordValid(false);
   };
 
   const dispatch = useDispatch();
@@ -39,7 +47,10 @@ export const SignUpForm = () => {
       name: Yup.string().min(2, 'Too short').required('Name is required'),
       email: Yup.string().email('Invalid email').required('Email is required'),
       password: Yup.string()
-        .min(6, 'Enter a valid Password')
+        .matches(
+          /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
+          'Enter a valid Password.'
+        )
         .required('Password is required'),
     }),
     Yup.object().shape({
@@ -111,7 +122,7 @@ export const SignUpForm = () => {
                 <Label
                   style={{
                     border:
-                      formik.values.name === ''
+                      formik.values.name === '' && !formik.touched.name
                         ? '1px solid #e3ffa8'
                         : formik.errors.name
                         ? '1px solid red'
@@ -127,10 +138,17 @@ export const SignUpForm = () => {
                     value={formik.values.name}
                     onBlur={formik.handleBlur}
                   />
+
+                  {formik.values.name === '' ? null : formik.errors.name ? (
+                    <IconSpan src={error} alt="Error icon" />
+                  ) : (
+                    <IconSpan src={correct} alt="Correct icon" />
+                  )}
                 </Label>
                 {formik.errors.name &&
                   formik.touched.name &&
-                  formik.values.name !== '' && (
+                  // formik.values.name !== ''
+                  formik.touched.name && (
                     <ErrorsMessage>{formik.errors.name}</ErrorsMessage>
                   )}
               </div>
@@ -138,7 +156,7 @@ export const SignUpForm = () => {
                 <Label
                   style={{
                     border:
-                      formik.values.email === ''
+                      formik.values.email === '' && !formik.touched.email
                         ? '1px solid #e3ffa8'
                         : formik.errors.email
                         ? '1px solid red'
@@ -154,11 +172,17 @@ export const SignUpForm = () => {
                     value={formik.values.email}
                     onBlur={formik.handleBlur}
                   />
+                  {formik.values.email === '' ? null : formik.errors.email ? (
+                    <IconSpan src={error} alt="Error icon" />
+                  ) : (
+                    <IconSpan src={correct} alt="Correct icon" />
+                  )}
                 </Label>
 
                 {formik.errors.email &&
                   formik.touched.email &&
-                  formik.values.email !== '' && (
+                  // formik.values.email !== ''
+                  formik.touched.email && (
                     <ErrorsMessage>{formik.errors.email}</ErrorsMessage>
                   )}
               </div>
@@ -166,7 +190,7 @@ export const SignUpForm = () => {
                 <Label
                   style={{
                     border:
-                      formik.values.password === ''
+                      formik.values.password === '' && !formik.touched.password
                         ? '1px solid #e3ffa8'
                         : formik.errors.password
                         ? '1px solid red'
@@ -176,7 +200,7 @@ export const SignUpForm = () => {
                   <Input
                     id="password"
                     name="password"
-                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                    title="Min 6 characters, 1 upper case letter, 1 lower case letter, 1 numeric digit"
                     type={showPassword ? 'text' : 'password'}
                     placeholder="Password"
                     onChange={formik.handleChange}
@@ -185,18 +209,37 @@ export const SignUpForm = () => {
                   />
                   {formik.values.password !== '' && (
                     <>
-                      <Checkbox
-                        type="checkbox"
-                        onChange={handleCheckboxChange}
-                      />
+                      {showPassword ? (
+                        <ImageToggle
+                          className="icon"
+                          src={eye}
+                          alt=""
+                          onClick={toggleCheckboxChange}
+                        />
+                      ) : (
+                        <ImageToggle
+                          className="icon"
+                          src={eyeOff}
+                          alt=""
+                          onClick={toggleCheckboxChange}
+                        />
+                      )}
                     </>
                   )}
                 </Label>
-                {formik.errors.password &&
-                  formik.touched.password &&
+                {formik.errors.password && formik.values.password !== '' ? (
+                  <ErrorsMessage>{formik.errors.password}</ErrorsMessage>
+                ) : (
                   formik.values.password !== '' && (
-                    <ErrorsMessage>{formik.errors.password}</ErrorsMessage>
-                  )}
+                    <ErrorsMessage
+                      style={{
+                        color: '#3CBC81',
+                      }}
+                    >
+                      Correct
+                    </ErrorsMessage>
+                  )
+                )}
               </div>
               <ButtonNext
                 style={{

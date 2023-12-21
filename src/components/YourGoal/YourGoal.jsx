@@ -1,4 +1,4 @@
-import goal from '../../images/goals.png';
+import goal from 'src/images/goals.png';
 import {
   ButtonBackGoals,
   ButtonNextGoals,
@@ -20,7 +20,6 @@ export const YourGoal = ({ formik, next, prev }) => {
     if (Object.keys(errors).length === 0) {
       next();
     }
-    console.log(errors);
   };
   return (
     <GoalContainer>
