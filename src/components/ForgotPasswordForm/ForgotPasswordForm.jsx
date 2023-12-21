@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import one from 'src/images/one.png';
+import { useDispatch } from 'react-redux';
 import {
   ForgotPasswordContainer,
   ForgotPasswordWrapper,
@@ -14,8 +14,8 @@ import {
   ForgotPasswordText,
   ForgotPasswordLink,
 } from './ForgotPasswordFormStyled';
-import { useDispatch } from 'react-redux';
 import { forgotPassword } from '../../redux/auth/operations';
+import one from 'src/images/one.png';
 
 export const ForgotPasswordForm = () => {
   const dispatch = useDispatch();
@@ -57,7 +57,7 @@ export const ForgotPasswordForm = () => {
           <ForgotPasswordText>
             Do you already have an account?
           </ForgotPasswordText>
-          <ForgotPasswordLink to={'/signin'}>Sing up</ForgotPasswordLink>
+          <ForgotPasswordLink to={'/signin'}>Sing in</ForgotPasswordLink>
         </ForgotPasswordTextWrapper>
       </ForgotPasswordWrapper>
     </ForgotPasswordContainer>

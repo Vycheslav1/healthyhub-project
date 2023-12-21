@@ -5,7 +5,6 @@ import {
   ButtonWrapper,
   Description,
   ImageOne,
-  ImageWrapper,
   Item,
   ListItems,
   SignIn,
@@ -17,9 +16,7 @@ import {
 export const AuthNav = () => {
   return (
     <AuthContainer>
-      <ImageWrapper>
-        <ImageOne src={one} alt="Sport and fitness tracker" />
-      </ImageWrapper>
+      <ImageOne src={one} alt="Sport and fitness tracker" />
       <TextWrapper>
         <TitleOne>Set goals and achieve them</TitleOne>
         <Description>

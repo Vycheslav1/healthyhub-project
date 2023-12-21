@@ -1,4 +1,3 @@
-import parameters from 'src/images/parameters.png';
 import {
   BodyParametersContainer,
   BodyParametersTitle,
@@ -12,6 +11,7 @@ import {
   BodyParametersButtonNext,
   BodyParametersButtonBack,
 } from './BodyParametersStyled';
+import parameters from 'src/images/parameters.png';
 
 export const BodyParameters = ({ formik, next, prev }) => {
   const validateAndMoveNext = async () => {
@@ -20,7 +20,6 @@ export const BodyParameters = ({ formik, next, prev }) => {
     if (Object.keys(errors).length === 0) {
       next();
     }
-    console.log(errors);
   };
   return (
     <BodyParametersContainer>
@@ -42,6 +41,12 @@ export const BodyParameters = ({ formik, next, prev }) => {
                 value={formik.values.height}
                 onChange={formik.handleChange}
                 placeholder="Enter your height"
+                style={{
+                  border:
+                    formik.values.height === '' && !formik.touched.height
+                      ? '1px solid #e3ffa8'
+                      : '1px solid #3CBC81',
+                }}
               />
             </BodyParametersLabel>
             <BodyParametersLabel>
@@ -52,6 +57,12 @@ export const BodyParameters = ({ formik, next, prev }) => {
                 value={formik.values.weight}
                 onChange={formik.handleChange}
                 placeholder="Enter your weight"
+                style={{
+                  border:
+                    formik.values.weight === '' && !formik.touched.weight
+                      ? '1px solid #e3ffa8'
+                      : '1px solid #3CBC81',
+                }}
               />
             </BodyParametersLabel>
           </BodyParametersWrapperLabel>

@@ -20,7 +20,6 @@ export const YourGoal = ({ formik, next, prev }) => {
     if (Object.keys(errors).length === 0) {
       next();
     }
-    console.log(errors);
   };
   return (
     <GoalContainer>
