@@ -2,64 +2,129 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const AuthContainer = styled.div`
-  display: flex;
-  padding: 40px 150px 72px 150px;
+  width: 320px;
+  padding: 24px 10px 40px 10px;
   margin: auto;
-`;
-export const ImageWrapper = styled.div`
-  background-color: #050505;
+
+  @media (min-width: 768px) {
+    width: 834px;
+    padding: 40px 195px 286px 195px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 1440px;
+    display: flex;
+    padding: 40px 150px 72px 150px;
+  }
 `;
 
 export const ImageOne = styled.img`
-  width: 592px;
-  height: 588px;
+  width: 300px;
+  height: 296px;
+
+  @media (min-width: 768px) {
+    width: 380px;
+    height: 376px;
+    margin: auto;
+  }
+
+  @media (min-width: 1024px) {
+    width: 592px;
+    height: 588px;
+  }
 `;
 
 export const TextWrapper = styled.div`
-  /* width: 444px; */
-  margin-top: 80px;
-  margin-left: 104px;
-  width: 50%;
+  @media (min-width: 768px) {
+  }
+
+  @media (min-width: 1024px) {
+    margin-top: 80px;
+    margin-left: 104px;
+    width: 50%;
+  }
 `;
 
 export const TitleOne = styled.h1`
-  width: 424px;
+  width: 300px;
   color: #fff;
   font-family: Poppins;
-  font-size: 30px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 500;
-  line-height: 36px;
-  margin-top: 0;
+  line-height: 30px;
+  text-align: start;
+  margin-top: 24px;
   margin-bottom: 16px;
+
+  @media (min-width: 768px) {
+    width: 424px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 36px;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 1024px) {
+    width: 444px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    text-align: start;
+  }
 `;
 export const Description = styled.p`
-  width: 444px;
-  color: #b6b6b6;
+  width: 300px;
+  color: var(--Color-Primary-Grey, #b6b6b6);
   font-family: Poppins;
-  font-size: 22px;
+  text-align: start;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 32px;
+  line-height: 24px;
   margin-top: 0;
   margin-bottom: 24px;
+
+  @media (min-width: 768px) {
+    width: 320px;
+    text-align: center;
+    font-size: 22px;
+    line-height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 1024px) {
+    text-align: start;
+  }
 `;
 
 export const ButtonWrapper = styled.div`
   display: flex;
-  margin-bottom: 80px;
   gap: 0 16px;
+  margin-bottom: 40px;
+
+  @media (min-width: 768px) {
+    width: 444px;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: 1024px) {
+    margin-bottom: 80px;
+  }
 `;
 
 export const SignIn = styled(NavLink)`
-  width: 192px;
-  border-radius: 12px;
-  background: var(--Color-Primary-Green-Lite, #e3ffa8);
+  width: 122px;
   display: flex;
   padding: 8px 10px;
   flex-direction: column;
-  /* align-items: flex-start; */
   gap: 10px;
+  border-radius: 12px;
+  background: var(--Color-Primary-Green-Lite, #e3ffa8);
+  text-decoration: none;
   color: var(--Color-Primary-Black-2, #0f0f0f);
   text-align: center;
   font-family: Poppins;
@@ -67,7 +132,13 @@ export const SignIn = styled(NavLink)`
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
-  text-decoration: none;
+
+  @media (min-width: 768px) {
+    width: 192px;
+  }
+
+  @media (min-width: 1024px) {
+  }
 `;
 
 export const SignUp = styled(NavLink)`
@@ -79,11 +150,21 @@ export const SignUp = styled(NavLink)`
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
-  padding: 8px 10px;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+
+  @media (min-width: 768px) {
+  }
+
+  @media (min-width: 1024px) {
+  }
 `;
 export const ListItems = styled.ul`
-  list-style: none;
+  padding: 0;
+  margin: 0;
   width: 234px;
   color: var(--Color-Primary-White, #fff);
   font-family: Poppins;
@@ -91,17 +172,46 @@ export const ListItems = styled.ul`
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
 
-  li::before {
-    content: '•';
-    color: #e3ffa8;
+  li:before {
+    content: '';
     width: 8px;
     height: 8px;
+    border-radius: 50%;
     margin-right: 8px;
+    display: flex;
+    align-self: center;
+    background-color: #e3ffa8;
+  }
+
+  @media (min-width: 768px) {
+    width: 360px;
+    height: 56px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+  }
+
+  @media (min-width: 1024px) {
+    width: 234px;
+    flex-direction: column;
+    flex-wrap: nowrap;
   }
 `;
 
 export const Item = styled.li`
-  margin-bottom: 16px;
+  margin: 0;
+  display: flex;
+  @media (min-width: 768px) {
+  }
+
+  @media (min-width: 1024px) {
+    margin-bottom: 16px;
+  }
 `;

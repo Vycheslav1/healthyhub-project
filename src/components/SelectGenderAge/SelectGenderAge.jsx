@@ -22,7 +22,6 @@ export const SelectGenderAge = ({ formik, next, prev }) => {
     if (Object.keys(errors).length === 0) {
       next();
     }
-    console.log(errors);
   };
   return (
     <GenderContainer>
@@ -66,6 +65,12 @@ export const SelectGenderAge = ({ formik, next, prev }) => {
               placeholder="Enter your age"
               value={formik.values.age}
               onChange={formik.handleChange}
+              style={{
+                border:
+                  formik.values.age === '' && !formik.touched.age
+                    ? '1px solid #e3ffa8'
+                    : '1px solid #3CBC81',
+              }}
             />
           </AgeLabel>
           <ButtonGenderNext
