@@ -5,7 +5,6 @@ import {
   ButtonWrapper,
   Description,
   ImageOne,
-  ImageWrapper,
   Item,
   ListItems,
   SignIn,
