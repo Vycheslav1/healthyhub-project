@@ -1,6 +1,6 @@
-import ketogenicDiet from '../../Images/ketogenicDiet.png';
+import ketogenicDiet from 'src/images/ketogenicDiet.png';
 import { RecommendedList } from '../../components/RecommendedList/RecommendedList';
-import { Img, Title, Wrapper } from './RecomendedFood.styled';
+import { Img, Title, Wrapper } from './RecommendedFoodStyled';
 
 export const RecommendedFood = () => {
   // const [foodRecommended, setFoodRecommended] = useState([]);

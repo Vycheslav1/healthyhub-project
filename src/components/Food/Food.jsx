@@ -1,22 +1,20 @@
 import {
-    FoodWrapper,
-    FoodHead,
-    GraphWrapper,
-    TotalCalorieWrapper,
-    CarboWrapper,
-    ItemWrapper,
-    NutritionWrapper,
-    CalorieHead,
-    GoalWrapper,
-    CrboSpan,
-    LeftWrapper,
-    ProtWrapper,
-    FatWrapper
-} from './Food.styled'
-
+  FoodWrapper,
+  FoodHead,
+  GraphWrapper,
+  TotalCalorieWrapper,
+  CarboWrapper,
+  ItemWrapper,
+  NutritionWrapper,
+  CalorieHead,
+  GoalWrapper,
+  CrboSpan,
+  LeftWrapper,
+  ProtWrapper,
+  FatWrapper,
+} from './FoodStyled';
 
 export default function Food() {
-  
   return (
     <FoodWrapper>
       <FoodHead>Food</FoodHead>
@@ -71,9 +69,7 @@ export default function Food() {
               <NutritionWrapper>
                 <GoalWrapper>
                   Goal:
-                                  <CrboSpan  >
-                                      {/* {goalСarbohydrates} */}
-                                  </CrboSpan>
+                  <CrboSpan>{/* {goalСarbohydrates} */}</CrboSpan>
                 </GoalWrapper>
                 <LeftWrapper>
                   left:
@@ -85,7 +81,7 @@ export default function Food() {
             </ItemWrapper>
           </CarboWrapper>
           <ProtWrapper>
-             {/* <div style={{ width: '48px', height: '48px' }}>
+            {/* <div style={{ width: '48px', height: '48px' }}>
               <CircularProgressbar
                 strokeWidth={10}
                 value={percentNutrition(goalProtein, usedProtein)}
@@ -102,9 +98,7 @@ export default function Food() {
               <CalorieHead>Protein</CalorieHead>
               <NutritionWrapper>
                 <GoalWrapper>
-                                  Goal: <CrboSpan>
-                                      {/* {goalProtein} */}
-                                  </CrboSpan>
+                  Goal: <CrboSpan>{/* {goalProtein} */}</CrboSpan>
                 </GoalWrapper>
                 <LeftWrapper>
                   left:{' '}
@@ -133,15 +127,11 @@ export default function Food() {
               <CalorieHead>Fat</CalorieHead>
               <NutritionWrapper>
                 <GoalWrapper>
-                                  Goal: <CrboSpan>
-                                      {/* {goalFat} */}
-                                  </CrboSpan>
+                  Goal: <CrboSpan>{/* {goalFat} */}</CrboSpan>
                 </GoalWrapper>
                 <LeftWrapper>
                   left:{' '}
-                  <CrboSpan>
-                    {/* {leftNutrient(goalFat, usedFat)} */}
-                  </CrboSpan>
+                  <CrboSpan>{/* {leftNutrient(goalFat, usedFat)} */}</CrboSpan>
                 </LeftWrapper>
               </NutritionWrapper>
             </ItemWrapper>

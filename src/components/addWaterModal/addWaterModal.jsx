@@ -3,25 +3,24 @@ import Notiflix from 'notiflix';
 import { useDispatch } from 'react-redux';
 import { addWater } from '../../redux/usersGoal/operations';
 import {
-    ModalOverly,
-    ModalContentAlt,
-    ModalHeadAlt,
-    AltText,
-    AltText2,
-    ModalForm,
-    ModalInput,
-    ModalBtnConfirm,
-    ModalContent,
-    ModalHead,
-    ModalLabel,
-    ModalBtnCancel
- } from './addWaterModal.styled'
+  ModalOverly,
+  ModalContentAlt,
+  ModalHeadAlt,
+  AltText,
+  AltText2,
+  ModalForm,
+  ModalInput,
+  ModalBtnConfirm,
+  ModalContent,
+  ModalHead,
+  ModalLabel,
+  ModalBtnCancel,
+} from './addWaterModalStyled';
 const AddWaterModal = ({ closeModal, waterGoal, waterUsed }) => {
+  const dispatch = useDispatch();
+  Notiflix.Notify.init({ zindex: 100000, position: 'center-top' });
 
-    const dispatch = useDispatch();
-    Notiflix.Notify.init({ zindex: 100000, position: 'center-top' });
-
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.currentTarget;
     const login = Number(form.elements.number.value);
@@ -38,7 +37,7 @@ const AddWaterModal = ({ closeModal, waterGoal, waterUsed }) => {
     form.reset();
     closeModal();
   };
-  const handleOnClose = e => {
+  const handleOnClose = (e) => {
     if (e.code === 'Escape') {
       closeModal();
     }
@@ -46,61 +45,53 @@ const AddWaterModal = ({ closeModal, waterGoal, waterUsed }) => {
 
   window.addEventListener('keydown', handleOnClose);
 
-  const handleOverlyClick = e => {
+  const handleOverlyClick = (e) => {
     if (e.currentTarget === e.target) {
       closeModal();
     }
   };
   return (
     <ModalOverly onClick={handleOverlyClick}>
-          {waterUsed >= waterGoal ? (
-              <ModalContentAlt>
-                  <ModalHeadAlt>Good result buddy</ModalHeadAlt>
+      {waterUsed >= waterGoal ? (
+        <ModalContentAlt>
+          <ModalHeadAlt>Good result buddy</ModalHeadAlt>
 
-                  <AltText>Yours daily goal achieved</AltText>
+          <AltText>Yours daily goal achieved</AltText>
 
-                  <AltText2>
-                      But don’t stop, remember, there is never too much water
-                  </AltText2>
-                  <ModalForm onSubmit={handleSubmit}>
-                      <ModalInput
-                          type="number"
-                          name="number"
-                          placeholder="Enter milliliters"
-                      />
+          <AltText2>
+            But don’t stop, remember, there is never too much water
+          </AltText2>
+          <ModalForm onSubmit={handleSubmit}>
+            <ModalInput
+              type="number"
+              name="number"
+              placeholder="Enter milliliters"
+            />
 
-                      <ModalBtnConfirm type="submit">
-                          Confirm
-                      </ModalBtnConfirm>
+            <ModalBtnConfirm type="submit">Confirm</ModalBtnConfirm>
 
-                      <ModalBtnCancel onClick={closeModal}>
-                          Cancel
-                      </ModalBtnCancel>
-                  </ModalForm>
-              </ModalContentAlt>
-          ) : (
-              <ModalContent>
-                  <ModalHead>Add water intake</ModalHead>
+            <ModalBtnCancel onClick={closeModal}>Cancel</ModalBtnCancel>
+          </ModalForm>
+        </ModalContentAlt>
+      ) : (
+        <ModalContent>
+          <ModalHead>Add water intake</ModalHead>
 
-                  <ModalForm>
-                      <ModalLabel>How much water</ModalLabel>
+          <ModalForm>
+            <ModalLabel>How much water</ModalLabel>
 
-                      <ModalInput
-                          type="number"
-                          name="number"
-                          placeholder="Enter milliliters"
-                      />
+            <ModalInput
+              type="number"
+              name="number"
+              placeholder="Enter milliliters"
+            />
 
-                      <ModalBtnConfirm type="submit">
-                          Confirm
-                      </ModalBtnConfirm>
+            <ModalBtnConfirm type="submit">Confirm</ModalBtnConfirm>
 
-                      <ModalBtnCancel onClick={closeModal}>
-                          Cancel
-                      </ModalBtnCancel >
-                  </ModalForm>
-              </ModalContent>
-          )}
+            <ModalBtnCancel onClick={closeModal}>Cancel</ModalBtnCancel>
+          </ModalForm>
+        </ModalContent>
+      )}
     </ModalOverly>
   );
 };

@@ -1,11 +1,10 @@
 import {
-    RecomendedList,
-    // Item,
-    RecomendedName,
-    Calories,
-    RecomendedSpan
-} from './RecommendedFoodOnMain.styled'
-
+  RecomendedList,
+  // Item,
+  RecomendedName,
+  Calories,
+  RecomendedSpan,
+} from './RecommendedFoodOnMainStyled';
 
 function RecommendedFoodList() {
   return (
@@ -19,18 +18,16 @@ function RecommendedFoodList() {
               src={product.img}
               alt={product.name}
             /> */}
-            <div>
-              <RecomendedName>
-                  {/* {product.name} */}
-              </RecomendedName>
-              <Calories>
-                <RecomendedSpan>100 g </RecomendedSpan>
-                  {/* {product.calories} */}
-                  calories
-              </Calories>
-            </div>
-          {/* </Item> */}
-    {/* //     );
+      <div>
+        <RecomendedName>{/* {product.name} */}</RecomendedName>
+        <Calories>
+          <RecomendedSpan>100 g </RecomendedSpan>
+          {/* {product.calories} */}
+          calories
+        </Calories>
+      </div>
+      {/* </Item> */}
+      {/* //     );
     //   })} */}
     </RecomendedList>
   );
