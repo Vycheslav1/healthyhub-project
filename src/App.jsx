@@ -12,13 +12,21 @@ import { ForgotPasswordPage } from '../src/pages/ForgotPasswordPage';
 import { RestrictedRoude } from './components/RestrictedRoude';
 import { PrivateRoute } from './components/PrivateRoute';
 import { OnePage } from './pages/OnePage';
-import { DashboardPage } from './pages/DashboardPage/DashboardPage';
 
 // const test = import.meta.env.VITE_API_TEST;
 
 function App() {
-  // console.log(test);
-  return (
+  const dispatch = useDispatch();
+
+  const { isRefreshing } = useAuth();
+
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
+
+  return isRefreshing ? (
+    <b>Refreshing user...</b>
+  ) : (
     <AppWrapper>
       <Routes>
         <Route></Route>
@@ -42,10 +50,16 @@ function App() {
           }
         />
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-
-        <Route path="/dashboard" element={<DashboardPage />} />
+        {/* <Route path="/" element={<SharedLayout />}>
+          <Route path="/first" element={<FirstPage />} />
+          <Route path="/second" element={<SecondPage />}>
+            <Route path=":half" element={<HalfPage />} />
+          </Route>
+          <Route path="*" element={<ErrorPage />} />
+        </Route> */}
       </Routes>
     </AppWrapper>
   );
 }
+
 export default App;

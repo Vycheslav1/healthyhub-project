@@ -1,4 +1,4 @@
-import gender from '../../Images/gender.png';
+import gender from 'src/images/gender.png';
 import {
   AgeInput,
   AgeLabel,
@@ -14,7 +14,7 @@ import {
   GenresWrapper,
   InputGenres,
   Label,
-} from './SelectGenderAge.styled';
+} from './SelectGenderAgeStyled';
 
 export const SelectGenderAge = ({ formik, next, prev }) => {
   const validateAndMoveNext = async () => {
@@ -22,7 +22,6 @@ export const SelectGenderAge = ({ formik, next, prev }) => {
     if (Object.keys(errors).length === 0) {
       next();
     }
-    console.log(errors);
   };
   return (
     <GenderContainer>
@@ -34,7 +33,7 @@ export const SelectGenderAge = ({ formik, next, prev }) => {
         <GenderDescription>
           Choose a goal so that we can help you effectively
         </GenderDescription>
-        <FormGenres>
+        <FormGenres autoComplete="off">
           <GenresText>Gender</GenresText>
           <GenderRadioWrapper>
             <Label>
@@ -66,11 +65,23 @@ export const SelectGenderAge = ({ formik, next, prev }) => {
               placeholder="Enter your age"
               value={formik.values.age}
               onChange={formik.handleChange}
+              style={{
+                border:
+                  formik.values.age === '' && !formik.touched.age
+                    ? '1px solid #e3ffa8'
+                    : '1px solid #3CBC81',
+              }}
             />
           </AgeLabel>
           <ButtonGenderNext
+            style={{
+              boxShadow:
+                !formik.isValid || !formik.values.gender
+                  ? 'none'
+                  : '0px 0px 5px #e3ffa8',
+            }}
             type="button"
-            // disabled={!formik.isValid || !formik.values.gender}
+            disabled={!formik.isValid || !formik.values.gender}
             onClick={validateAndMoveNext}
             // onClick={next}
           >
