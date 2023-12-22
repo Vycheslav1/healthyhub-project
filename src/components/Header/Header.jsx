@@ -25,7 +25,7 @@ import {
   UserInfoButton,
   UserSvg,
   UserAvatar,
-} from './Header.styled';
+} from './HeaderStyled';
 
 import sprite from '/src/components/Header/images-for-header/icons.svg';
 
