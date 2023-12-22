@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import SharedLayout from 'components/SharedLayout/SharedLayout';
 import FirstPage from 'pages/FirstPage/FirstPage';
 import SecondPage from 'pages/SecondPage/SecondPage';
@@ -13,9 +14,22 @@ import { RecommendedFood } from 'pages/RecommendedFood/RecommendedFood';
 import { RestrictedRoude } from 'components/RestrictedRoude';
 import { PrivateRoute } from 'components/PrivateRoute';
 import { OnePage } from 'pages/OnePage';
+import { useEffect } from 'react';
+import { refreshUser } from './redux/auth/operations';
+import { useAuth } from 'src/hooks/useAuth';
 
 function App() {
-  return (
+  const dispatch = useDispatch();
+
+  const { isRefreshing } = useAuth();
+
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
+
+  return isRefreshing ? (
+    <b>Refreshing user...</b>
+  ) : (
     <AppWrapper>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
@@ -23,7 +37,7 @@ function App() {
           <Route
             path="/signup"
             element={
-              <RestrictedRoude redirectTo="/dairy" component={<SingUpPage />} />
+              <RestrictedRoude redirectTo="/main" component={<SingUpPage />} />
             }
           />
           <Route
@@ -46,4 +60,5 @@ function App() {
     </AppWrapper>
   );
 }
+
 export default App;

@@ -165,9 +165,9 @@ export const BodyParametersInput = styled.input`
   gap: 10px;
   border-radius: 12px;
   border: 1px solid var(--Color-Primary-Green-Lite, #e3ffa8);
-  background-color: transparent;
   color: #fff;
   outline: transparent;
+  background: var(--Color-Primary-Black-2, #0f0f0f);
 
   @media (min-width: 768px) {
   }
@@ -217,6 +217,5 @@ export const BodyParametersButtonBack = styled.button`
 
   @media (min-width: 1024px) {
     width: 192px;
-    margin-top: 20px;
   }
 `;

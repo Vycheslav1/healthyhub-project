@@ -116,6 +116,7 @@ export const ForgotPasswordFormWrapper = styled.form`
 `;
 
 export const ForgotPasswordLabel = styled.label`
+  position: relative;
   width: 300px;
   border-radius: 12px;
   border: 1px solid var(--Color-Primary-Green-Lite, #e3ffa8);
@@ -132,7 +133,8 @@ export const ForgotPasswordLabel = styled.label`
 
   @media (min-width: 768px) {
     width: 380px;
-    font-family: Poppins;
+    margin: auto;
+    display: flex;
   }
 
   @media (min-width: 1024px) {
@@ -176,6 +178,7 @@ export const ForgotPasswordButton = styled.button`
 
   @media (min-width: 768px) {
     width: 380px;
+    /* margin: 0; */
   }
 
   @media (min-width: 1024px) {
@@ -227,6 +230,23 @@ export const ForgotPasswordLink = styled(NavLink)`
   font-weight: 500;
   line-height: 20px;
 
+  @media (min-width: 768px) {
+  }
+
+  @media (min-width: 1024px) {
+  }
+`;
+
+export const ErrorsMessage = styled.div`
+  color: red;
+  margin-top: 15px;
+  text-align: center;
+`;
+
+export const IconSpan = styled.img`
+  position: absolute;
+  top: 30%;
+  right: 5%;
   @media (min-width: 768px) {
   }
 
