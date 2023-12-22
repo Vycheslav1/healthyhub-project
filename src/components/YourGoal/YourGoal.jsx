@@ -1,4 +1,4 @@
-import goal from '../../images/goals.png';
+import goal from 'src/images/goals.png';
 import {
   ButtonBackGoals,
   ButtonNextGoals,
@@ -11,7 +11,7 @@ import {
   InputGoal,
   Label,
   TitleGoals,
-} from './YourGoal.styled';
+} from './YourGoalStyled';
 
 export const YourGoal = ({ formik, next, prev }) => {
   const validateAndMoveNext = async () => {
@@ -20,7 +20,6 @@ export const YourGoal = ({ formik, next, prev }) => {
     if (Object.keys(errors).length === 0) {
       next();
     }
-    console.log(errors);
   };
   return (
     <GoalContainer>
@@ -68,9 +67,15 @@ export const YourGoal = ({ formik, next, prev }) => {
             {/* {formik.errors.goal && <div>{formik.errors.goal}</div>} */}
           </FormRadioWrapper>
           <ButtonNextGoals
+            style={{
+              boxShadow:
+                !formik.isValid || !formik.values.goal
+                  ? 'none'
+                  : '0px 0px 5px #e3ffa8',
+            }}
             type="button"
             onClick={validateAndMoveNext}
-            // disabled={!formik.isValid || !formik.values.goal}
+            disabled={!formik.isValid || !formik.values.goal}
           >
             Next
           </ButtonNextGoals>

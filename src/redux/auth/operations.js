@@ -19,6 +19,7 @@ export const delAuthHeader = () => {
   instance.defaults.headers.common.Authorization = '';
 };
 
+//signup
 export const register = createAsyncThunk(
   'auth/register',
   async (credentials, thunkAPI) => {
@@ -31,7 +32,7 @@ export const register = createAsyncThunk(
     }
   }
 );
-
+//signin
 export const logIn = createAsyncThunk(
   'auth/login',
   async (credentials, thunkAPI) => {
@@ -45,6 +46,7 @@ export const logIn = createAsyncThunk(
   }
 );
 
+//signout
 export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
     await axios.post('/users/logout');
@@ -105,6 +107,27 @@ export const refreshUser = createAsyncThunk(
       setAuthHeader(persistedToken);
       const res = await axios.get('/users/current');
       return res.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+//forgot-password
+// https://nodejs-rest-api-ljp2.onrender.com/users/forgot-password
+// http://localhost:3000/users/forgot-password
+// ВІДКОРЕГУВАТИ ЕНДПОІНТ
+export const forgotPassword = createAsyncThunk(
+  'auth/forgotPassword',
+  async (credentials, thunkAPI) => {
+    try {
+      const { data } = await axios.post(
+        'http://localhost:3000/users/forgot-password',
+        credentials
+      );
+      setAuthHeader(data.token);
+      console.log(data);
+      return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
