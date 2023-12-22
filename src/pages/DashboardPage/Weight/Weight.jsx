@@ -1,26 +1,58 @@
-import { Line } from 'react-chartjs-2';
+// import { nanoid } from 'nanoid';
+// import { getDate, parseISO } from 'date-fns';
+// import { avarageValue } from '../../../utils/DashBoard/avarageValue';
+// import {
+//   WeightBody,
+//   WeigthFrame,
+//   WeigthItem,
+//   ScrollWrap,
+//   GraphicHeader,
+//   GraphicTitle,
+//   Avarage,
+//   Value,
+//   WeightData,
+//   WeightDate,
+//   Stub,
+// } from '../DashboardPage.styled';
 
-const WeightChart = ({ averageValue, data, labels }) => {
-  const chartData = {
-    labels: labels,
-    datasets: [
-      {
-        label: 'Weight',
-        data: data,
-        fill: false,
-        borderColor: 'rgba(255, 99, 132, 1)',
-        tension: 0.1,
-      },
-    ],
-  };
+// export const Weight = ({ name, data: dataWeight, period }) => {
+//   if (!dataWeight) {
+//     return;
+//   }
 
-  return (
-    <div>
-      <h2>Weight</h2>
-      <p>{`Average value: ${averageValue}`}</p>
-      <Line data={chartData} />
-    </div>
-  );
-};
+//   const dateOrMonth = (date, period) => {
+//     if (period.value === 'lastYear') {
+//       return date.substring(0, 3);
+//     }
+//     return getDate(parseISO(date));
+//   };
 
-export default WeightChart;
+//   return (
+//     <>
+//       <WeightBody>
+//         <GraphicHeader>
+//           <GraphicTitle>{name}</GraphicTitle>
+//           <Avarage>
+//             Avarage value:<Value>{avarageValue(dataWeight)} kg</Value>
+//           </Avarage>
+//         </GraphicHeader>
+//         <ScrollWrap>
+//           <WeigthFrame>
+//             {dataWeight.length ? (
+//               dataWeight.map(({ value, date }) => {
+//                 return (
+//                   <WeigthItem key={nanoid()}>
+//                     <WeightData>{value}</WeightData>
+//                     <WeightDate>{dateOrMonth(date, period)}</WeightDate>
+//                   </WeigthItem>
+//                 );
+//               })
+//             ) : (
+//               <Stub> Created by HealthyHub🍎Team</Stub>
+//             )}
+//           </WeigthFrame>
+//         </ScrollWrap>
+//       </WeightBody>
+//     </>
+//   );
+// };

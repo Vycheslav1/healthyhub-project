@@ -1,16 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
-import SharedLayout from 'components/SharedLayout/SharedLayout';
-import FirstPage from 'pages/FirstPage/FirstPage';
-import SecondPage from 'pages/SecondPage/SecondPage';
-import HalfPage from 'pages/HalfPage/HalfPage';
-import ErrorPage from 'pages/ErrorPage/ErrorPage';
+// import SharedLayout from 'components/SharedLayout/SharedLayout';
+// import FirstPage from 'pages/FirstPage/FirstPage';
+// import SecondPage from 'pages/SecondPage/SecondPage';
+// import HalfPage from 'pages/HalfPage/HalfPage';
+// import ErrorPage from 'pages/ErrorPage/ErrorPage';
 import { AppWrapper } from './App.styled';
-<<<<<<< HEAD
-import { lazy } from 'react';
-
-const test = import.meta.env.VITE_API_TEST;
-const DashboardPage = lazy(() => import('./pages/DashboardPage/DashboardPage'));
-=======
 import { MainPage } from '../src/pages/MainPage';
 import { SingUpPage } from '../src/pages/SingUpPage';
 import { SingInPage } from '../src/pages/SingInPage';
@@ -18,9 +12,9 @@ import { ForgotPasswordPage } from '../src/pages/ForgotPasswordPage';
 import { RestrictedRoude } from './components/RestrictedRoude';
 import { PrivateRoute } from './components/PrivateRoute';
 import { OnePage } from './pages/OnePage';
+import { DashboardPage } from './pages/DashboardPage/DashboardPage';
 
 // const test = import.meta.env.VITE_API_TEST;
->>>>>>> main
 
 function App() {
   // console.log(test);
@@ -48,23 +42,8 @@ function App() {
           }
         />
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-        {/* <Route path="/" element={<SharedLayout />}>
-          <Route path="/first" element={<FirstPage />} />
-          <Route path="/second" element={<SecondPage />}>
-            <Route path=":half" element={<HalfPage />} />
-          </Route>
-          <Route path="*" element={<ErrorPage />} />
-<<<<<<< HEAD
-        </Route>
-        <Route
-          path="/dashboard"
-          element={
-            <PrivateRoute redirectTo="/signin" component={<DashboardPage />} />
-          }
-        />
-=======
-        </Route> */}
->>>>>>> main
+
+        <Route path="/dashboard" element={<DashboardPage />} />
       </Routes>
     </AppWrapper>
   );

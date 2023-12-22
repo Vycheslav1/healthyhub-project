@@ -1,69 +1,89 @@
-import React, { useState, useEffect } from 'react';
-import { Line } from 'react-chartjs-2';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
+import Chart from './Chart/Chart';
+import DropdownSelect from '../DashboardPage/DropdownSelect/DropdownSelect';
+import {
+  Frame,
+  GraphicsFrame,
+  CaloriesFrame,
+  WaterFrame,
+} from './DashboardPage.styled';
+import { fetchStatistics } from '../../redux/statistic/operation';
+import {
+  selectCaloriesData,
+  selectWaterData,
+  selectWeightData,
+  selectMonthOptions,
+} from '../../pages/DashboardPage/SelectorPage/SelectorPage';
 
-const ChartComponent = () => {
-  const [selectedMonth, setSelectedMonth] = useState('current');
-  const [caloriesData, setCaloriesData] = useState({});
-  const [waterData, setWaterData] = useState({});
-  const [weightData, setWeightData] = useState({});
+export const DashboardPage = () => {
+  const [data, setData] = useState({ value: 'lastMonth', label: 'Last Month' });
 
-  useEffect(() => {
-    // Здесь потрібно отримати дані для графіків (caloriesData, waterData, weightData)
-    // на основі вибраного місяця (selectedMonth).
-    // Дані можна отримати, наприклад, із сервера чи локального сховища.
+  const monthOptions = useSelector(selectMonthOptions);
+  const caloriesData = useSelector((state) =>
+    selectCaloriesData(state, data.value)
+  );
+  const waterData = useSelector(selectWaterData);
+  const weightData = useSelector(selectWeightData);
 
-    const fetchData = async () => {
-      const result = await getDataFromServer(selectedMonth);
-      setCaloriesData(result.calories);
-      setWaterData(result.water);
-      setWeightData(result.weight);
-    };
+  const dispatch = useDispatch();
 
-    fetchData();
-  }, [selectedMonth]);
-
-  const options = {
-    scales: {
-      x: [{ title: 'Days', type: 'linear', position: 'bottom' }],
-      y: [{ title: 'Value', type: 'linear', position: 'left' }],
-    },
+  const onChange = (dat) => {
+    setData(dat);
   };
+  const handleMonthChange = (selectedMonth) => {
+    console.log('Selected month:', selectedMonth);
+    setData({ value: selectedMonth, label: selectedMonth });
+  };
+  useEffect(() => {
+    if (
+      !caloriesData ||
+      !waterData ||
+      !weightData ||
+      !caloriesData.length ||
+      !waterData.length ||
+      !weightData.length
+    ) {
+      dispatch(fetchStatistics());
+    }
+  }, [dispatch, caloriesData, waterData, weightData]);
 
   return (
-    <div className="container">
-      <div>
-        <label>
-          Select Month:
-          <select
-            value={selectedMonth}
-            onChange={(e) => setSelectedMonth(e.target.value)}
+    <>
+      <Frame className="Frame">
+        <DropdownSelect options={monthOptions} onChange={handleMonthChange} />
+        <GraphicsFrame className="GraphicsFrame">
+          <CaloriesFrame
+            className="CaloriesFrame"
+            onChange={onChange}
+            data={caloriesData}
           >
-            <option value="current">Current Month</option>
-            <option value="previous">Previous Month</option>
-          </select>
-        </label>
-        <p>{`Month: ${selectedMonth}`}</p>
-      </div>
-
-      <div>
-        <h2>Calories</h2>
-        <p>{`Average value: 1700 calories`}</p>
-        <Line data={caloriesData} options={options} />
-      </div>
-
-      <div>
-        <h2>Water</h2>
-        <p>{`Average value: 1700 ml`}</p>
-        <Line data={waterData} options={options} />
-      </div>
-
-      <div>
-        <h2>Weight</h2>
-        <p>{`Average value: 68 kg`}</p>
-        <Line data={weightData} options={options} />
-      </div>
-    </div>
+            <Chart
+              chartType="Calories"
+              data={caloriesData}
+              period={data}
+              labels={'Last Month'}
+              averageValue={'lastMonth'}
+            />
+          </CaloriesFrame>
+          <WaterFrame>
+            <Chart
+              chartType="Water"
+              data={waterData}
+              period={data}
+              labels={'Last Month'}
+              averageValue={'lastMonth'}
+            />
+          </WaterFrame>
+        </GraphicsFrame>
+        <Chart
+          chartType="Weight"
+          data={weightData}
+          period={data}
+          labels={'Last Month'}
+          averageValue={'lastMonth'}
+        />
+      </Frame>
+    </>
   );
 };
-
-export default ChartComponent;
