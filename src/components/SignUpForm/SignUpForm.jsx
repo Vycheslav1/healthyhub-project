@@ -42,6 +42,7 @@ export const SignUpForm = () => {
   };
 
   const dispatch = useDispatch();
+
   const validation = [
     Yup.object().shape({
       name: Yup.string().min(2, 'Too short').required('Name is required'),
@@ -49,7 +50,7 @@ export const SignUpForm = () => {
       password: Yup.string()
         .matches(
           /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
-          'Enter a valid Password.'
+          'Enter a valid Password (min 6 characters, 1 upper case, 1 lower case, 1 number)'
         )
         .required('Password is required'),
     }),
@@ -145,12 +146,9 @@ export const SignUpForm = () => {
                     <IconSpan src={correct} alt="Correct icon" />
                   )}
                 </Label>
-                {formik.errors.name &&
-                  formik.touched.name &&
-                  // formik.values.name !== ''
-                  formik.touched.name && (
-                    <ErrorsMessage>{formik.errors.name}</ErrorsMessage>
-                  )}
+                {formik.errors.name && formik.touched.name && (
+                  <ErrorsMessage>{formik.errors.name}</ErrorsMessage>
+                )}
               </div>
               <div>
                 <Label
@@ -178,13 +176,9 @@ export const SignUpForm = () => {
                     <IconSpan src={correct} alt="Correct icon" />
                   )}
                 </Label>
-
-                {formik.errors.email &&
-                  formik.touched.email &&
-                  // formik.values.email !== ''
-                  formik.touched.email && (
-                    <ErrorsMessage>{formik.errors.email}</ErrorsMessage>
-                  )}
+                {formik.errors.email && formik.touched.email && (
+                  <ErrorsMessage>{formik.errors.email}</ErrorsMessage>
+                )}
               </div>
               <div>
                 <Label
@@ -227,19 +221,17 @@ export const SignUpForm = () => {
                     </>
                   )}
                 </Label>
-                {formik.errors.password && formik.values.password !== '' ? (
+                {formik.errors.password &&
+                formik.touched.password &&
+                formik.values.password === '' ? (
                   <ErrorsMessage>{formik.errors.password}</ErrorsMessage>
-                ) : (
-                  formik.values.password !== '' && (
-                    <ErrorsMessage
-                      style={{
-                        color: '#3CBC81',
-                      }}
-                    >
-                      Correct
-                    </ErrorsMessage>
-                  )
-                )}
+                ) : formik.values.password !== '' && formik.errors.password ? (
+                  <ErrorsMessage>{formik.errors.password}</ErrorsMessage>
+                ) : formik.values.password !== '' && !formik.errors.password ? (
+                  <ErrorsMessage style={{ color: '#3CBC81' }}>
+                    Correct
+                  </ErrorsMessage>
+                ) : null}
               </div>
               <ButtonNext
                 style={{

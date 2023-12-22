@@ -13,18 +13,18 @@ export const MainPage = () => {
 
   return (
     <>
-      <h1>WELCOM TO YOUR DAIRY</h1>
+      <h1 style={{ color: 'white' }}>WELCOM TO YOUR DAIRY</h1>
       {name ? (
         <>
-          <p> Your dairy: {name}</p>
+          <p style={{ color: 'white' }}> Your dairy: {name}</p>
           <button type="button" onClick={handleLogOut}>
             LogOut
           </button>
         </>
       ) : (
         <>
-          <p>Email: tanya20@gmail.com</p>
-          <p>Password: tanya2020</p>
+          <p style={{ color: 'white' }}>Email: tanya30@gmail.com</p>
+          <p style={{ color: 'white' }}>Password: Tanya3030</p>
         </>
       )}
     </>

@@ -191,6 +191,7 @@ export const AgeLabel = styled.label`
 `;
 
 export const AgeInput = styled.input`
+  background: var(--Color-Primary-Black-2, #0f0f0f);
   width: 280px;
   display: flex;
   padding: 8px 10px;
@@ -200,7 +201,6 @@ export const AgeInput = styled.input`
   border-radius: 12px;
   border: 1px solid var(--Color-Primary-Green-Lite, #e3ffa8);
   color: #fff;
-  background-color: transparent;
   outline: transparent;
 
   @media (min-width: 768px) {
@@ -255,6 +255,5 @@ export const ButtonGenderBack = styled.button`
 
   @media (min-width: 1024px) {
     width: 192px;
-    margin-top: 20px;
   }
 `;

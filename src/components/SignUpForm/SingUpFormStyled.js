@@ -157,7 +157,7 @@ export const Label = styled.label`
   }
 
   @media (min-width: 1024px) {
-    position: relative;
+    /* position: relative; */
     width: 212px;
     height: 36px;
     display: flex;

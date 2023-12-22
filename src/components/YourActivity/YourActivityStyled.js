@@ -180,6 +180,7 @@ export const ActivityButtonSignUp = styled.button`
     width: 192px;
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 20px;
   }
 `;
 
@@ -204,7 +205,6 @@ export const ActivityButtonBack = styled.button`
 
   @media (min-width: 1024px) {
     width: 192px;
-    margin-top: 20px;
     margin-left: 0;
     margin-right: 0;
   }

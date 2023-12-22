@@ -1,6 +1,10 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+export const instance = axios.create({
+  baseURL: 'https://github.com/Alex1Go/back-healthy-hub',
+});
+
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
 const setAuthHeader = (token) => {
@@ -9,6 +13,10 @@ const setAuthHeader = (token) => {
 
 const clearAuthHeader = () => {
   axios.defaults.headers.common.Authorization = '';
+};
+
+export const delAuthHeader = () => {
+  instance.defaults.headers.common.Authorization = '';
 };
 
 //signup
@@ -47,6 +55,44 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
     return thunkAPI.rejectWithValue(error.message);
   }
 });
+
+export const logOutThunk = createAsyncThunk(
+  'auth/logOut',
+  async (_, thunkAPI) => {
+    try {
+      await instance.post('api/users/logout');
+      delAuthHeader();
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+// PUT /api/user/goal
+export const updateGoalThunk = createAsyncThunk(
+  'auth/updateGoal',
+  async (credentials, thunkAPI) => {
+    try {
+      const response = await instance.put('api/user/goal', credentials);
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+// PUT /api/user/weight
+export const updateWeightThunk = createAsyncThunk(
+  'auth/updateWeight',
+  async (credentials, thunkAPI) => {
+    try {
+      const response = await instance.put('api/user/weight', credentials);
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
 
 export const refreshUser = createAsyncThunk(
   'auth/refresh',
