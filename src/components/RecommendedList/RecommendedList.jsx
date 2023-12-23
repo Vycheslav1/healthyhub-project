@@ -7,7 +7,7 @@ export const RecommendedList = () => {
         <img
           width="46px"
           height="46px"
-          src={'https://placebear.com/400/600'}
+          src={'www'}
           alt={'bear'}
         />
         <div>
