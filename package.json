@@ -74,5 +74,10 @@
   "lint-staged": {
     "*.{js,jsx}": "eslint --cache --fix",
     "*./src": "prettier --write"
-  }
+  },
+  "description": "Цей проєкт було створено за допомогою [Create Vite](https://vitejs.dev/). Для\r знайомства і налаштування додаткових можливостей\r [звернися до документації](https://vitejs.dev/guide/).",
+  "main": "vite.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
