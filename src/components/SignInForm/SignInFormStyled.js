@@ -120,6 +120,11 @@ export const SignInLabel = styled.label`
   border-radius: 12px;
   border: 1px solid var(--Color-Primary-Green-Lite, #e3ffa8);
   background: var(--Color-Primary-Black-2, #0f0f0f);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 
   @media (min-width: 768px) {
     width: 380px;
@@ -137,7 +142,7 @@ export const SignInLabel = styled.label`
 `;
 
 export const SignInInput = styled.input`
-  width: 280px;
+  width: 255px;
   background-color: transparent;
   border: none;
   border-radius: 12px;
@@ -146,10 +151,11 @@ export const SignInInput = styled.input`
   outline: none;
 
   @media (min-width: 768px) {
+    width: 320px;
   }
 
   @media (min-width: 1024px) {
-    width: 192px;
+    width: 175px;
   }
 `;
 

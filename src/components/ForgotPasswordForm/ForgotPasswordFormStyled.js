@@ -116,6 +116,7 @@ export const ForgotPasswordFormWrapper = styled.form`
 `;
 
 export const ForgotPasswordLabel = styled.label`
+  display: flex;
   position: relative;
   width: 300px;
   border-radius: 12px;
@@ -134,7 +135,6 @@ export const ForgotPasswordLabel = styled.label`
   @media (min-width: 768px) {
     width: 380px;
     margin: auto;
-    display: flex;
   }
 
   @media (min-width: 1024px) {
@@ -145,7 +145,7 @@ export const ForgotPasswordLabel = styled.label`
 `;
 
 export const ForgotPasswordInput = styled.input`
-  width: 280px;
+  width: 255px;
   border: transparent;
   color: white;
   outline: none;
@@ -154,11 +154,11 @@ export const ForgotPasswordInput = styled.input`
   border-radius: 12px;
 
   @media (min-width: 768px) {
-    width: 360px;
+    width: 330px;
   }
 
   @media (min-width: 1024px) {
-    width: 192px;
+    width: 170px;
   }
 `;
 

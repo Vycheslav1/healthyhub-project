@@ -55,7 +55,7 @@ export const SignInForm = () => {
     }),
 
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      // alert(JSON.stringify(values, null, 2));
       console.log(values);
       dispatch(
         logIn({
@@ -158,7 +158,22 @@ export const SignInForm = () => {
                 Correct
               </ErrorsMessage>
             ) : null}
-            <SignInButton type="submit">Sing in</SignInButton>
+            <SignInButton
+              style={{
+                boxShadow:
+                  !formik.isValid || !formik.dirty || !formik.touched
+                    ? 'none'
+                    : '0px 0px 5px #e3ffa8',
+                backgroundColor:
+                  !formik.isValid || !formik.dirty || !formik.touched
+                    ? 'lightgray'
+                    : '#e3ffa8',
+              }}
+              type="submit"
+              disabled={!formik.isValid || !formik.dirty || !formik.touched}
+            >
+              Sing in
+            </SignInButton>
           </FormSignIn>
           <FootWrapperOne>
             <FootLinkOne to={'/forgot-password'}>

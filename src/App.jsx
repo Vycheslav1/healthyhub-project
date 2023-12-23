@@ -6,16 +6,16 @@ import { SingUpPage } from 'pages/SingUpPage';
 import { SingInPage } from 'pages/SingInPage';
 import { ForgotPasswordPage } from 'pages/ForgotPasswordPage';
 import { RecommendedFood } from 'pages/RecommendedFood/RecommendedFood';
-
 import { OnePage } from 'pages/OnePage';
 import { useEffect } from 'react';
 import { refreshUser } from './redux/auth/operations';
 import { useAuth } from 'src/hooks/useAuth';
-import { PrivateRoute } from './components/PriveteRoute/PrivateRoute';
+import { PrivateRoute } from './components/PrivateRoute';
 import { SettingPage } from './pages/SettingPage/SettingPage';
 import { DiaryPage } from './pages/DiaryPage/DiaryPage';
 import { Dashboard } from './components/Dashboard/Dashboard';
-import { RestrictedRoute } from './components/RestrictedRoute/RestrictedRoude';
+import { RestrictedRoute } from './components/RestrictedRoute';
+import { Loader } from './components/Loader/Loader';
 
 function App() {
   const dispatch = useDispatch();
@@ -26,14 +26,14 @@ function App() {
     dispatch(refreshUser());
   }, [dispatch]);
 
-  // const { isLoggedIn } = useAuth();
+  const { isLoggedIn } = useAuth();
 
   return isRefreshing ? (
-    <b>Refreshing user...</b>
+    <Loader />
   ) : (
     <Routes>
       <Route path="/" element={<SharedLayout />}>
-        <Route index element={<OnePage />} />
+        <Route index element={isLoggedIn ? <MainPage /> : <OnePage />} />
         <Route
           path="signup"
           element={
