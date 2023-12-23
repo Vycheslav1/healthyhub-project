@@ -239,6 +239,10 @@ export const SignUpForm = () => {
                     !formik.isValid || !formik.dirty || !formik.touched
                       ? 'none'
                       : '0px 0px 5px #e3ffa8',
+                  backgroundColor:
+                    !formik.isValid || !formik.dirty || !formik.touched
+                      ? 'lightgray'
+                      : '#e3ffa8',
                 }}
                 type="button"
                 disabled={!formik.isValid || !formik.dirty || !formik.touched}

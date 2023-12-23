@@ -72,8 +72,11 @@ export const TitleOne = styled.h1`
     margin-top: 0;
     margin-bottom: 16px;
     text-align: start;
+    margin-left: 0;
+    margin-right: 0;
   }
 `;
+
 export const Description = styled.p`
   width: 300px;
   color: var(--Color-Primary-Grey, #b6b6b6);
@@ -97,6 +100,8 @@ export const Description = styled.p`
 
   @media (min-width: 1024px) {
     text-align: start;
+    margin-left: 0;
+    margin-right: 0;
   }
 `;
 
@@ -113,6 +118,7 @@ export const ButtonWrapper = styled.div`
 
   @media (min-width: 1024px) {
     margin-bottom: 80px;
+    justify-content: flex-start;
   }
 `;
 
@@ -190,7 +196,7 @@ export const ListItems = styled.ul`
   }
 
   @media (min-width: 768px) {
-    width: 360px;
+    width: 444px;
     height: 56px;
     flex-wrap: wrap;
     flex-direction: row;
@@ -202,6 +208,7 @@ export const ListItems = styled.ul`
     width: 234px;
     flex-direction: column;
     flex-wrap: nowrap;
+    margin: 0;
   }
 `;
 
