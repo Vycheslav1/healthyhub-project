@@ -1,4 +1,4 @@
-import { Calories, Item, List, Title } from './RecommendedListStyled';
+import { Calories, Item, List, Title } from './Recommended.styled';
 
 export const RecommendedList = () => {
   return (
