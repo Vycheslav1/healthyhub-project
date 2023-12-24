@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 // import { selectUser } from '../redux/auth/selectors';
 import { logOut } from '../redux/auth/operations';
+import { DiaryOnMain } from '../components/DiaryOnMain/DiaryOnMain';
 import { AddWaterModal } from '../components/ModalAddWater/ModalAddWater';
 
 export const MainPage = () => {
@@ -14,9 +15,10 @@ export const MainPage = () => {
 
   return (
     <>
-      <button type="button" onClick={handleLogOut}>
+      {/* <button type="button" onClick={handleLogOut}>
         LogOut
-      </button>
+      </button> */}
+      <DiaryOnMain />
       <AddWaterModal/>
     </>
   );
