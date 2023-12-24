@@ -7,6 +7,7 @@ import {
   GraphicsFrame,
   CaloriesFrame,
   WaterFrame,
+  WeightFrame,
 } from './DashboardPage.styled';
 import { fetchStatistics } from '../../redux/statistic/operation';
 import {
@@ -59,11 +60,12 @@ export const DashboardPage = () => {
             data={caloriesData}
           >
             <Chart
+              className="Canvas"
               chartType="Calories"
               data={caloriesData}
               period={data}
               labels={'Last Month'}
-              averageValue={'lastMonth'}
+              averageValue={'1700 cal'}
             />
           </CaloriesFrame>
           <WaterFrame>
@@ -72,17 +74,19 @@ export const DashboardPage = () => {
               data={waterData}
               period={data}
               labels={'Last Month'}
-              averageValue={'lastMonth'}
+              averageValue={'1700 ml'}
             />
           </WaterFrame>
         </GraphicsFrame>
-        <Chart
-          chartType="Weight"
-          data={weightData}
-          period={data}
-          labels={'Last Month'}
-          averageValue={'lastMonth'}
-        />
+        <WeightFrame>
+          <Chart
+            chartType="Weight"
+            data={weightData}
+            period={data}
+            labels={'Last Month'}
+            averageValue={'68 kg'}
+          />
+        </WeightFrame>
       </Frame>
     </>
   );

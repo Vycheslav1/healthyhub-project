@@ -3,8 +3,12 @@ import styled from 'styled-components';
 export const Frame = styled('div')`
   display: flex;
   flex-direction: column;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  width: 620px;
+  height: 313px;
+  top: 235px;
+  left: 70px;
+  border: 0.5px;
+  gap: 20px;
 
   @media screen and (min-width: 834px) {
     margin-top: 24px;
@@ -20,6 +24,8 @@ export const GraphicsFrame = styled('div')`
   flex-direction: column;
   gap: 27px;
   margin-bottom: 27px;
+  padding-left: 34px;
+  width: 300%;
 
   @media screen and (min-width: 834px) {
     gap: 40px;
@@ -35,10 +41,11 @@ export const GraphicsFrame = styled('div')`
 export const GraficFrame = styled('div')`
   display: flex;
   flex-direction: column;
+  bacground-color: #0f0f0f;
 `;
 
 export const WeigthFrame = styled('div')`
-  width: 780px;
+  width: 300%;
   height: 110px;
   display: flex;
   flex-direction: row;
@@ -53,15 +60,21 @@ export const WeigthFrame = styled('div')`
     width: 1372px;
   }
 `;
-
 export const CaloriesFrame = styled('div')`
-  background-color: #ffffff;
-    width: 620px
-  height: 313px
-  top: 235px
-  left: 70px
+  width: 620px;
+  border-radius: 12px;
+  background-color: #0f0f0f;
 `;
 
 export const WaterFrame = styled('div')`
-  background-color: #ffffff;
+  width: 620px;
+  border-radius: 12px;
+  background-color: #0f0f0f;
+`;
+
+export const WeightFrame = styled('div')`
+  width: 1372px;
+  padding-left: 34px;
+  border-radius: 12px;
+  background-color: #0f0f0f;
 `;

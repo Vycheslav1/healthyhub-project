@@ -1,8 +1,46 @@
 import { Line } from 'react-chartjs-2';
 import { useEffect, useRef } from 'react';
 import { registerables, Chart } from 'chart.js';
+import {
+  ChartType,
+  ChartWrapper,
+  AverageText,
+  Container,
+  // ChartCanvas,
+} from './Chart.styled';
 Chart.register(...registerables);
 import { useMemo } from 'react';
+const options = {
+  scales: {
+    x: {
+      grid: {
+        color: 'rgba(255, 255, 255, 0.1)',
+        borderWidth: 1,
+      },
+      ticks: {
+        color: 'white',
+      },
+    },
+    y: {
+      grid: {
+        color: 'rgba(255, 255, 255, 0.1)',
+        borderWidth: 1,
+      },
+      ticks: {
+        color: 'white',
+      },
+    },
+  },
+  plugins: {
+    legend: {
+      display: true,
+      labels: {
+        color: 'white',
+      },
+    },
+  },
+};
+
 const CustomChart = ({ chartType, averageValue, data, labels }) => {
   const chartData = useMemo(() => {
     return {
@@ -12,8 +50,6 @@ const CustomChart = ({ chartType, averageValue, data, labels }) => {
           label: chartType,
           data: data,
           fill: false,
-          borderColor: 'rgba(255, 99, 132, 1)',
-          tension: 0.1,
         },
       ],
     };
@@ -33,11 +69,13 @@ const CustomChart = ({ chartType, averageValue, data, labels }) => {
   }, [chartData]);
 
   return (
-    <div>
-      <h2>{chartType}</h2>
-      <p>{`Average value: ${averageValue}`}</p>
-      <Line ref={chartRef} data={chartData} />
-    </div>
+    <ChartWrapper>
+      <Container>
+        <ChartType>{chartType}</ChartType>
+        <AverageText>{`Average value: ${averageValue}`}</AverageText>
+      </Container>
+      <Line ref={chartRef} data={chartData} options={options} />
+    </ChartWrapper>
   );
 };
 
