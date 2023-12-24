@@ -1,7 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import SharedLayout from 'components/SharedLayout/SharedLayout';
-import { MainPage } from 'pages/MainPage';
 import { SingUpPage } from 'pages/SingUpPage';
 import { SingInPage } from 'pages/SingInPage';
 import { ForgotPasswordPage } from 'pages/ForgotPasswordPage';
