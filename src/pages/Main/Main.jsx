@@ -1,9 +1,9 @@
-
-import DailyGoal from '../../components/DailyGoal/DailyGoal';
-import Water from '../../components/WaterMain/Water';
-import Food from '../../components/Food/Food';
+import { useSelector } from 'react-redux';
+import { DailyGoal } from '../../components/DailyGoal/DailyGoal';
 import DiaryOnMain from '../../components/DiaryOnMain/DiaryOnMain';
-// import RecommendedFoodList from '../../components/RecommendedFoodOnMain/RecommendedFoodOnMain';
+import { Food } from '../../components/Food/Food';
+import { RecommendedList } from '../../components/RecommendedList/RecommendedList';
+import { Water } from '../../components/WaterMain/Water';
 import {
   Content,
   HeaderMainPage,
@@ -12,47 +12,70 @@ import {
   TrackerList,
   Tarker,
   Wrapper,
-} from './Main.styled'
+  TitleRecommended,
+  WrapperRecommended,
+  WrapperDiaryOnMain,
+  ImageRecom,
+  LinkRecommended,
+} from './Main.styled';
+import { useEffect, useState } from 'react';
+import { getRecommendedImage } from '../../redux/getRequest/getRecommendedImg';
+import arrow from '../../images/svg/arrow.svg';
 
+export const Main = () => {
+  const [foodRecommended, setFoodRecommended] = useState([]);
+  const token = useSelector((state) => state.auth.token);
 
- export const Main = () => {
+  useEffect(() => {
+    getRecommendedImage(4)
+      .then((data) => {
+        const newData = data.slice(0, 4);
+        setFoodRecommended(newData);
+      })
+      .catch((error) => console.error(error));
+  }, [token]);
+
   return (
+    <Content>
+      {/* Заговолок */}
+      <HeaderMainPage>
+        <TitlePage>Today</TitlePage>
+        <LinkToDashboard to="/dashboard">
+          <p>On the way to the goal</p>
+          <img />
+        </LinkToDashboard>
+      </HeaderMainPage>
+      {/* Блоки, що показують трекери прийому їжі та води (Daily Goal, Water, Food)  */}
+      <TrackerList>
+        <Tarker>
+          {/* блок Щоденна мета DailyGoal */}
+          <DailyGoal />
+        </Tarker>
+        <Tarker>
+          {/* блок Вода Water */}
+          <Water />
+        </Tarker>
+        <Tarker>
+          {/* блок Їжа Food */}
+          <Food />
+        </Tarker>
+      </TrackerList>
 
-          <Content>
-            {/* Заговолок */}
-            <HeaderMainPage>
-              <TitlePage>Today</TitlePage>
-              <LinkToDashboard to="/dashboard">
-                <p>On the way to the goal</p>
-                <img
-                
-                />
-              </LinkToDashboard>
-            </HeaderMainPage>
-            {/* Блоки, що показують трекери прийому їжі та води (Daily Goal, Water, Food)  */}
-            <TrackerList>
-              <Tarker>
-                {/* блок Щоденна мета DailyGoal */}
-                <DailyGoal />
-              </Tarker>
-              <Tarker>
-                {/* блок Вода Water */}
-                <Water />
-              </Tarker>
-              <Tarker>
-                {/* блок Їжа Food */}
-                <Food />
-              </Tarker>
-            </TrackerList>
-
-            <Wrapper>
-              {/* блок щоденник */}
-              <DiaryOnMain />
-              {/* блок рекомендована їжа */}
-              {/* < RecommendedFoodList /> */}
-            </Wrapper>
-          </Content>
-    
-  
-  )
- }
+      <Wrapper>
+        {/* блок щоденник */}
+        <WrapperDiaryOnMain>
+          <DiaryOnMain />
+        </WrapperDiaryOnMain>
+        {/* блок рекомендована їжа */}
+        <WrapperRecommended>
+          <TitleRecommended>Recommended food</TitleRecommended>
+          <RecommendedList recommendedImage={foodRecommended} />
+          <LinkRecommended to={'/recommended-food'}>
+            See more
+            <ImageRecom src={arrow} alt="arrow" />
+          </LinkRecommended>
+        </WrapperRecommended>
+      </Wrapper>
+    </Content>
+  );
+};

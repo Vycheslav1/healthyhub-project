@@ -7,13 +7,13 @@ export const GenderContainer = styled.div`
   padding: 24px 10px 24px 10px;
   margin: auto;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     align-items: center;
     width: 834px;
     padding: 40px 195px 286px 195px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     display: flex;
     flex-direction: row;
     width: 1440px;
@@ -26,22 +26,22 @@ export const GenderImage = styled.img`
   width: 300px;
   height: 288px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 380px;
     height: 366px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 592px;
     height: 570px;
   }
 `;
 
 export const GenresWrapper = styled.div`
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 50%;
     margin-top: 80px;
     margin-left: 104px;
@@ -60,14 +60,14 @@ export const GenresTitle = styled.h2`
   margin-top: 24px;
   margin-bottom: 16px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     text-align: center;
     font-size: 30px;
     line-height: 36px;
     margin: auto;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     text-align: start;
     margin: 0 0 16px 0;
   }
@@ -84,7 +84,7 @@ export const GenderDescription = styled.p`
   margin-top: 16px;
   margin-bottom: 24px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 400px;
     text-align: center;
     font-size: 22px;
@@ -93,7 +93,7 @@ export const GenderDescription = styled.p`
     margin-right: auto;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     text-align: start;
     margin-top: 0;
     margin-bottom: 24px;
@@ -103,12 +103,12 @@ export const GenderDescription = styled.p`
 `;
 
 export const FormGenres = styled.form`
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 380px;
     margin: auto;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     display: flex;
     flex-direction: column;
     width: 234px;
@@ -124,10 +124,10 @@ export const GenresText = styled.p`
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     margin-top: 0;
     margin-bottom: 12px;
   }
@@ -138,10 +138,10 @@ export const GenderRadioWrapper = styled.div`
   flex-direction: row;
   gap: 16px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     flex-direction: column;
   }
 `;
@@ -155,10 +155,10 @@ export const Label = styled.label`
   font-weight: 400;
   line-height: 20px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     display: flex;
   }
 `;
@@ -182,10 +182,10 @@ export const AgeLabel = styled.label`
   margin-top: 24px;
   margin-bottom: 40px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 192px;
   }
 `;
@@ -203,11 +203,11 @@ export const AgeInput = styled.input`
   color: #fff;
   outline: transparent;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 360px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 192px;
     margin-top: 12px;
   }
@@ -228,11 +228,11 @@ export const ButtonGenderNext = styled.button`
   line-height: 20px;
   margin-bottom: 20px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 360px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 192px;
   }
 `;
@@ -249,11 +249,11 @@ export const ButtonGenderBack = styled.button`
   font-weight: 400;
   line-height: 20px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 360px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 192px;
   }
 `;

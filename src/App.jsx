@@ -16,6 +16,7 @@ import { DiaryPage } from './pages/DiaryPage/DiaryPage';
 import { Dashboard } from './components/Dashboard/Dashboard';
 import { RestrictedRoute } from './components/RestrictedRoute';
 import { Loader } from './components/Loader/Loader';
+import { Main } from './pages/Main/Main';
 
 function App() {
   const dispatch = useDispatch();
@@ -33,25 +34,27 @@ function App() {
   ) : (
     <Routes>
       <Route path="/" element={<SharedLayout />}>
-        <Route index element={isLoggedIn ? <MainPage /> : <OnePage />} />
+        {/* <Route path="/main" element={<Main />}></Route> */}
+
+        <Route index element={isLoggedIn ? <Main /> : <OnePage />} />
         <Route
-          path="signup"
+          path="/signup"
           element={
-            <RestrictedRoute redirectTo="/" component={<SingUpPage />} />
+            <RestrictedRoute redirectTo="/signin" component={<SingUpPage />} />
           }
         />
         <Route
-          path="signin"
+          path="/signin"
           element={
-            <RestrictedRoute redirectTo="/" component={<SingInPage />} />
+            <RestrictedRoute redirectTo="/main" component={<SingInPage />} />
           }
         />
         <Route
-          path="main"
-          element={<PrivateRoute redirectTo="/" component={<MainPage />} />}
+          path="/main"
+          element={<PrivateRoute redirectTo="/signin" component={<Main />} />}
         />
         <Route
-          path="forgot-password"
+          path="/forgot-password"
           element={
             <RestrictedRoute
               redirectTo="/"
@@ -73,7 +76,7 @@ function App() {
         }
       />
       <Route
-        path="recommended-food"
+        path="/recommended-food"
         element={
           <PrivateRoute redirectTo="/signin" component={<RecommendedFood />} />
         }

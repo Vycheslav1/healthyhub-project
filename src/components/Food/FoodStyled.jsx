@@ -1,18 +1,19 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const FoodWrapper = styled.div`
   width: 300px;
   height: 410px;
 
   @media screen and (min-width: 834px) {
- width: 780px;
- height: 278px;
+    width: 780px;
+    height: 278px;
   }
 
-@media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1440px) {
     width: 560px;
+    /* padding: 36px 40px 36px 96px; */
   }
-`
+`;
 
 export const FoodHead = styled.h2`
   color: #fff;
@@ -24,10 +25,10 @@ export const FoodHead = styled.h2`
   margin-bottom: 6px;
 
   @media screen and (min-width: 834px) {
-      font-size: 22px;
+    font-size: 22px;
     line-height: 32px;
   }
-`
+`;
 
 export const GraphWrapper = styled.div`
   width: 300px;
@@ -48,9 +49,9 @@ export const GraphWrapper = styled.div`
   }
 
   @media screen and (min-width: 1440px) {
-     width: 560px;
+    width: 560px;
   }
-`
+`;
 
 export const TotalCalorieWrapper = styled.div`
   display: flex;
@@ -58,65 +59,67 @@ export const TotalCalorieWrapper = styled.div`
   row-gap: 12px;
   margin-top: 12px;
 
-@media screen and (min-width: 834px) {
-     margin-top: 0px;
+  @media screen and (min-width: 834px) {
+    margin-top: 0px;
     margin-left: 40px;
   }
-`
+`;
 
 export const CarboWrapper = styled.div`
- display: flex;
+  display: flex;
   align-items: center;
-`
+`;
 
 export const ItemWrapper = styled.div`
-     margin-left: 12px;
-`
+  margin-left: 12px;
+  display: flex;
+`;
 
 export const CalorieHead = styled.h3`
-  color:  #fff;
+  color: #fff;
   font-family: Poppins;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
   margin-bottom: 2px;
-`
+`;
 
 export const NutritionWrapper = styled.div`
- display: flex;
- margin-top: 2px;
-`
+  display: flex;
+  margin-top: 2px;
+`;
 
 export const GoalWrapper = styled.p`
-  color:  #fff;
+  color: #fff;
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-`
+`;
 
 export const CrboSpan = styled.span`
-  color:  #b6b6b6;
+  color: #b6b6b6;
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
   margin-left: 4px;
-`
+`;
 
 export const LeftWrapper = styled.p`
- margin-left: 12px;
-`
+  margin-left: 12px;
+  color: #b6b6b6;
+`;
 
 export const ProtWrapper = styled.div`
-    display: flex;
+  display: flex;
   align-items: center;
-`
+`;
 
 export const FatWrapper = styled.div`
-    display: flex;
+  display: flex;
   align-items: center;
-`
+`;
