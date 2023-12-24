@@ -50,8 +50,7 @@ function App() {
         />
         <Route
           path="main"
-          element={<Main />}
-          // element={<PrivateRoute redirectTo="/signin" component={<Main />} />}
+          element={<PrivateRoute redirectTo="/signin" component={<Main />} />}
         />
         <Route
           path="forgot-password"
