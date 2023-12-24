@@ -1,158 +1,27 @@
 import { Calories, Item, List, Title } from './Recommended.styled';
 
-export const RecommendedList = () => {
+export const RecommendedList = ({ recommendedImage }) => {
   return (
     <List>
-      <Item>
-        <img
-          width="46px"
-          height="46px"
-          src={'https://placebear.com/400/600'}
-          alt={'bear'}
-        />
-        <div>
-          <Title>Food 1</Title>
-          <Calories>
-            <span>100 g </span>
-            100 calories
-          </Calories>
-        </div>
-      </Item>
-      <Item>
-        <img
-          width="46px"
-          height="46px"
-          src={'https://placebear.com/400/600'}
-          alt={'bear'}
-        />
-        <div>
-          <Title>Food 1</Title>
-          <Calories>
-            <span>100 g </span>
-            100 calories
-          </Calories>
-        </div>
-      </Item>
-      <Item>
-        <img
-          width="46px"
-          height="46px"
-          src={'https://placebear.com/400/600'}
-          alt={'bear'}
-        />
-        <div>
-          <Title>Food 1</Title>
-          <Calories>
-            <span>100 g </span>
-            100 calories
-          </Calories>
-        </div>
-      </Item>
-      <Item>
-        <img
-          width="46px"
-          height="46px"
-          src={'https://placebear.com/400/600'}
-          alt={'bear'}
-        />
-        <div>
-          <Title>Food 1</Title>
-          <Calories>
-            <span>100 g </span>
-            100 calories
-          </Calories>
-        </div>
-      </Item>
-      <Item>
-        <img
-          width="46px"
-          height="46px"
-          src={'https://placebear.com/400/600'}
-          alt={'bear'}
-        />
-        <div>
-          <Title>Food 1</Title>
-          <Calories>
-            <span>100 g </span>
-            100 calories
-          </Calories>
-        </div>
-      </Item>
-      <Item>
-        <img
-          width="46px"
-          height="46px"
-          src={'https://placebear.com/400/600'}
-          alt={'bear'}
-        />
-        <div>
-          <Title>Food 1</Title>
-          <Calories>
-            <span>100 g </span>
-            100 calories
-          </Calories>
-        </div>
-      </Item>
-      <Item>
-        <img
-          width="46px"
-          height="46px"
-          src={'https://placebear.com/400/600'}
-          alt={'bear'}
-        />
-        <div>
-          <Title>Food 1</Title>
-          <Calories>
-            <span>100 g </span>
-            100 calories
-          </Calories>
-        </div>
-      </Item>
-      <Item>
-        <img
-          width="46px"
-          height="46px"
-          src={'https://placebear.com/400/600'}
-          alt={'bear'}
-        />
-        <div>
-          <Title>Food 1</Title>
-          <Calories>
-            <span>100 g </span>
-            100 calories
-          </Calories>
-        </div>
-      </Item>
-      <Item>
-        <img
-          width="46px"
-          height="46px"
-          src={'https://placebear.com/400/600'}
-          alt={'bear'}
-        />
-        <div>
-          <Title>Food 1</Title>
-          <Calories>
-            <span>100 g </span>
-            100 calories
-          </Calories>
-        </div>
-      </Item>
-      <Item>
-        <img
-          width="46px"
-          height="46px"
-          src={'https://placebear.com/400/600'}
-          alt={'bear'}
-        />
-        <div>
-          <Title>Food 1</Title>
-          <Calories>
-            <span>100 g </span>
-            100 calories
-          </Calories>
-        </div>
-      </Item>
+      {recommendedImage.slice(0, 10).map((product) => {
+        return (
+          <Item key={product._id}>
+            <img
+              width="46px"
+              height="46px"
+              src={product.img}
+              alt={product.name}
+            />
+            <div>
+              <Title>{product.name}</Title>
+              <Calories>
+                <span>100 g </span>
+                {product.calories} calories
+              </Calories>
+            </div>
+          </Item>
+        );
+      })}
     </List>
   );
 };
