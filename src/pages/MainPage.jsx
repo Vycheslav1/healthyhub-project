@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { selectUser } from '../redux/auth/selectors';
 import { logOut } from '../redux/auth/operations';
+import { DiaryOnMain } from '../components/DiaryOnMain/DiaryOnMain';
 
 export const MainPage = () => {
   const { name } = useSelector(selectUser);
@@ -13,9 +14,10 @@ export const MainPage = () => {
 
   return (
     <>
-      <button type="button" onClick={handleLogOut}>
+      {/* <button type="button" onClick={handleLogOut}>
         LogOut
-      </button>
+      </button> */}
+      <DiaryOnMain />
     </>
   );
 };

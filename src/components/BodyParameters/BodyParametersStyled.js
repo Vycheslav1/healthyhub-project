@@ -7,13 +7,13 @@ export const BodyParametersContainer = styled.div`
   padding: 24px 10px 24px 10px;
   margin: auto;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     align-items: center;
     width: 834px;
     padding: 40px 195px 286px 195px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     display: flex;
     flex-direction: row;
     width: 1440px;
@@ -26,19 +26,19 @@ export const ImageBodyParameters = styled.img`
   width: 300px;
   height: 302px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 380px;
     height: 382px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 592px;
     height: 594px;
   }
 `;
 
 export const BodyParametersWrapper = styled.div`
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 50%;
     margin-top: 80px;
     margin-left: 104px;
@@ -55,14 +55,14 @@ export const BodyParametersTitle = styled.h2`
   line-height: 30px;
   margin: 24px auto 16px auto;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 264px;
     text-align: center;
     font-size: 30px;
     line-height: 36px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 444px;
     text-align: start;
     margin-top: 0;
@@ -79,14 +79,14 @@ export const BodyParametersDescr = styled.p`
   font-weight: 400;
   line-height: 24px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 380px;
     text-align: center;
     font-size: 22px;
     line-height: 32px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     text-align: start;
     margin-top: 0;
     margin-bottom: 24px;
@@ -97,11 +97,11 @@ export const BodyParametersForm = styled.form`
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     align-items: center;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -110,13 +110,13 @@ export const BodyParametersForm = styled.form`
 `;
 
 export const BodyParametersWrapperLabel = styled.div`
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     display: flex;
     flex-direction: column;
     gap: 24px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 458px;
     display: flex;
     flex-direction: column;
@@ -138,11 +138,11 @@ export const BodyParametersLabel = styled.label`
   line-height: 20px;
   margin-bottom: 40px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 360px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 192px;
     display: flex;
     flex-direction: column;
@@ -169,10 +169,10 @@ export const BodyParametersInput = styled.input`
   outline: transparent;
   background: var(--Color-Primary-Black-2, #0f0f0f);
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
   }
 `;
 
@@ -190,11 +190,11 @@ export const BodyParametersButtonNext = styled.button`
   line-height: 20px;
   margin-bottom: 20px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 360px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 192px;
   }
 `;
@@ -211,11 +211,11 @@ export const BodyParametersButtonBack = styled.button`
   background-color: transparent;
   border: none;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 360px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 192px;
   }
 `;
