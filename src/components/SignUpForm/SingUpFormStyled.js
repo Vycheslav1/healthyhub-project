@@ -6,12 +6,12 @@ export const FormContainer = styled.div`
   padding: 24px 10px 40px 10px;
   margin: auto;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 834px;
     padding: 40px 195px 286px 195px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 1440px;
     display: flex;
     padding: 40px 150px 72px 150px;
@@ -23,12 +23,12 @@ export const ImageFormOne = styled.img`
   height: 296px;
   margin: auto;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 380px;
     height: 376px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 592px;
     height: 588px;
     margin-bottom: 12px;
@@ -36,13 +36,13 @@ export const ImageFormOne = styled.img`
 `;
 
 export const FormWrapper = styled.div`
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 444px;
 
     margin: auto;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 444px;
     margin-top: 80px;
     margin-left: 104px;
@@ -59,7 +59,7 @@ export const FormTitle = styled.h2`
   margin-top: 24px;
   margin-bottom: 16px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 444px;
     text-align: center;
     font-family: Poppins;
@@ -69,7 +69,7 @@ export const FormTitle = styled.h2`
     line-height: 36px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     font-size: 30px;
     line-height: 36px;
     margin-top: 0;
@@ -87,7 +87,7 @@ export const FormDescription = styled.p`
   line-height: 24px;
   margin-bottom: 24px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 444px;
     color: var(--Color-Primary-Grey, #b6b6b6);
     text-align: center;
@@ -98,7 +98,7 @@ export const FormDescription = styled.p`
     line-height: 32px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     color: #b6b6b6;
     font-family: Poppins;
     font-size: 22px;
@@ -115,12 +115,13 @@ export const Form = styled.form`
   flex-direction: column;
   width: 280px;
   gap: 20px;
-  @media (min-width: 768px) {
+
+  @media screen and (min-width: 834px) {
     width: 360px;
     margin: auto;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 212px;
     margin: 0;
     margin-bottom: 80px;
@@ -145,7 +146,7 @@ export const Label = styled.label`
   border: 1px solid var(--Color-Primary-Green-Lite, #e3ffa8);
   background: var(--Color-Primary-Black-2, #0f0f0f);
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 360px;
     display: inline-flex;
     padding: 8px 10px;
@@ -156,7 +157,7 @@ export const Label = styled.label`
     background: var(--Color-Primary-Black-2, #0f0f0f);
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     /* position: relative; */
     width: 212px;
     height: 36px;
@@ -181,10 +182,10 @@ export const Input = styled.input`
   color: white;
   outline: none;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     border: none;
     border-radius: 12px;
     border: transparent;
@@ -201,10 +202,10 @@ export const ImageToggle = styled.img`
   width: 16px;
   height: 16px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
   }
 `;
 
@@ -212,10 +213,11 @@ export const IconSpan = styled.img`
   position: absolute;
   top: 30%;
   right: 5%;
-  @media (min-width: 768px) {
+
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
   }
 `;
 
@@ -234,11 +236,11 @@ export const ButtonNext = styled.button`
   margin-top: 24px;
   margin-bottom: 48px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 360px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 212px;
     padding: 8px 10px;
     gap: 10px;
@@ -264,11 +266,11 @@ export const TextSignIn = styled.p`
   line-height: 20px;
   margin-bottom: 0;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     /* width: 215px; */
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     color: var(--Color-Primary-Grey, #b6b6b6);
     font-family: Poppins;
     font-size: 14px;
@@ -283,14 +285,14 @@ export const TextSignInWrapper = styled.div`
   flex-direction: column;
   gap: 16px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     flex-direction: row;
     justify-content: center;
     margin-top: 100px;
     align-items: baseline;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     display: flex;
     /* align-items: center; */
     justify-content: flex-start;
@@ -306,10 +308,10 @@ export const NavLinkSignIn = styled(NavLink)`
   font-weight: 500;
   line-height: 20px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
   }
   color: var(--Color-Primary-White, #fff);
   text-decoration: none;

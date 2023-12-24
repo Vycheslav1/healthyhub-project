@@ -1,24 +1,22 @@
-import { Route, Routes } from 'react-router-dom';
-// import SharedLayout from 'components/SharedLayout/SharedLayout';
-// import FirstPage from 'pages/FirstPage/FirstPage';
-// import SecondPage from 'pages/SecondPage/SecondPage';
-// import HalfPage from 'pages/HalfPage/HalfPage';
-// import ErrorPage from 'pages/ErrorPage/ErrorPage';
-import { AppWrapper } from './AppStyled';
-import { MainPage } from '../src/pages/MainPage';
-import { SingUpPage } from '../src/pages/SingUpPage';
-import { SingInPage } from '../src/pages/SingInPage';
-import { ForgotPasswordPage } from '../src/pages/ForgotPasswordPage';
-import { RestrictedRoude } from './components/RestrictedRoude';
-import { PrivateRoute } from './components/PrivateRoute';
-import { OnePage } from './pages/OnePage';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { useAuth } from './hooks/useAuth';
+import SharedLayout from 'components/SharedLayout/SharedLayout';
+import { MainPage } from 'pages/MainPage';
+import { SingUpPage } from 'pages/SingUpPage';
+import { SingInPage } from 'pages/SingInPage';
+import { ForgotPasswordPage } from 'pages/ForgotPasswordPage';
+import { RecommendedFood } from 'pages/RecommendedFood/RecommendedFood';
+import { OnePage } from 'pages/OnePage';
 import { useEffect } from 'react';
 import { refreshUser } from './redux/auth/operations';
-import { DashboardPage } from './pages/DashboardPage/DashboardPage';
-
-// const test = import.meta.env.VITE_API_TEST;
+import { useAuth } from 'src/hooks/useAuth';
+import { PrivateRoute } from './components/PrivateRoute';
+import { SettingPage } from './pages/SettingPage/SettingPage';
+import { DiaryPage } from './pages/DiaryPage/DiaryPage';
+import { Dashboard } from './components/Dashboard/Dashboard';
+import { RestrictedRoute } from './components/RestrictedRoute';
+import { Loader } from './components/Loader/Loader';
+import { Main } from './pages/Main/Main';
 
 function App() {
   const dispatch = useDispatch();
@@ -29,42 +27,68 @@ function App() {
     dispatch(refreshUser());
   }, [dispatch]);
 
+  const { isLoggedIn } = useAuth();
+
   return isRefreshing ? (
-    <b>Refreshing user...</b>
+    <Loader />
   ) : (
-    <AppWrapper>
-      <Routes>
-        <Route></Route>
-        <Route path="/" element={<OnePage />} />
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        {/* <Route path="/main" element={<Main />}></Route> */}
+
+        <Route index element={isLoggedIn ? <Main /> : <OnePage />} />
         <Route
-          path="/signup"
+          path="signup"
           element={
-            <RestrictedRoude redirectTo="/dairy" component={<SingUpPage />} />
+            <RestrictedRoute redirectTo="/signin" component={<SingUpPage />} />
           }
         />
         <Route
-          path="/signin"
+          path="signin"
           element={
-            <RestrictedRoude redirectTo="/main" component={<SingInPage />} />
+            <RestrictedRoute redirectTo="/main" component={<SingInPage />} />
           }
         />
         <Route
-          path="/main"
+          path="main"
+          element={<PrivateRoute redirectTo="/signin" component={<Main />} />}
+        />
+        <Route
+          path="forgot-password"
           element={
-            <PrivateRoute redirectTo="/signin" component={<MainPage />} />
+            <RestrictedRoute
+              redirectTo="/"
+              component={<ForgotPasswordPage />}
+            />
           }
         />
-        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-        <Route path="/dashboard" element={<DashboardPage />} />
-        {/* <Route path="/" element={<SharedLayout />}>
-          <Route path="/first" element={<FirstPage />} />
-          <Route path="/second" element={<SecondPage />}>
-            <Route path=":half" element={<HalfPage />} />
-          </Route>
-          <Route path="*" element={<ErrorPage />} />
-        </Route> */}
-      </Routes>
-    </AppWrapper>
+        <Route
+          path="dashboard"
+          element={
+            <PrivateRoute redirectTo="/signin" component={<Dashboard />} />
+          }
+        />
+      </Route>
+      <Route
+        path="diary"
+        element={
+          <PrivateRoute redirectTo="/signin" component={<DiaryPage />} />
+        }
+      />
+      <Route
+        path="recommended-food"
+        element={
+          <PrivateRoute redirectTo="/signin" component={<RecommendedFood />} />
+        }
+      />
+      <Route
+        path="settings"
+        elements={
+          <PrivateRoute redirectTo="/signin" component={<SettingPage />} />
+        }
+      />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   );
 }
 

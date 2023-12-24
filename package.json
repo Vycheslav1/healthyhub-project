@@ -74,10 +74,15 @@
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "prettier": "3.0.3",
-    "vite": "^5.0.10"
+    "vite": "^4.2.0"
   },
   "lint-staged": {
     "*.{js,jsx}": "eslint --cache --fix",
     "*./src": "prettier --write"
-  }
+  },
+  "description": "Цей проєкт було створено за допомогою [Create Vite](https://vitejs.dev/). Для\r знайомства і налаштування додаткових можливостей\r [звернися до документації](https://vitejs.dev/guide/).",
+  "main": "vite.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

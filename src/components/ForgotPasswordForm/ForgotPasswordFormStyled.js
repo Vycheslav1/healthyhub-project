@@ -6,12 +6,12 @@ export const ForgotPasswordContainer = styled.div`
   padding: 24px 10px 40px 10px;
   margin: auto;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 834px;
     padding: 40px 195px 286px 195px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 1440px;
     display: flex;
     padding: 40px 150px 60px 150px;
@@ -23,12 +23,12 @@ export const ImageForgotPassword = styled.img`
   width: 300px;
   height: 296px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 380px;
     height: 376px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 598px;
     height: 588px;
     margin-bottom: 12px;
@@ -36,10 +36,10 @@ export const ImageForgotPassword = styled.img`
 `;
 
 export const ForgotPasswordWrapper = styled.div`
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 444px;
     margin-top: 80px;
     margin-left: 104px;
@@ -57,7 +57,7 @@ export const ForgotPasswordTitle = styled.h2`
   margin-top: 24px;
   margin-bottom: 16px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 329px;
     text-align: center;
     font-size: 30px;
@@ -67,7 +67,7 @@ export const ForgotPasswordTitle = styled.h2`
     margin-right: auto;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     margin-top: 0;
     text-align: start;
     margin-left: 0;
@@ -88,14 +88,14 @@ export const ForgotPasswordDescrip = styled.p`
   margin-left: auto;
   margin-right: auto;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 444px;
     text-align: center;
     font-size: 22px;
     line-height: 32px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     text-align: start;
   }
 `;
@@ -104,10 +104,11 @@ export const ForgotPasswordFormWrapper = styled.form`
   display: flex;
   flex-direction: column;
   gap: 40px;
-  @media (min-width: 768px) {
+
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     display: flex;
     flex-direction: column;
     width: 192px;
@@ -116,6 +117,7 @@ export const ForgotPasswordFormWrapper = styled.form`
 `;
 
 export const ForgotPasswordLabel = styled.label`
+  display: flex;
   position: relative;
   width: 300px;
   border-radius: 12px;
@@ -131,13 +133,12 @@ export const ForgotPasswordLabel = styled.label`
   margin-left: auto;
   margin-right: auto;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 380px;
     margin: auto;
-    display: flex;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 212px;
     height: 36px;
     margin: 0;
@@ -145,7 +146,7 @@ export const ForgotPasswordLabel = styled.label`
 `;
 
 export const ForgotPasswordInput = styled.input`
-  width: 280px;
+  width: 255px;
   border: transparent;
   color: white;
   outline: none;
@@ -153,12 +154,12 @@ export const ForgotPasswordInput = styled.input`
   border: none;
   border-radius: 12px;
 
-  @media (min-width: 768px) {
-    width: 360px;
+  @media screen and (min-width: 834px) {
+    width: 330px;
   }
 
-  @media (min-width: 1024px) {
-    width: 192px;
+  @media screen and (min-width: 1440px) {
+    width: 170px;
   }
 `;
 
@@ -176,12 +177,12 @@ export const ForgotPasswordButton = styled.button`
   line-height: 20px;
   margin: auto;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 380px;
     /* margin: 0; */
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 212px;
     font-style: normal;
     box-shadow: 0px 0px 5px #e3ffa8;
@@ -191,14 +192,14 @@ export const ForgotPasswordButton = styled.button`
 export const ForgotPasswordTextWrapper = styled.div`
   margin-top: 56px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     display: flex;
     margin-top: 150px;
     justify-content: center;
     gap: 16px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     margin-top: 0;
     margin-top: 220px;
     justify-content: flex-start;
@@ -213,10 +214,10 @@ export const ForgotPasswordText = styled.p`
   font-weight: 400;
   line-height: 20px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
   }
 `;
 
@@ -230,10 +231,10 @@ export const ForgotPasswordLink = styled(NavLink)`
   font-weight: 500;
   line-height: 20px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
   }
 `;
 
@@ -247,9 +248,9 @@ export const IconSpan = styled.img`
   position: absolute;
   top: 30%;
   right: 5%;
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
   }
 `;

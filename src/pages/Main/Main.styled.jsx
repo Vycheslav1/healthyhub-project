@@ -1,7 +1,5 @@
-
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
 
 export const Content = styled.div`
   margin: 0 auto;
@@ -15,7 +13,7 @@ export const Content = styled.div`
 
   @media screen and (min-width: 1440px) {
     width: 1440px;
-    padding: 0 34px;
+    padding: 20px 34px 54px;
   }
 `;
 
@@ -35,10 +33,10 @@ export const HeaderMainPage = styled.header`
 
 export const TitlePage = styled.h1`
   font-family: Poppins;
-font-size: 24px;
-font-style: normal;
-font-weight: 500;
-line-height: 36px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
   color: white;
 
   @media screen and (min-width: 1440px) {
@@ -47,24 +45,24 @@ line-height: 36px;
   }
 `;
 
-export const LinkToDashboard = styled(Link)`
+export const LinkToDashboard = styled(NavLink)`
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 6px;
- font-family: Poppins;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 22px;
-  color: #B6B6B6;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  color: #b6b6b6;
   cursor: pointer;
 
   @media screen and (min-width: 834px) {
     font-size: 16px;
     line-height: 22px;
   }
-`
+`;
 
 export const TrackerList = styled.ul`
   display: flex;
@@ -113,6 +111,40 @@ export const Wrapper = styled.div`
 
   @media screen and (min-width: 1440px) {
     flex-direction: row;
-    flex-basis: calc((100% - 20px) / 2);
+    /* flex-basis: calc((100% - 20px) / 2); */
+    width: 1440px;
   }
+`;
+
+export const WrapperDiaryOnMain = styled.div`
+  /* width: 558px; */
+  width: 47%;
+  margin: 0;
+`;
+
+export const TitleRecommended = styled.h2`
+  color: var(--Color-Primary-White, #fff);
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+`;
+
+export const WrapperRecommended = styled.div`
+  width: 676px;
+`;
+
+export const ImageRecom = styled.img``;
+
+export const LinkRecommended = styled(NavLink)`
+  color: var(--Color-Primary-Grey, #b6b6b6);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  display: flex;
+  gap: 6px;
+  margin-top: 16px;
 `;

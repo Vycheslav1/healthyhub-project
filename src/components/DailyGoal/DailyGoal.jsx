@@ -18,7 +18,7 @@ import {
   WaterSpan,
 } from './DialyGoalStyled';
 
-export default function DailyGoal() {
+export const DailyGoal = () => {
   // const { items } = useSelector(selectGoals);
 
   // if (Object.keys(items).length === 0) {
@@ -52,4 +52,4 @@ export default function DailyGoal() {
       </DailyWrapper>
     </DailyWindow>
   );
-}
+};

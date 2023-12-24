@@ -45,7 +45,7 @@ export const SignUpForm = () => {
 
   const validation = [
     Yup.object().shape({
-      name: Yup.string().min(2, 'Too short').required('Name is required'),
+      username: Yup.string().min(2, 'Too short').required('Name is required'),
       email: Yup.string().email('Invalid email').required('Email is required'),
       password: Yup.string()
         .matches(
@@ -72,7 +72,7 @@ export const SignUpForm = () => {
 
   const formik = useFormik({
     initialValues: {
-      name: '',
+      username: '',
       email: '',
       password: '',
       goal: '',
@@ -85,13 +85,19 @@ export const SignUpForm = () => {
     validationSchema: validation[currentPage - 1],
 
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-      console.log(values);
+      // alert(JSON.stringify(values, null, 2));
+      // console.log(values);
       dispatch(
         register({
-          name: values.name,
+          username: values.username,
           email: values.email,
           password: values.password,
+          goal: values.goal,
+          gender: values.gender,
+          age: values.age,
+          height: values.height,
+          weight: values.weight,
+          activity: values.activity,
         })
       );
     },
@@ -123,31 +129,32 @@ export const SignUpForm = () => {
                 <Label
                   style={{
                     border:
-                      formik.values.name === '' && !formik.touched.name
+                      formik.values.username === '' && !formik.touched.username
                         ? '1px solid #e3ffa8'
-                        : formik.errors.name
+                        : formik.errors.username
                         ? '1px solid red'
                         : '1px solid #3CBC81',
                   }}
                 >
                   <Input
-                    id="name"
-                    name="name"
+                    id="username"
+                    name="username"
                     type="text"
                     placeholder="Name"
                     onChange={formik.handleChange}
-                    value={formik.values.name}
+                    value={formik.values.username}
                     onBlur={formik.handleBlur}
                   />
 
-                  {formik.values.name === '' ? null : formik.errors.name ? (
+                  {formik.values.username === '' ? null : formik.errors
+                      .username ? (
                     <IconSpan src={error} alt="Error icon" />
                   ) : (
                     <IconSpan src={correct} alt="Correct icon" />
                   )}
                 </Label>
-                {formik.errors.name && formik.touched.name && (
-                  <ErrorsMessage>{formik.errors.name}</ErrorsMessage>
+                {formik.errors.username && formik.touched.username && (
+                  <ErrorsMessage>{formik.errors.username}</ErrorsMessage>
                 )}
               </div>
               <div>
@@ -239,6 +246,10 @@ export const SignUpForm = () => {
                     !formik.isValid || !formik.dirty || !formik.touched
                       ? 'none'
                       : '0px 0px 5px #e3ffa8',
+                  backgroundColor:
+                    !formik.isValid || !formik.dirty || !formik.touched
+                      ? 'lightgray'
+                      : '#e3ffa8',
                 }}
                 type="button"
                 disabled={!formik.isValid || !formik.dirty || !formik.touched}
