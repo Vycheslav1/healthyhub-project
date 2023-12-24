@@ -38,23 +38,23 @@ function App() {
 
         <Route index element={isLoggedIn ? <Main /> : <OnePage />} />
         <Route
-          path="/signup"
+          path="signup"
           element={
             <RestrictedRoute redirectTo="/signin" component={<SingUpPage />} />
           }
         />
         <Route
-          path="/signin"
+          path="signin"
           element={
             <RestrictedRoute redirectTo="/main" component={<SingInPage />} />
           }
         />
         <Route
-          path="/main"
+          path="main"
           element={<PrivateRoute redirectTo="/signin" component={<Main />} />}
         />
         <Route
-          path="/forgot-password"
+          path="forgot-password"
           element={
             <RestrictedRoute
               redirectTo="/"
@@ -76,7 +76,7 @@ function App() {
         }
       />
       <Route
-        path="/recommended-food"
+        path="recommended-food"
         element={
           <PrivateRoute redirectTo="/signin" component={<RecommendedFood />} />
         }
