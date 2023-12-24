@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const WaterWindow = styled.div`
-     width: 300px;
+  width: 300px;
   height: 254px;
-  background-color: #050505;
+  /* background-color: #050505; */
 
   @media screen and (min-width: 834px) {
     width: 380px;
@@ -16,7 +16,7 @@ export const WaterWindow = styled.div`
 `;
 
 export const Head = styled.h2`
-    color: var(--color-primary-white, #fff);
+  color: var(--color-primary-white, #fff);
   font-family: Poppins;
   font-size: 18px;
   font-style: normal;
@@ -27,10 +27,13 @@ export const Head = styled.h2`
     line-height: 32px;
     font-size: 22px;
   }
-`
+  @media (min-width: 1024px) {
+    margin-bottom: 6px;
+  }
+`;
 
 export const WaterWrapper = styled.div`
- margin-top: 6px;
+  margin-top: 6px;
   display: flex;
   width: 100%;
   height: 224px;
@@ -48,13 +51,13 @@ export const WaterWrapper = styled.div`
   }
 
   @media screen and (min-width: 1440px) {
-     width: 444px;
+    width: 444px;
     padding: 24px 40px;
   }
-`
+`;
 
 export const WaterProgressBar = styled.div`
-      font-family: sans-serif;
+  font-family: sans-serif;
   text-align: center;
   width: 80px;
   height: 192px;
@@ -64,9 +67,9 @@ export const WaterProgressBar = styled.div`
   margin-right: 20px;
 
   @media screen and (min-width: 834px) {
- margin-right: 40px;
+    margin-right: 40px;
   }
-`
+`;
 
 export const Progress = styled.div`
   position: relative;
@@ -77,10 +80,10 @@ export const Progress = styled.div`
   background-color: black;
   border-radius: 20px;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-`
+`;
 
 export const ProgressBar = styled.div`
- width: 0;
+  width: 0;
   border-radius: 20px;
   text-align: center;
   background-color: #b6c3ff;
@@ -91,10 +94,9 @@ export const ProgressBar = styled.div`
   transition: all 1s ease;
 
   @media screen and (min-width: 834px) {
-     margin-right: 40px;
+    margin-right: 40px;
   }
-
-  `
+`;
 
 export const Consumption = styled.h3`
   margin-top: 38px;
@@ -109,16 +111,16 @@ export const Consumption = styled.h3`
     font-size: 18px;
     line-height: 24px;
   }
-  `
-  export const Item = styled.div`
-    @media screen and (min-width: 834px) {
-     display: flex;
+`;
+export const Item = styled.div`
+  @media screen and (min-width: 834px) {
+    display: flex;
     align-items: center;
-    }
-  `
+  }
+`;
 
-  export const WaterGoal = styled.p`
-     display: flex;
+export const WaterGoal = styled.p`
+  display: flex;
   align-items: center;
   margin-top: 12px;
   color: #fff;
@@ -127,12 +129,10 @@ export const Consumption = styled.h3`
   font-style: normal;
   font-weight: 500;
   line-height: 34px;
-
-
-  `
+`;
 
 export const WaterSpan = styled.span`
-      margin-left: 8px;
+  margin-left: 8px;
   color: #b6b6b6;
   font-family: Poppins;
   font-size: 14px;
@@ -141,19 +141,18 @@ export const WaterSpan = styled.span`
   line-height: 20px;
 
   @media screen and (min-width: 834px) {
-     margin-left: 2px;
+    margin-left: 2px;
   }
-`
-export const LeftSpan = styled.p`
+`;
+export const LeftSpan = styled.span`
   margin-left: 4px;
-  color:  #b6b6b6;
+  color: #b6b6b6;
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
-
-`
+`;
 
 export const Left = styled.p`
   margin-top: 8px;
@@ -167,7 +166,7 @@ export const Left = styled.p`
   @media screen and (min-width: 834px) {
     margin-left: 40px;
   }
-`
+`;
 
 export const WaterButton = styled.button`
   justify-content: center;
@@ -178,19 +177,19 @@ export const WaterButton = styled.button`
   padding: 8px 10px;
   align-items: center;
   border-radius: 12px;
-  background:  #e3ffa8;
-  color:  #0f0f0f;
+  background: #e3ffa8;
+  color: #0f0f0f;
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
-`
+`;
 
 export const WaterImg = styled.img`
   margin-top: 2px;
   margin-right: 8px;
-`
+`;
 export const SrOnly = styled.span`
   position: relative;
   z-index: 20;
@@ -198,4 +197,4 @@ export const SrOnly = styled.span`
   font-size: 18px;
   line-height: 22px;
   font-weight: 600;
-`
+`;

@@ -1,5 +1,5 @@
 // import React from 'react';
-import Notiflix from 'notiflix';
+// import Notiflix from 'notiflix';
 import { useDispatch } from 'react-redux';
 import { addWater } from '../../redux/usersGoal/operations';
 import {

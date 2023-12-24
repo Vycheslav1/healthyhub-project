@@ -6,12 +6,12 @@ export const SignInContainer = styled.div`
   padding: 24px 10px 40px 10px;
   margin: auto;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 834px;
     padding: 40px 195px 286px 195px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 1440px;
     display: flex;
     padding: 40px 150px 60px 150px;
@@ -22,12 +22,12 @@ export const ImageSignIn = styled.img`
   width: 300px;
   height: 296px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 380px;
     height: 376px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     display: flex;
     width: 592px;
     height: 588px;
@@ -39,10 +39,10 @@ export const ImageSignIn = styled.img`
 `;
 
 export const SignInFormWrapper = styled.div`
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 444px;
     margin-top: 80px;
     margin-left: 104px;
@@ -59,7 +59,7 @@ export const SignInTitle = styled.h2`
   margin-top: 24px;
   margin-bottom: 16px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     text-align: center;
     font-size: 30px;
     line-height: 36px;
@@ -67,7 +67,7 @@ export const SignInTitle = styled.h2`
     width: 380px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 102px;
     text-align: start;
     margin-top: 0;
@@ -84,13 +84,13 @@ export const SignInDescription = styled.p`
   line-height: 24px;
   margin-bottom: 24px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     /* text-align: center; */
     font-size: 22px;
     line-height: 32px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 444px;
     text-align: start;
     margin-top: 0;
@@ -104,11 +104,11 @@ export const FormSignIn = styled.form`
   gap: 20px;
   width: 300px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 380px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 212px;
   }
 `;
@@ -126,12 +126,12 @@ export const SignInLabel = styled.label`
   font-weight: 400;
   line-height: 20px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 380px;
     margin: auto;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 212px;
     height: 36px;
     display: flex;
@@ -150,11 +150,11 @@ export const SignInInput = styled.input`
   color: white;
   outline: none;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 320px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 175px;
   }
 `;
@@ -174,14 +174,14 @@ export const SignInButton = styled.button`
   line-height: 20px;
   margin-bottom: 14px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     margin-left: auto;
     margin-right: auto;
     width: 380px;
     margin-bottom: 20px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 212px;
     margin-top: 20px;
     box-shadow: 0px 0px 5px #e3ffa8;
@@ -193,11 +193,11 @@ export const SignInButton = styled.button`
 export const FootWrapperOne = styled.div`
   margin-bottom: 54px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 192px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     /* margin-top: 20px; */
     text-align: center;
   }
@@ -213,11 +213,11 @@ export const FootLinkOne = styled(NavLink)`
   font-weight: 400;
   line-height: 20px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 192px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     text-decoration: none;
   }
 `;
@@ -227,13 +227,13 @@ export const FootWrapperTwo = styled.div`
   align-items: baseline;
   gap: 20px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     margin-top: 150px;
     justify-content: center;
     align-items: baseline;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     margin-top: 147px;
     justify-content: flex-start;
     align-items: baseline;
@@ -249,10 +249,10 @@ export const FootLinkTextTwo = styled.p`
   font-weight: 400;
   line-height: 20px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
   }
 `;
 
@@ -266,11 +266,11 @@ export const FootLinkTwo = styled(NavLink)`
   font-weight: 500;
   line-height: 20px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 122px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
   }
 `;
 
@@ -282,10 +282,10 @@ export const ImageToggle = styled.img`
   width: 16px;
   height: 16px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
   }
 `;
 
@@ -299,9 +299,9 @@ export const IconSpan = styled.img`
   position: absolute;
   top: 30%;
   right: 5%;
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
   }
 `;
