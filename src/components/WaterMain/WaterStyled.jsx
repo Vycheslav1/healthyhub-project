@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const WaterWindow = styled.div`
   width: 300px;
   height: 254px;
-  /* background-color: #050505; */
+  /* background: #050505; */
 
   @media screen and (min-width: 834px) {
     width: 380px;

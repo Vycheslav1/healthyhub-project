@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux';
 import { DailyGoal } from '../../components/DailyGoal/DailyGoal';
 import DiaryOnMain from '../../components/DiaryOnMain/DiaryOnMain';
+import { Water } from '../../components/WaterMain/Water'
 import { Food } from '../../components/Food/Food';
 import { RecommendedList } from '../../components/RecommendedList/RecommendedList';
-import { Water } from '../../components/WaterMain/Water';
 import {
   Content,
   HeaderMainPage,
