@@ -1,7 +1,7 @@
-import breakfastImage from 'src/images/svg/breakfest.svg';
-import lunchImage from 'src/images/svg/Lunch.svg';
-import dinnerImage from 'src/images/svg/Dinner image.svg';
-import snackImage from 'src/images/svg/Snack image.svg';
+import breakfastImg from 'src/images/svg/breakfastImg.svg';
+import lunchImg from 'src/images/svg/lunchImg.svg';
+import dinnerImg from 'src/images/svg/dinnerImg.svg';
+import snackImg from 'src/images/svg/snackImg.svg';
 import {
   ContainerDiary,
   AddLink,
@@ -38,7 +38,7 @@ export const DiaryOnMain = () => {
         <div>
           <DivBreakfast>
             <DiaryMobile>
-              <BreakfastImage src={breakfastImage} alt="Breakfast" />
+              <BreakfastImage src={breakfastImg} alt="Breakfast" />
               <DiaryBreakfast>Breakfast</DiaryBreakfast>
             </DiaryMobile>
             <div>
@@ -73,7 +73,7 @@ export const DiaryOnMain = () => {
 
           <DivBreakfast>
             <DiaryMobile>
-              <BreakfastImage src={lunchImage} alt="Lunch" />
+              <BreakfastImage src={lunchImg} alt="Lunch" />
               <DiaryBreakfast>Lunch</DiaryBreakfast>
             </DiaryMobile>
             <div>
@@ -103,7 +103,7 @@ export const DiaryOnMain = () => {
 
           <DivBreakfast>
             <DiaryMobile>
-              <BreakfastImage src={dinnerImage} alt="Dinner" />
+              <BreakfastImage src={dinnerImg} alt="Dinner" />
               <DiaryBreakfast>Dinner</DiaryBreakfast>
             </DiaryMobile>
             <div>
@@ -133,7 +133,7 @@ export const DiaryOnMain = () => {
 
           <DivBreakfast>
             <DiaryMobile>
-              <BreakfastImage src={snackImage} alt="Snack" />
+              <BreakfastImage src={snackImg} alt="Snack" />
               <DiaryBreakfast>Snack</DiaryBreakfast>
             </DiaryMobile>
             <div>
