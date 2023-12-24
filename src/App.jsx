@@ -33,7 +33,7 @@ function App() {
   ) : (
     <Routes>
       <Route path="/" element={<SharedLayout />}>
-        <Route index element={isLoggedIn ? <MainPage /> : <OnePage />} />
+        <Route index element={<MainPage /> } />
         <Route
           path="signup"
           element={

@@ -1,9 +1,10 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { selectUser } from '../redux/auth/selectors';
+import { useDispatch } from 'react-redux';
+// import { selectUser } from '../redux/auth/selectors';
 import { logOut } from '../redux/auth/operations';
+import { AddWaterModal } from '../components/ModalAddWater/ModalAddWater';
 
 export const MainPage = () => {
-  const { name } = useSelector(selectUser);
+  // const { name } = useSelector(selectUser);
 
   const dispatch = useDispatch();
 
@@ -16,6 +17,7 @@ export const MainPage = () => {
       <button type="button" onClick={handleLogOut}>
         LogOut
       </button>
+      <AddWaterModal/>
     </>
   );
 };
