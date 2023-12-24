@@ -27,7 +27,7 @@ export const Main = () => {
   const token = useSelector((state) => state.auth.token);
 
   useEffect(() => {
-    getRecommendedImage()
+    getRecommendedImage(10)
       .then((data) => {
         const newData = data.slice(0, 4);
         setFoodRecommended(newData);
