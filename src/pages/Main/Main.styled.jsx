@@ -8,7 +8,7 @@ export const Content = styled.div`
 
   @media screen and (min-width: 834px) {
     width: 834px;
-    padding: 0 27px;
+    padding: 24px 27px 40px;
   }
 
   @media screen and (min-width: 1440px) {
@@ -74,6 +74,9 @@ export const TrackerList = styled.ul`
     flex-wrap: wrap;
     flex-direction: row;
   }
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 0;
+  }
 `;
 
 export const Tarker = styled.li`
@@ -129,10 +132,17 @@ export const TitleRecommended = styled.h2`
   font-style: normal;
   font-weight: 400;
   line-height: 32px;
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 25px;
+  }
 `;
 
 export const WrapperRecommended = styled.div`
   width: 676px;
+  @media screen and (min-width: 834px) {
+    width: 780px;
+  }
 `;
 
 export const ImageRecom = styled.img``;

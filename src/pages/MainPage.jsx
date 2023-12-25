@@ -1,17 +1,17 @@
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 // import { selectUser } from '../redux/auth/selectors';
-import { logOut } from '../redux/auth/operations';
+// import { logOut } from '../redux/auth/operations';
 import { DiaryOnMain } from '../components/DiaryOnMain/DiaryOnMain';
-import { AddWaterModal } from '../components/ModalAddWater/ModalAddWater';
+// import { AddWaterModal } from '../components/ModalAddWater/ModalAddWater';
 
 export const MainPage = () => {
   // const { name } = useSelector(selectUser);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  const handleLogOut = () => {
-    dispatch(logOut());
-  };
+  // const handleLogOut = () => {
+  //   dispatch(logOut());
+  // };
 
   return (
     <>
@@ -19,7 +19,6 @@ export const MainPage = () => {
         LogOut
       </button> */}
       <DiaryOnMain />
-      <AddWaterModal/>
     </>
   );
 };

@@ -1,5 +1,4 @@
 // import { useSelector } from 'react-redux';
-
 import bubble from 'src/images/svg/bubble.svg';
 import milk from 'src/images/svg/milk.svg';
 // import { selectGoals } from '../../redux/usersGoal/selectors';
@@ -36,7 +35,7 @@ export const DailyGoal = () => {
           <img src={bubble} alt="illustration" />
           <CaloriesWrapper>
             <CaloriesHead>Calories</CaloriesHead>
-            <Calories>{/* {caloriesGoal} */}</Calories>
+            <Calories>{/* {caloriesGoal} */}1700</Calories>
           </CaloriesWrapper>
         </BubbleWrapper>
         <BubbleWrapper>
@@ -44,7 +43,7 @@ export const DailyGoal = () => {
           <WaterWrapper>
             <WaterHead>Water</WaterHead>
             <Water>
-              {/* {waterGoal} */}
+              {/* {waterGoal} */}2000
               <WaterSpan>ml</WaterSpan>
             </Water>
           </WaterWrapper>

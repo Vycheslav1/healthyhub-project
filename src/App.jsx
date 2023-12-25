@@ -1,7 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import SharedLayout from 'components/SharedLayout/SharedLayout';
-// import { MainPage } from 'pages/MainPage';
 import { SingUpPage } from 'pages/SingUpPage';
 import { SingInPage } from 'pages/SingInPage';
 import { ForgotPasswordPage } from 'pages/ForgotPasswordPage';
@@ -34,8 +33,6 @@ function App() {
   ) : (
     <Routes>
       <Route path="/" element={<SharedLayout />}>
-        {/* <Route path="/main" element={<Main />}></Route> */}
-
         <Route index element={isLoggedIn ? <Main /> : <OnePage />} />
         <Route
           path="signup"
@@ -81,14 +78,12 @@ function App() {
           <PrivateRoute redirectTo="/signin" component={<RecommendedFood />} />
         }
       />
-
       <Route
         path="settings"
-        element={
+        elements={
           <PrivateRoute redirectTo="/signin" component={<SettingPage />} />
         }
       />
-
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );

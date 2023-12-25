@@ -181,8 +181,10 @@ export const Input = styled.input`
   line-height: 20px;
   color: white;
   outline: none;
+  width: 230px;
 
   @media screen and (min-width: 834px) {
+    width: 310px;
   }
 
   @media screen and (min-width: 1440px) {
@@ -191,6 +193,7 @@ export const Input = styled.input`
     border: transparent;
     color: white;
     outline: none;
+    width: 170px;
   }
 `;
 

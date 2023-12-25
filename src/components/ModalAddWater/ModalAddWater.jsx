@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import Notiflix from 'notiflix';
 import {
   ModalBtnCancel,
   ModalBtnSubmit,
@@ -9,20 +9,51 @@ import {
   ModalInput,
   ModalOverlay,
 } from './ModalAddWater.styled';
+import { useDispatch } from 'react-redux';
+import { addWater } from '../../redux/usersGoal/operations';
 
-export const AddWaterModal = () => {
-  const [openModal, setOpenModal] = useState(true);
+export const AddWaterModal = ({ closeModal }) => {
+  const dispatch = useDispatch();
 
-  const closeModalHendler = (e) => {
+  Notiflix.Notify.init({ zindex: 100000, position: 'center-top' });
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setOpenModal(false);
+    const form = e.currentTarget;
+    const login = Number(form.elements.number.value);
+
+    if (login <= 0) {
+      Notiflix.Notify.failure(
+        'The entered number must be greater than zero :)'
+      );
+
+      return;
+    }
+    dispatch(addWater(login));
+    form.reset();
+    closeModal();
   };
+
+  const handleOnClose = (e) => {
+    if (e.code === 'Escape') {
+      closeModal();
+    }
+  };
+
+  window.addEventListener('keydown', handleOnClose);
+
+  const handleOverlyClick = (e) => {
+    if (e.currentTarget === e.target) {
+      closeModal();
+    }
+  };
+
   return (
-    <ModalOverlay>
+    <ModalOverlay onClick={handleOverlyClick}>
       <ModalContent>
         <ModalHead>Add water intake</ModalHead>
 
-        <ModalForm>
+        <ModalForm onSubmit={handleSubmit}>
           <ModalDesc>How much water</ModalDesc>
 
           <ModalInput
@@ -33,7 +64,7 @@ export const AddWaterModal = () => {
 
           <ModalBtnSubmit type="submit">Confirm</ModalBtnSubmit>
 
-          <ModalBtnCancel onClick={closeModalHendler}>Cancel</ModalBtnCancel>
+          <ModalBtnCancel onClick={closeModal}>Cancel</ModalBtnCancel>
         </ModalForm>
       </ModalContent>
     </ModalOverlay>
