@@ -37,8 +37,7 @@ export const ForgotPasswordForm = () => {
     }),
 
     onSubmit: (values) => {
-      // alert(JSON.stringify(values, null, 2));
-      // console.log(values);
+      console.log(values);
       Notify.success('The password has been successfully sent to your email!');
       dispatch(
         forgotPassword({

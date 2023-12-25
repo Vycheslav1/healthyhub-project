@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { Notify } from 'notiflix';
 import { useDispatch } from 'react-redux';
 import { BodyParameters } from 'src/components/BodyParameters/BodyParameters';
 import { SelectGenderAge } from 'src/components/SelectGenderAge/SelectGenderAge';
@@ -88,7 +87,6 @@ export const SignUpForm = () => {
     onSubmit: (values) => {
       // alert(JSON.stringify(values, null, 2));
       console.log(values);
-      Notify.success('You have successfully registered!');
       dispatch(
         register({
           username: values.username,
