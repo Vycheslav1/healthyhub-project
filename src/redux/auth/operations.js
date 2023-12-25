@@ -6,8 +6,6 @@ import Notiflix from 'notiflix';
 //   baseURL: 'https://github.com/Alex1Go/back-healthy-hub',
 // });
 
-// axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
-
 axios.defaults.baseURL = 'https://healthy-hub-2d3x.onrender.com/api';
 
 const setAuthHeader = (token) => {
@@ -27,17 +25,14 @@ export const register = createAsyncThunk(
   'auth/register',
   async (credentials, thunkAPI) => {
     try {
-      // const res = await axios.post('/users/signup', credentials);
       const { data } = await axios.post('/auth/signup', credentials);
-      // Notiflix.Notify.success(`Hooray! We found ${data} images.`, {
-      //   timeout: 2000,
-      //   width: '260px',
-      // });
+      Notiflix.Notify.success(`You have successfully registered!`);
 
       setAuthHeader(data.token);
       console.log(data);
       return data;
     } catch (error) {
+      Notiflix.Notify.failure(`Sorry, there was an error, please try again.`);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -47,13 +42,14 @@ export const logIn = createAsyncThunk(
   'auth/login',
   async (credentials, thunkAPI) => {
     try {
-      // const { data } = await axios.post('/users/login', credentials);
       const { data } = await axios.post('/auth/signin', credentials);
+      Notiflix.Notify.success(`You have successfully logged in!`);
 
       setAuthHeader(data.token);
       console.log(data);
       return data;
     } catch (error) {
+      Notiflix.Notify.failure(`Oops! The email or password is incorrect`);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -62,7 +58,6 @@ export const logIn = createAsyncThunk(
 //signout
 export const logOut = createAsyncThunk('/auth/logout', async (_, thunkAPI) => {
   try {
-    // await axios.post('/users/logout');
     await axios.post('/auth/signout');
 
     clearAuthHeader();
@@ -133,18 +128,19 @@ export const refreshUser = createAsyncThunk(
 );
 
 //forgot-password
-// https://nodejs-rest-api-ljp2.onrender.com/users/forgot-password
-// http://localhost:3000/users/forgot-password
-// ВІДКОРЕГУВАТИ ЕНДПОІНТ
 export const forgotPassword = createAsyncThunk(
   'auth/forgotPassword',
   async (credentials, thunkAPI) => {
     try {
       const { data } = await axios.post('/auth/forgot-password', credentials);
       setAuthHeader(data.token);
+      Notiflix.Notify.success(
+        'The password has been successfully sent to your email!'
+      );
       console.log(data);
       return data;
     } catch (error) {
+      Notiflix.Notify.failure(`Sorry, there was an error, please try again.`);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
