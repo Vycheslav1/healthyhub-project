@@ -101,7 +101,7 @@ export default function CurrentWeightModal({ onClose, date }) {
                           placeholder="Enter your weight"
                           borderstyle={
                             errors.weight && touched.weight
-                              ? '1px solid var(--input-border-color-error)'
+                              ? '1px solid rgba(231, 74, 59, 1)'
                               : ''
                           }
                         />
