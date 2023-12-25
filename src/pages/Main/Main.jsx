@@ -1,7 +1,7 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { DailyGoal } from '../../components/DailyGoal/DailyGoal';
 import DiaryOnMain from '../../components/DiaryOnMain/DiaryOnMain';
-import { Water } from '../../components/WaterMain/Water'
+import { Water } from '../../components/WaterMain/Water';
 import { Food } from '../../components/Food/Food';
 import { RecommendedList } from '../../components/RecommendedList/RecommendedList';
 import {
@@ -20,11 +20,18 @@ import {
 } from './Main.styled';
 import { useEffect, useState } from 'react';
 import { getRecommendedImage } from '../../redux/getRequest/getRecommendedImg';
-import arrow from '../../images/svg/arrow.svg';
+import arrow from 'src/images/svg/arrow.svg';
+import { addWater, fetchGoalsConfirm } from '../../redux/usersGoal/operations';
 
 export const Main = () => {
   const [foodRecommended, setFoodRecommended] = useState([]);
   const token = useSelector((state) => state.auth.token);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchGoalsConfirm());
+    dispatch(addWater());
+  });
 
   useEffect(() => {
     getRecommendedImage(10)
@@ -37,7 +44,6 @@ export const Main = () => {
 
   return (
     <Content>
-      {/* Заговолок */}
       <HeaderMainPage>
         <TitlePage>Today</TitlePage>
         <LinkToDashboard to="/dashboard">
@@ -45,28 +51,26 @@ export const Main = () => {
           <img />
         </LinkToDashboard>
       </HeaderMainPage>
-      {/* Блоки, що показують трекери прийому їжі та води (Daily Goal, Water, Food)  */}
+
       <TrackerList>
         <Tarker>
-          {/* блок Щоденна мета DailyGoal */}
           <DailyGoal />
         </Tarker>
+
         <Tarker>
-          {/* блок Вода Water */}
           <Water />
         </Tarker>
+
         <Tarker>
-          {/* блок Їжа Food */}
           <Food />
         </Tarker>
       </TrackerList>
 
       <Wrapper>
-        {/* блок щоденник */}
         <WrapperDiaryOnMain>
           <DiaryOnMain />
         </WrapperDiaryOnMain>
-        {/* блок рекомендована їжа */}
+
         <WrapperRecommended>
           <TitleRecommended>Recommended food</TitleRecommended>
           <RecommendedList recommendedImage={foodRecommended} />

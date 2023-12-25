@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import {
   // UpdateFood,
+  fetchGoalsConfirm,
   addWater,
   // fetchGoals,
   // fetchGoalsConfirm,
@@ -8,7 +9,7 @@ import {
   // weightGoalUpdate,
 } from './operations';
 
-const handlePending = state => {
+const handlePending = (state) => {
   state.isLoading = true;
 };
 const handleRejected = (state, action) => {
@@ -90,7 +91,7 @@ const goalSlice = createSlice({
     isLoading: false,
     error: null,
   },
-  extraReducers: builder => {
+  extraReducers: (builder) => {
     builder
       // .addCase(fetchGoals.pending, handlePending)
       // .addCase(fetchGoals.fulfilled, handleFetchGoalsFulfilled)
@@ -100,21 +101,21 @@ const goalSlice = createSlice({
       .addCase(addWater.fulfilled, handleAddWaterFulfilled)
       .addCase(addWater.rejected, handleRejected)
       //addFood
-      // .addCase(fetchGoalsConfirm.pending, handlePending)
-      // .addCase(fetchGoalsConfirm.fulfilled, handleFetchGoalsConfirmFulfilled)
-      // .addCase(fetchGoalsConfirm.rejected, handleRejected)
-      // updateGoal
-      // .addCase(updateGoal.pending, handlePending)
-      // .addCase(updateGoal.fulfilled, handleUpdateGoalFulfilled)
-      // .addCase(updateGoal.rejected, handleRejected)
-      // updateFood
-      // .addCase(UpdateFood.pending, handlePending)
-      // .addCase(UpdateFood.fulfilled, handleUpdateFoodFulfilled)
-      // .addCase(UpdateFood.rejected, handleRejected)
-      // weightGoalUpdate
-      // .addCase(weightGoalUpdate.pending, handlePending)
-      // .addCase(weightGoalUpdate.fulfilled, handleUpdateGoalFulfilled)
-      // .addCase(weightGoalUpdate.rejected, handleRejected);
+      .addCase(fetchGoalsConfirm.pending, handlePending)
+      .addCase(fetchGoalsConfirm.fulfilled, handleFetchGoalsConfirmFulfilled)
+      .addCase(fetchGoalsConfirm.rejected, handleRejected);
+    // updateGoal
+    // .addCase(updateGoal.pending, handlePending)
+    // .addCase(updateGoal.fulfilled, handleUpdateGoalFulfilled)
+    // .addCase(updateGoal.rejected, handleRejected)
+    // updateFood
+    // .addCase(UpdateFood.pending, handlePending)
+    // .addCase(UpdateFood.fulfilled, handleUpdateFoodFulfilled)
+    // .addCase(UpdateFood.rejected, handleRejected)
+    // weightGoalUpdate
+    // .addCase(weightGoalUpdate.pending, handlePending)
+    // .addCase(weightGoalUpdate.fulfilled, handleUpdateGoalFulfilled)
+    // .addCase(weightGoalUpdate.rejected, handleRejected);
   },
 });
 

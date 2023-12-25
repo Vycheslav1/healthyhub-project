@@ -1,5 +1,6 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { Notify } from 'notiflix';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import {
@@ -27,18 +28,6 @@ export const ForgotPasswordForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // const handleForgotPassword = (e) => {
-  //   e.preventDefault();
-  //   const form = e.currentTarget;
-  //   dispatch(
-  //     forgotPassword({
-  //       email: form.elements.email.value,
-  //     })
-  //   );
-  //   navigate('/signin');
-  //   form.reset();
-  // };
-
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -48,8 +37,9 @@ export const ForgotPasswordForm = () => {
     }),
 
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-      console.log(values);
+      // alert(JSON.stringify(values, null, 2));
+      // console.log(values);
+      Notify.success('The password has been successfully sent to your email!');
       dispatch(
         forgotPassword({
           email: values.email,

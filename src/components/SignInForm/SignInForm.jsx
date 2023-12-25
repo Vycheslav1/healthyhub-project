@@ -1,5 +1,6 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { Notify } from 'notiflix';
 import { logIn } from '../../redux/auth/operations';
 import { useDispatch } from 'react-redux';
 import {
@@ -56,7 +57,8 @@ export const SignInForm = () => {
 
     onSubmit: (values) => {
       // alert(JSON.stringify(values, null, 2));
-      console.log(values);
+      // console.log(values);
+      Notify.success('You have successfully logged in!');
       dispatch(
         logIn({
           email: values.email,
