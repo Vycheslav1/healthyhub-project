@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const FoodWrapper = styled.div`
   width: 300px;
   height: 410px;
+  margin-bottom: 50px;
 
   @media screen and (min-width: 834px) {
     width: 780px;
@@ -34,18 +35,22 @@ export const GraphWrapper = styled.div`
   width: 300px;
   height: 380;
   background-color: #0f0f0f;
-  padding-top: 16px;
+  padding: 16px 72px 16px 12px;
+  /* padding-top: 16px;
   padding-bottom: 16px;
-  padding-left: 12px;
+  padding-left: 12px; */
   border-radius: 12px;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
 
   @media screen and (min-width: 834px) {
     display: flex;
     width: 780px;
     height: 240px;
     padding: 36px 40px;
+    flex-direction: row;
   }
 
   @media screen and (min-width: 1440px) {

@@ -17,25 +17,19 @@ import {
   LinkFood,
   BreakfastFet,
   WrapperOne,
-  RecommendedWrapper,
-  RecommendedListWrapper,
   TrashButton,
-  SpanDate,
 } from './DiaryOnMainStyled';
-import { RecommendedList } from '../RecommendedList/RecommendedList';
-import { NavLink } from 'react-router-dom';
-import trash from '../../images/svg/trash-03.svg';
+import trash from 'src/images/svg/trash-03.svg';
 
 export const DiaryOnMain = () => {
   return (
     <ContainerDiary>
-      <WrapperOne></WrapperOne>
       <AddLink>
         <Diary>Diary</Diary>
-        <SeeMore>See More</SeeMore>
+        <SeeMore to={'/diary'}>See More</SeeMore>
       </AddLink>
       <div>
-        <div>
+        <WrapperOne>
           <DivBreakfast>
             <DiaryMobile>
               <BreakfastImage src={breakfastImg} alt="Breakfast" />
@@ -92,7 +86,7 @@ export const DiaryOnMain = () => {
                   <img src={trash} alt="trash basket" />
                 </TrashButton>
               </LinkFood>
-              :
+
               <OpenModal
               //   onClick={() => openModal('lunch')}
               >
@@ -159,7 +153,7 @@ export const DiaryOnMain = () => {
               </OpenModal>
             </div>
           </DivBreakfast>
-        </div>
+        </WrapperOne>
       </div>
     </ContainerDiary>
   );
