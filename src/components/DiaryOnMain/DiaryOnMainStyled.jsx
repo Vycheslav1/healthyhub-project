@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { Link, NavLink } from 'react-router-dom';
+// import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const ContainerDiary = styled.div`
   width: 300px;
