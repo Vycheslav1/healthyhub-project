@@ -1,6 +1,6 @@
 import { CloseButton } from './CloseModalButton.styled';
 
-import sprite from 'src/components/Header/images-for-header/icons.svg';
+import sprite from '../../../components/Header/images-for-header/icons.svg';
 
 export default function CloseModalButton({ onClose }) {
   return (
