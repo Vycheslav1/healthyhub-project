@@ -80,7 +80,7 @@ function App() {
       />
       <Route
         path="settings"
-        elements={
+        element={
           <PrivateRoute redirectTo="/signin" component={<SettingPage />} />
         }
       />
