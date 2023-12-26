@@ -144,7 +144,7 @@ export const Left = styled.div`
 
 export const WaterButton = styled.button`
   justify-content: center;
-  width: 168px;
+  width: 170px;
   height: 36px;
   margin-top: 16px;
   display: flex;
