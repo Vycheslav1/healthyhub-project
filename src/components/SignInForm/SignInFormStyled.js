@@ -155,7 +155,7 @@ export const SignInInput = styled.input`
   }
 
   @media screen and (min-width: 1440px) {
-    width: 175px;
+    width: 170px;
   }
 `;
 
@@ -229,7 +229,7 @@ export const FootWrapperTwo = styled.div`
 
   @media screen and (min-width: 834px) {
     margin-top: 150px;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: baseline;
   }
 

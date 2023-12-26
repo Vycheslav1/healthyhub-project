@@ -24,15 +24,16 @@ export const DailyHead = styled.h3`
   @media screen and (min-width: 834px) {
     line-height: 32px;
     font-size: 22px;
+    margin-bottom: 19px;
   }
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     margin-bottom: 6px;
   }
 `;
 
 export const DailyWrapper = styled.div`
   width: 300px;
-  height: 200px;
+  height: 212px;
   background-color: #0f0f0f;
   border-radius: 12px;
   margin-top: 6px;
@@ -51,7 +52,7 @@ export const DailyWrapper = styled.div`
 
 export const BubbleWrapper = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 export const CaloriesWrapper = styled.div`

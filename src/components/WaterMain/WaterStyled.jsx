@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const WaterWindow = styled.div`
   width: 300px;
   height: 254px;
-  /* background-color: #050505; */
+  /* background: #050505; */
 
   @media screen and (min-width: 834px) {
     width: 380px;
@@ -27,7 +27,7 @@ export const Head = styled.h2`
     line-height: 32px;
     font-size: 22px;
   }
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     margin-bottom: 6px;
   }
 `;
@@ -61,37 +61,10 @@ export const WaterProgressBar = styled.div`
   text-align: center;
   width: 80px;
   height: 192px;
-  padding: 8px;
+  /* padding: 8px; */
   background-color: black;
   border-radius: 20px;
   margin-right: 20px;
-
-  @media screen and (min-width: 834px) {
-    margin-right: 40px;
-  }
-`;
-
-export const Progress = styled.div`
-  position: relative;
-  width: 64px;
-  height: 176px;
-  margin-bottom: 20px;
-  overflow: hidden;
-  background-color: black;
-  border-radius: 20px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-`;
-
-export const ProgressBar = styled.div`
-  width: 0;
-  border-radius: 20px;
-  text-align: center;
-  background-color: #b6c3ff;
-  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  -webkit-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
 
   @media screen and (min-width: 834px) {
     margin-right: 40px;
@@ -106,6 +79,7 @@ export const Consumption = styled.h3`
   font-style: normal;
   font-weight: 500;
   line-height: 22px;
+  margin-bottom: 12px;
 
   @media screen and (min-width: 834px) {
     font-size: 18px;
@@ -115,13 +89,13 @@ export const Consumption = styled.h3`
 export const Item = styled.div`
   @media screen and (min-width: 834px) {
     display: flex;
-    align-items: center;
+    align-items: baseline;
   }
 `;
 
-export const WaterGoal = styled.p`
+export const WaterGoal = styled.div`
   display: flex;
-  align-items: center;
+  align-items: baseline;
   margin-top: 12px;
   color: #fff;
   font-family: Poppins;
@@ -154,7 +128,7 @@ export const LeftSpan = styled.span`
   line-height: 20px;
 `;
 
-export const Left = styled.p`
+export const Left = styled.div`
   margin-top: 8px;
   color: var(--color-primary-white, #fff);
   font-family: Poppins;
@@ -170,7 +144,7 @@ export const Left = styled.p`
 
 export const WaterButton = styled.button`
   justify-content: center;
-  width: 166px;
+  width: 168px;
   height: 36px;
   margin-top: 16px;
   display: flex;

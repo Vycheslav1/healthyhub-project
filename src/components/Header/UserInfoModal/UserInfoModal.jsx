@@ -2,11 +2,11 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { logOutThunk } from '/src/redux/auth/operations.js';
-import { clearWaterIntake } from '/src/redux/dailyWater/slice.js';
-import { clearDailyCalories } from '/src/redux/dialyGoalCalories/slice.js';
-import { clearDiary } from '/src/redux/diary/slice.js';
-import { clearStatistic } from '/src/redux/statistic/slice.js';
+import { logOut, logOutThunk } from '../../../redux/auth/operations';
+import { clearWaterIntake } from '../../../redux/dailyWater/slice.js';
+import { clearDailyCalories } from '../../../redux/dialyGoalCalories/slice.js';
+import { clearDiary } from '../../../redux/diary/slice.js';
+import { clearStatistic } from '../../../redux/statistic/slice.js';
 
 import {
   Overlay,
@@ -16,7 +16,7 @@ import {
   Svg,
   CancelButton,
 } from './UserInfoModal.styled';
-import sprite from 'src/components/Header/images-for-header/icons.svg';
+import sprite from '../images-for-header/icons.svg';
 
 export default function UserInfoModal({ onClose }) {
   const [showConfirmation, setShowConfirmation] = useState(false);
@@ -51,7 +51,7 @@ export default function UserInfoModal({ onClose }) {
   };
 
   const onLogout = async () => {
-    await dispatch(logOutThunk());
+    await dispatch(logOut());
 
     dispatch(clearWaterIntake());
     dispatch(clearDailyCalories());

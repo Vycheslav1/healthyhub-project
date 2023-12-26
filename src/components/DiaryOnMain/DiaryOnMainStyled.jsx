@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { Link, NavLink } from 'react-router-dom';
+// import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const ContainerDiary = styled.div`
   width: 300px;
@@ -8,12 +9,12 @@ export const ContainerDiary = styled.div`
   margin-left: auto;
   margin-right: auto;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 518px;
     padding-right: 10px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     /* width: 1440px;
     padding: 20px 34px 54px 34px;
     margin: auto; */
@@ -23,12 +24,13 @@ export const ContainerDiary = styled.div`
 `;
 export const WrapperOne = styled.div`
   display: flex;
+  flex-direction: column;
   gap: 20px;
 `;
 
 export const AddLink = styled.div`
   display: flex;
-  align-items: center;
+  align-items: baseline;
 
   @media screen and (min-width: 834px) {
     display: flex;
@@ -47,7 +49,7 @@ export const Diary = styled.h2`
   color: rgba(255, 255, 255, 1);
 `;
 
-export const SeeMore = styled(Link)`
+export const SeeMore = styled(NavLink)`
   width: auto;
   height: 22px;
   font-weight: 500;
@@ -70,9 +72,9 @@ export const DivBreakfast = styled.div`
 `;
 export const DiaryMobile = styled.div`
   display: flex;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   align-items: center;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 
   @media screen and (min-width: 834px) {
     display: flex;
@@ -103,8 +105,10 @@ export const DiaryBreakfast = styled.h2`
 `;
 
 export const Carbonohidrates = styled.p`
+  width: 124px;
+
   color: white;
-  margin: 0 25px 0 10px;
+  margin: 0 25px 0 0px;
   /* margin-right: 25px;
   margin-left: 43px; */
   width: 160px;
@@ -163,6 +167,11 @@ export const OpenModal = styled.button`
 `;
 
 export const LinkFood = styled.div`
+  width: 300px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+
   @media screen and (min-width: 834px) {
     width: 518px;
     display: flex;
@@ -170,12 +179,6 @@ export const LinkFood = styled.div`
     gap: 20px;
   }
 `;
-
-export const RecommendedWrapper = styled.div`
-  /* display: flex; */
-`;
-
-export const RecommendedListWrapper = styled.div``;
 
 export const TrashButton = styled.button`
   background-color: transparent;
