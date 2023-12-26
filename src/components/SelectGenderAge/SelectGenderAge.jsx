@@ -60,7 +60,7 @@ export const SelectGenderAge = ({ formik, next, prev }) => {
           <AgeLabel>
             Your age
             <AgeInput
-              type="text"
+              type="number"
               name="age"
               placeholder="Enter your age"
               value={formik.values.age}

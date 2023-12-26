@@ -17,6 +17,10 @@ export const YourActivity = ({ formik, prev }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     formik.handleSubmit();
+    formik.setValues({
+      ...formik.values,
+      activity: Number(formik.values.activity),
+    });
   };
   return (
     <ActivityContainer>
@@ -52,7 +56,7 @@ export const YourActivity = ({ formik, prev }) => {
               <ActivityInput
                 type="radio"
                 name="activity"
-                value="1.55 "
+                value="1.55"
                 onChange={formik.handleChange}
               />
               1.55 - if you play sports with average loads 3-5 times a week

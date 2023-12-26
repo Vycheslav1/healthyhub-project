@@ -36,7 +36,7 @@ export const BodyParameters = ({ formik, next, prev }) => {
             <BodyParametersLabel>
               Height
               <BodyParametersInput
-                type="text"
+                type="number"
                 name="height"
                 value={formik.values.height}
                 onChange={formik.handleChange}
@@ -52,7 +52,7 @@ export const BodyParameters = ({ formik, next, prev }) => {
             <BodyParametersLabel>
               Weight
               <BodyParametersInput
-                type="text"
+                type="number"
                 name="weight"
                 value={formik.values.weight}
                 onChange={formik.handleChange}

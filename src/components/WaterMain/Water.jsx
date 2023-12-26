@@ -42,7 +42,7 @@ export const Water = () => {
     (consumedWater / targetWater) * 100
   );
 
-  //  const { items } = useSelector(selectGoals);
+  // const { items } = useSelector(selectGoals);
 
   // console.log(items);
 
