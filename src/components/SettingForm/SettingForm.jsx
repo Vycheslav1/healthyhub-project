@@ -32,7 +32,7 @@ import {
 } from './SettingFormStyled';
 import settings from 'src/images/settings.png';
 import inbox from 'src/images/svg/inbox.svg';
-import avatar from 'src/images/svg/avatar.svg';
+import avatar from 'src/images/avatar.png';
 
 export const SettingForm = () => {
   const formik = useFormik({
