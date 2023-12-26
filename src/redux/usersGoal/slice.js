@@ -3,7 +3,7 @@ import {
   // UpdateFood,
   fetchGoalsConfirm,
   addWater,
-  // fetchGoals,
+  fetchGoals,
   // fetchGoalsConfirm,
   // updateGoal,
   // weightGoalUpdate,
@@ -93,9 +93,9 @@ const goalSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      // .addCase(fetchGoals.pending, handlePending)
-      // .addCase(fetchGoals.fulfilled, handleFetchGoalsFulfilled)
-      // .addCase(fetchGoals.rejected, handleRejected)
+      .addCase(fetchGoals.pending, handlePending)
+      .addCase(fetchGoals.fulfilled, handleFetchGoalsFulfilled)
+      .addCase(fetchGoals.rejected, handleRejected)
       //addWater
       .addCase(addWater.pending, handlePending)
       .addCase(addWater.fulfilled, handleAddWaterFulfilled)

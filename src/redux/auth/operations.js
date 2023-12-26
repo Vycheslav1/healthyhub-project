@@ -145,3 +145,18 @@ export const forgotPassword = createAsyncThunk(
     }
   }
 );
+
+export const updateUser = createAsyncThunk(
+  'user/update',
+  async (body, thunkAPI) => {
+    try {
+      const { data } = await axios.put('/user/update', body);
+      setAuthHeader(data.token);
+
+      console.log(data);
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
