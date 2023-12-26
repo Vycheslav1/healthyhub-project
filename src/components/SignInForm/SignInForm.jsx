@@ -47,10 +47,7 @@ export const SignInForm = () => {
     validationSchema: Yup.object().shape({
       email: Yup.string().email('Invalid email').required('Email is required'),
       password: Yup.string()
-        .matches(
-          /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
-          'Enter a valid Password (min 6 characters, 1 upper case, 1 lower case, 1 number)'
-        )
+        .min(6, 'Enter a valid Password')
         .required('Password is required'),
     }),
 

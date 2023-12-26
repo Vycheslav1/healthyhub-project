@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { BodyParameters } from 'src/components/BodyParameters/BodyParameters';
 import { SelectGenderAge } from 'src/components/SelectGenderAge/SelectGenderAge';
 import { YourActivity } from 'src/components/YourActivity/YourActivity';
@@ -33,15 +34,14 @@ import eyeOff from 'src/images/svg/eye-off.svg';
 export const SignUpForm = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [showPassword, setShowPassword] = useState(false);
-
   const [isPasswordValid, setIsPasswordValid] = useState(true);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const toggleCheckboxChange = () => {
     setShowPassword(!showPassword);
     setIsPasswordValid(false);
   };
-
-  const dispatch = useDispatch();
 
   const validation = [
     Yup.object().shape({
@@ -98,7 +98,8 @@ export const SignUpForm = () => {
           height: values.height,
           weight: values.weight,
           activity: values.activity,
-        })
+        }),
+        navigate('/signin')
       );
     },
   });
