@@ -219,6 +219,8 @@ import {
   UserInfoButton,
   UserSvg,
   UserAvatar,
+  Span,
+  List,
 } from './HeaderStyled';
 
 import sprite from './images-for-header/icons.svg';
@@ -297,14 +299,19 @@ export const Header = () => {
   return (
     <>
       {!isAuth && (
-        <Navigation>
-          <StyledLink to="/signin">Sign in</StyledLink>
-          <span>/</span>
-          <StyledLink to="/signup">Sign up</StyledLink>
-          <ProfileSvg>
-            <use href={sprite + '#icon-profile-circle'} />
-          </ProfileSvg>
-        </Navigation>
+       <div className="container">
+          <Navigation>
+            <Logo to="/">HealthyHub</Logo>
+           <List>
+              <StyledLink to="/signin">Sign in</StyledLink>
+              <Span>/</Span>
+              <StyledLink to="/signup">Sign up</StyledLink>
+              <ProfileSvg>
+                <use href={sprite + '#icon-profile-circle'} />
+              </ProfileSvg>
+           </List>
+          </Navigation>
+       </div>
       )}
       {isAuth && (
         <HeaderContainer>
