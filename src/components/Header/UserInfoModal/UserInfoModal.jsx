@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { logOutThunk } from '../../../redux/auth/operations';
+import { logOut, logOutThunk } from '../../../redux/auth/operations';
 import { clearWaterIntake } from '../../../redux/dailyWater/slice.js';
 import { clearDailyCalories } from '../../../redux/dialyGoalCalories/slice.js';
 import { clearDiary } from '../../../redux/diary/slice.js';
@@ -51,7 +51,7 @@ export default function UserInfoModal({ onClose }) {
   };
 
   const onLogout = async () => {
-    await dispatch(logOutThunk());
+    await dispatch(logOut());
 
     dispatch(clearWaterIntake());
     dispatch(clearDailyCalories());

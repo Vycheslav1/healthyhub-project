@@ -65,26 +65,30 @@ function App() {
             <PrivateRoute redirectTo="/signin" component={<Dashboard />} />
           }
         />
+
+        <Route
+          path="diary"
+          element={
+            <PrivateRoute redirectTo="/signin" component={<DiaryPage />} />
+          }
+        />
+        <Route
+          path="recommended-food"
+          element={
+            <PrivateRoute
+              redirectTo="/signin"
+              component={<RecommendedFood />}
+            />
+          }
+        />
+        <Route
+          path="settings"
+          element={
+            <PrivateRoute redirectTo="/signin" component={<SettingPage />} />
+          }
+        />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
-      <Route
-        path="diary"
-        element={
-          <PrivateRoute redirectTo="/signin" component={<DiaryPage />} />
-        }
-      />
-      <Route
-        path="recommended-food"
-        element={
-          <PrivateRoute redirectTo="/signin" component={<RecommendedFood />} />
-        }
-      />
-      <Route
-        path="settings"
-        element={
-          <PrivateRoute redirectTo="/signin" component={<SettingPage />} />
-        }
-      />
-      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 }

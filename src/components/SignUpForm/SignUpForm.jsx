@@ -59,14 +59,14 @@ export const SignUpForm = () => {
     }),
     Yup.object().shape({
       gender: Yup.string().required('Please select your gender'),
-      age: Yup.string().required('Required'),
+      age: Yup.number().required('Required'),
     }),
     Yup.object().shape({
-      height: Yup.string().required('Required'),
-      weight: Yup.string().required('Required'),
+      height: Yup.number().required('Required'),
+      weight: Yup.number().required('Required'),
     }),
     Yup.object().shape({
-      activity: Yup.string().required('Please select your activity'),
+      activity: Yup.number().required('Please select your activity'),
     }),
   ];
 
@@ -77,10 +77,10 @@ export const SignUpForm = () => {
       password: '',
       goal: '',
       gender: '',
-      age: '',
-      height: '',
-      weight: '',
-      activity: '',
+      age: null,
+      height: null,
+      weight: null,
+      activity: null,
     },
     validationSchema: validation[currentPage - 1],
 
