@@ -35,3 +35,16 @@ export const fetchGoalsConfirm = createAsyncThunk(
     }
   }
 );
+
+export const fetchGoals = createAsyncThunk(
+  'user/food-intake',
+  async (body, thunkAPI) => {
+    try {
+      setHeadersToken(thunkAPI.getState().auth.token);
+      const { data } = await axios.post('/user/food-intake');
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.response.data);
+    }
+  }
+);
