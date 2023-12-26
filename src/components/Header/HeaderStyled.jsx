@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
-  background-color: #0f0f0f;
-  color: #ffffff;
-  padding: 11px 0;
-  font-family: Poppins;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
 
   @media (min-width: 834px) {
-    padding: 26px 0;
+    height: 100px;
   }
 `;
 
@@ -36,10 +36,32 @@ export const Logo = styled(Link)`
   }
 `;
 
+export const List = styled.div`
+  display: flex;
+  gap: 6px;
+  align-items: center;
+`;
+
+export const Span = styled.span`
+  padding: 22px 0;
+  text-decoration: none;
+  color: var(--color-primary-white, #fff);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.33;
+`;
+
 export const Navigation = styled.nav`
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 6px;
+  height: 60px;
+
+  @media (min-width: 834px) {
+    height: 100px;
+  }
 `;
 
 export const StyledLink = styled(Link)`
@@ -90,7 +112,7 @@ export const MenuButton = styled.button`
 export const MenuSvg = styled.svg`
   width: 16px;
   height: 16px;
-  stroke: #e3ffa8;
+  stroke: white;
 
   @media (min-width: 834px) {
     display: none;
