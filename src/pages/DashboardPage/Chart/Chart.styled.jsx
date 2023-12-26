@@ -20,4 +20,4 @@ export const AverageText = styled('p')`
   padding-top: 10px;
   color: #ffffff;
 `;
-export const ChartCanvas = styled('canvas')``;
+// export const ChartCanvas = styled('canvas')``;
