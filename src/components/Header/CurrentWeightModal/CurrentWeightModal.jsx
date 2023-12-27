@@ -2,7 +2,6 @@ import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Notiflix from 'notiflix';
 
 import { getDateLastWeight } from '../../../redux/auth/selectors';
 import { refreshUser, updateWeightThunk } from '../../../redux/auth/operations';
@@ -58,7 +57,6 @@ export default function CurrentWeightModal({ onClose, date }) {
 
   const handleSubmit = ({ weight }, actions) => {
     dispatch(updateWeightThunk({ weight }));
-    Notiflix.Notify.success('Your data has been successfully updated!');
     dispatch(refreshUser());
     setTimeout(() => {
       dispatch(fetchCaloriesIntake());

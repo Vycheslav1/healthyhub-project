@@ -2,10 +2,6 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import Notiflix from 'notiflix';
 
-// export const instance = axios.create({
-//   baseURL: 'https://github.com/Alex1Go/back-healthy-hub',
-// });
-
 axios.defaults.baseURL = 'https://healthy-hub-2d3x.onrender.com/api';
 
 const setAuthHeader = (token) => {
@@ -14,10 +10,6 @@ const setAuthHeader = (token) => {
 
 const clearAuthHeader = () => {
   axios.defaults.headers.common.Authorization = '';
-};
-
-export const delAuthHeader = () => {
-  instance.defaults.headers.common.Authorization = '';
 };
 
 //signup
