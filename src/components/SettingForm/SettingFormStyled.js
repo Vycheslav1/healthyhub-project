@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const SettingsFormWrapper = styled.div`
@@ -253,7 +253,7 @@ export const ButtonSave = styled.button`
   }
 `;
 
-export const ButtonCancel = styled(NavLink)`
+export const ButtonCancel = styled.button`
   width: 300px;
   color: var(--Color-Primary-Grey, #b6b6b6);
   text-align: center;
