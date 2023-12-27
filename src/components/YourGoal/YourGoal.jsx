@@ -65,12 +65,6 @@ export const YourGoal = ({ formik, next, prev }) => {
             </Label>
           </FormRadioWrapper>
           <ButtonNextGoals
-            style={{
-              boxShadow:
-                !formik.isValid || !formik.values.goal
-                  ? 'none'
-                  : '0px 0px 5px #e3ffa8',
-            }}
             type="button"
             onClick={validateAndMoveNext}
             disabled={!formik.isValid || !formik.values.goal}

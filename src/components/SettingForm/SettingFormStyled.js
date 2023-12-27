@@ -251,6 +251,10 @@ export const ButtonSave = styled.button`
   @media (min-width: 834px) {
     width: 192px;
   }
+  @media (min-width: 1440px) {
+    &:hover {
+    }
+  }
 `;
 
 export const ButtonCancel = styled.button`

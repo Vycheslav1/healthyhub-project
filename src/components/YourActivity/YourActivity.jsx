@@ -82,17 +82,7 @@ export const YourActivity = ({ formik, prev }) => {
             </ActivityLabel>
             {formik.errors.goal && <div>{formik.errors.goal}</div>}
           </ActivityLabelWrapper>
-          <ActivityButtonSignUp
-            style={{
-              boxShadow:
-                !formik.isValid || !formik.values.activity
-                  ? 'none'
-                  : '0px 0px 5px #e3ffa8',
-            }}
-            type="submit"
-          >
-            Sing up
-          </ActivityButtonSignUp>
+          <ActivityButtonSignUp type="submit">Sing up</ActivityButtonSignUp>
           <ActivityButtonBack type="button" onClick={prev}>
             Back
           </ActivityButtonBack>
