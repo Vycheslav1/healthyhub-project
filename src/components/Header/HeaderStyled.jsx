@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
@@ -64,7 +64,7 @@ export const Navigation = styled.nav`
   }
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledNavLink = styled(NavLink)`
   font-size: 12px;
   line-height: 1.43;
   color: #ffffff;
