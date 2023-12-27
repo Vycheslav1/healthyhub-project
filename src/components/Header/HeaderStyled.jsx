@@ -29,7 +29,7 @@ export const Logo = styled(Link)`
   font-size: 16px;
   font-weight: 700;
   line-height: 1.45;
-  color: #b6b6b6;
+  color: var(--primary-grey-color);
 
   @media (min-width: 834px) {
     font-size: 22px;
@@ -45,7 +45,7 @@ export const List = styled.div`
 export const Span = styled.span`
   padding: 22px 0;
   text-decoration: none;
-  color: var(--color-primary-white, #fff);
+  color: var(--primary-white-color);
   text-align: center;
   font-family: 'Poppins', sans-serif;
   font-size: 12px;
@@ -67,10 +67,10 @@ export const Navigation = styled.nav`
 export const StyledNavLink = styled(NavLink)`
   font-size: 12px;
   line-height: 1.43;
-  color: #ffffff;
+  color: var(--primary-white-color);
 
   &.active {
-    color: #e3ffa8;
+    color: var(--primary-light-green-color);
   }
 
   @media (min-width: 834px) {
@@ -81,7 +81,7 @@ export const StyledNavLink = styled(NavLink)`
 export const ProfileSvg = styled.svg`
   width: 26px;
   height: 26px;
-  stroke: #ffffff;
+  stroke: var(--primary-white-color);
 
   @media (min-width: 834px) {
     width: 28px;
@@ -112,7 +112,7 @@ export const MenuButton = styled.button`
 export const MenuSvg = styled.svg`
   width: 16px;
   height: 16px;
-  stroke: white;
+  stroke: var(--primary-white-color);
 
   @media (min-width: 834px) {
     display: none;
@@ -144,7 +144,7 @@ export const UserInfoButton = styled.button`
 export const UserName = styled.p`
   font-size: 12px;
   line-height: 1.43;
-  color: #ffffff;
+  color: var(--primary-white-color);
   margin-right: 6px;
 
   @media (min-width: 834px) {
@@ -155,7 +155,7 @@ export const UserName = styled.p`
 export const UserSvg = styled.svg`
   width: 24px;
   height: 24px;
-  stroke: #ffffff;
+  stroke: var(--primary-white-color);
   margin-right: 4px;
 
   @media (min-width: 834px) {

@@ -40,7 +40,7 @@ export const UserContainer = styled.div`
   top: -6px;
   right: 0;
   width: 158px;
-  background: rgba(15, 15, 15, 1);
+  background: var(--primary-black-second-color);
   padding: 24px;
   border-radius: 12px;
   box-shadow: 0px 4px 14px 0px rgba(227, 255, 168, 0.2);
@@ -60,7 +60,7 @@ export const UserButton = styled.button`
   gap: 8px;
   width: 100%;
   padding: 0;
-  color: #ffffff;
+  color: var(--primary-white-color);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.43;
@@ -69,7 +69,7 @@ export const UserButton = styled.button`
 `;
 
 export const Svg = styled.svg`
-  stroke: #ffffff;
+  stroke: var(--primary-white-color);
   width: 16px;
   height: 16px;
 `;
@@ -78,7 +78,7 @@ export const CancelButton = styled.button`
   display: flex;
   justify-content: center;
   width: 100%;
-  color: #b6b6b6;
+  color: var(--primary-grey-color);
   font-size: 14px;
   line-height: 1.43;
   background: transparent;

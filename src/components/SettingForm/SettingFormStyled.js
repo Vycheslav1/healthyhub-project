@@ -40,7 +40,7 @@ export const TitleImage = styled.img`
 `;
 
 export const TitleSettings = styled.h2`
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 24px;
   font-style: normal;
@@ -67,7 +67,7 @@ export const FormWrapper = styled.form`
     width: 491px;
     margin: auto;
     flex-wrap: wrap;
-    color: white;
+    color: var(--primary-white-color);
   }
 
   @media (min-width: 1440px) {
@@ -99,7 +99,7 @@ export const PhotoWrapper = styled.div`
 `;
 
 export const Text = styled.p`
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -110,7 +110,7 @@ export const Text = styled.p`
 
 export const TextActivity = styled.p`
   margin: 0 0 12px 0;
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -128,7 +128,7 @@ export const LabelSettings = styled.label`
   display: flex;
   flex-direction: column;
   width: 300px;
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -147,9 +147,9 @@ export const LabelSettings = styled.label`
 export const InputSettings = styled.input`
   padding: 8px 10px;
   border-radius: 12px;
-  border: 1px solid var(--Color-Primary-Grey, #b6b6b6);
-  background: var(--Color-Primary-Black-2, #0f0f0f);
-  color: var(--Color-Primary-White, #fff);
+  border: 1px solid var(--primary-grey-color);
+  background: var(--primary-black-second-color);
+  color: var(--primary-white-color);
   outline: none;
   margin-top: 12px;
 `;
@@ -162,7 +162,7 @@ export const WrapperOne = styled.div`
 `;
 
 export const LabelSettingsRadio = styled.label`
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
 `;
 
 export const WrapperTwo = styled.div`
@@ -183,7 +183,7 @@ export const WrapperGenres = styled.div`
 `;
 
 export const LabelSettingsGender = styled.label`
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
 
   @media (min-width: 1440px) {
     display: flex;
@@ -210,7 +210,7 @@ export const WrapperActivity = styled.div`
   }
 
   @media (min-width: 1440px) {
-    color: var(--Color-Primary-White, #fff);
+    color: var(--primary-white-color);
     font-family: Poppins;
     font-size: 14px;
     font-style: normal;
@@ -238,8 +238,8 @@ export const ButtonSave = styled.button`
   width: 300px;
   padding: 8px 10px;
   border-radius: 12px;
-  background: var(--Color-Primary-Green-Lite, #e3ffa8);
-  color: var(--Color-Primary-Black-2, #0f0f0f);
+  background: var(--primary-light-green-color);
+  color: var(--primary-black-second-color);
   text-align: center;
   font-family: Poppins;
   font-size: 14px;
@@ -259,7 +259,7 @@ export const ButtonSave = styled.button`
 
 export const ButtonCancel = styled.button`
   width: 300px;
-  color: var(--Color-Primary-Grey, #b6b6b6);
+  color: var(--primary-grey-color);
   text-align: center;
   padding: 8px 10px;
   font-family: Poppins;
@@ -276,7 +276,7 @@ export const ButtonCancel = styled.button`
 `;
 
 export const TextLabel = styled.p`
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;

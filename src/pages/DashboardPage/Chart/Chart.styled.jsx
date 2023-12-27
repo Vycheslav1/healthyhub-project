@@ -4,7 +4,7 @@ export const ChartType = styled('h2')`
   font-weight: 400;
   line-height: 32px;
   letter-spacing: 0em;
-  color: #ffffff;
+  color: var(--primary-white-color);
 `;
 
 export const Container = styled('div')`
@@ -18,6 +18,6 @@ export const AverageText = styled('p')`
   letter-spacing: 0em;
   padding-left: 40px;
   padding-top: 10px;
-  color: #ffffff;
+  color: var(--primary-white-color);
 `;
 export const ChartCanvas = styled('canvas')``;

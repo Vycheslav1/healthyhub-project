@@ -8,7 +8,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-  color: #ffffff;
+  color: var(--primary-white-color);
   text-shadow:
     0 0 5px #00baff,
     0 0 10px #00baff,

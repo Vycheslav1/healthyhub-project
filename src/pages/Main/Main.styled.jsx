@@ -148,7 +148,7 @@ export const WrapperRecommended = styled.div`
 export const ImageRecom = styled.img``;
 
 export const LinkRecommended = styled(NavLink)`
-  color: var(--Color-Primary-Grey, #b6b6b6);
+  color: var(--primary-grey-color);
   font-family: Poppins;
   font-size: 16px;
   font-style: normal;

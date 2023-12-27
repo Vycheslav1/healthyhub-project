@@ -20,7 +20,7 @@ export const RecordModalDiv = styled.div`
   width: 300px;
   height: 558px;
   padding: 16px 12px 40px;
-  background-color: rgba(15, 15, 15, 1);
+  background-color: var(--primary-black-second-color);
   border-radius: 12px;
   overflow: auto;
 
@@ -33,7 +33,7 @@ export const RecordModalDiv = styled.div`
 
 export const RecordTitle = styled.p`
   margin-bottom: 24px;
-  color: rgba(255, 255, 255, 1);
+  color: var(--primary-white-color);
   font-size: 24px;
   font-weight: 500;
   line-height: 1.2;
@@ -44,7 +44,7 @@ export const RecordTitle = styled.p`
 `;
 
 export const RecordSubtitle = styled.p`
-  color: rgba(255, 255, 255, 1);
+  color: var(--primary-white-color);
   font-size: 18px;
   line-height: 1.455;
 
@@ -81,9 +81,9 @@ export const RecordNameField = styled.input`
   padding: 8px 10px;
 
   border-radius: 12px;
-  border: 1px solid rgba(227, 255, 168, 1);
-  background-color: rgba(15, 15, 15, 1);
-  color: rgba(255, 255, 255, 1);
+  border: 1px solid var(--primary-light-green-color);
+  background-color: var(--primary-black-second-color);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 14px;
   line-height: 1.43;
@@ -99,9 +99,9 @@ export const RecordNameField = styled.input`
 export const RecordField = styled.input`
   padding: 8px 10px;
   border-radius: 12px;
-  border: 1px solid rgba(227, 255, 168, 1);
-  background-color: rgba(15, 15, 15, 1);
-  color: rgba(255, 255, 255, 1);
+  border: 1px solid var(--primary-light-green-color);
+  background-color: var(--primary-black-second-color);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 14px;
   line-height: 1.43;
@@ -113,7 +113,7 @@ export const RecordField = styled.input`
   }
 
   ::placeholder {
-    color: rgba(182, 182, 182, 1);
+    color: var(--primary-grey-color);
   }
 
   @media (min-width: 834px) {
@@ -144,12 +144,12 @@ export const RecordButtonStyle = styled.button`
   font-size: 14px;
   line-height: 1.43;
   margin-top: 24px;
-  color: rgba(227, 255, 168, 1);
+  color: var(--primary-light-green-color);
 `;
 
 export const RecordButtonSubmit = styled.button`
   width: 100%;
-  color: rgba(15, 15, 15, 1);
+  color: var(--primary-black-second-color);
   text-align: center;
   font-size: 14px;
   font-weight: 500;
@@ -157,7 +157,7 @@ export const RecordButtonSubmit = styled.button`
   height: 36px;
   border-radius: 12px;
   border: none;
-  background: rgba(227, 255, 168, 1);
+  background: var(--primary-light-green-color);
 
   @media (min-width: 834px) {
     width: 212px;

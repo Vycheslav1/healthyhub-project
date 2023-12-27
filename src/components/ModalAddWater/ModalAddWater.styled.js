@@ -34,7 +34,7 @@ export const ModalContent = styled.div`
 `;
 
 export const ModalHead = styled.h1`
-  color: #ffffff;
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 24px;
   font-style: normal;
@@ -54,7 +54,7 @@ export const ModalForm = styled.form`
 `;
 
 export const ModalDesc = styled.p`
-  color: #fff;
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -64,7 +64,7 @@ export const ModalDesc = styled.p`
 `;
 
 export const ModalInput = styled.input`
-  color: #b6b6b6;
+  color: var(--primary-grey-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -77,12 +77,12 @@ export const ModalInput = styled.input`
   margin-bottom: 16px;
   align-items: flex-start;
   border-radius: 12px;
-  border: 1px solid #e3ffa8;
-  background: #0f0f0f;
+  border: 1px solid var(--primary-light-green-color);
+  background: var(--primary-black-second-color);
 `;
 
 export const ModalBtnSubmit = styled.button`
-  color: #0f0f0f;
+  color: var(--primary-black-second-color);
   text-align: center;
   font-family: Poppins;
   font-size: 14px;
@@ -93,15 +93,15 @@ export const ModalBtnSubmit = styled.button`
   height: 36px;
   margin-bottom: 16px;
   border-radius: 12px;
-  border: 1px solid #e3ffa8;
-  background: #e3ffa8;
+  border: 1px solid var(--primary-light-green-color);
+  background: var(--primary-light-green-color);
 `;
 
 export const ModalBtnCancel = styled.button`
   width: 276px;
   height: 20px;
-  background: #0f0f0f;
-  color: #b6b6b6;
+  background: var(--primary-black-second-color);
+  color: var(--primary-grey-color);
   text-align: center;
   font-family: Poppins;
   font-size: 14px;

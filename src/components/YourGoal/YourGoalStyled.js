@@ -56,7 +56,7 @@ export const GoalsWrapper = styled.div`
 
 export const TitleGoals = styled.h2`
   width: 300px;
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 24px;
   font-style: normal;
@@ -85,7 +85,7 @@ export const TitleGoals = styled.h2`
 
 export const GoalsDescription = styled.p`
   width: 240px;
-  color: var(--Color-Primary-Grey, #b6b6b6);
+  color: var(--primary-grey-color);
   font-family: Poppins;
   font-size: 18px;
   font-style: normal;
@@ -138,7 +138,7 @@ export const FormRadioWrapper = styled.div`
 `;
 
 export const Label = styled.label`
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -162,7 +162,7 @@ export const ButtonNextGoals = styled.button`
   margin-top: 24px;
   padding: 8px 10px;
   border-radius: 12px;
-  background: var(--Color-Primary-Green-Lite, #e3ffa8);
+  background: var(--primary-light-green-color);
 
   @media screen and (min-width: 834px) {
     width: 360px;
@@ -174,13 +174,13 @@ export const ButtonNextGoals = styled.button`
     width: 212px;
     margin-top: 24px;
     border-radius: 12px;
-    background: var(--Color-Primary-Green-Lite, #e3ffa8);
+    background: var(--primary-light-green-color);
   }
 `;
 
 export const ButtonBackGoals = styled.button`
   width: 280px;
-  color: var(--Color-Primary-Grey, #b6b6b6);
+  color: var(--primary-grey-color);
   text-align: center;
   font-family: Poppins;
   background-color: transparent;

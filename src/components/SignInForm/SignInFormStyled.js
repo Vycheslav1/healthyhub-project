@@ -50,7 +50,7 @@ export const SignInFormWrapper = styled.div`
 `;
 
 export const SignInTitle = styled.h2`
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 24px;
   font-style: normal;
@@ -76,7 +76,7 @@ export const SignInTitle = styled.h2`
 `;
 
 export const SignInDescription = styled.p`
-  color: var(--Color-Primary-Grey, #b6b6b6);
+  color: var(--primary-grey-color);
   font-family: Poppins;
   font-size: 18px;
   font-style: normal;
@@ -118,8 +118,8 @@ export const SignInLabel = styled.label`
   width: 300px;
   padding: 8px 10px;
   border-radius: 12px;
-  border: 1px solid var(--Color-Primary-Green-Lite, #e3ffa8);
-  background: var(--Color-Primary-Black-2, #0f0f0f);
+  border: 1px solid var(--primary-light-green-color);
+  background: var(--primary-black-second-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -147,7 +147,7 @@ export const SignInInput = styled.input`
   border: none;
   border-radius: 12px;
   border: transparent;
-  color: white;
+  color: var(--primary-white-color);
   outline: none;
 
   @media screen and (min-width: 834px) {
@@ -164,8 +164,8 @@ export const SignInButton = styled.button`
   width: 300px;
   padding: 8px 10px;
   border-radius: 12px;
-  background: var(--Color-Primary-Green-Lite, #e3ffa8);
-  color: var(--Color-Primary-Black-2, #0f0f0f);
+  background: var(--primary-light-green-color);
+  color: var(--primary-black-second-color);
   text-align: center;
   font-family: Poppins;
   font-size: 14px;
@@ -184,7 +184,7 @@ export const SignInButton = styled.button`
   @media screen and (min-width: 1440px) {
     width: 212px;
     margin-top: 20px;
-    box-shadow: 0px 0px 5px #e3ffa8;
+    box-shadow: 0px 0px 5px var(--primary-light-green-color);
     margin-left: 0;
     margin-right: 0;
   }
@@ -205,7 +205,7 @@ export const FootWrapperOne = styled.div`
 export const FootLinkOne = styled(NavLink)`
   display: flex;
   justify-content: center;
-  color: var(--Color-Primary-Grey, #b6b6b6);
+  color: var(--primary-grey-color);
   text-align: center;
   font-family: Poppins;
   font-size: 14px;
@@ -242,7 +242,7 @@ export const FootWrapperTwo = styled.div`
 `;
 
 export const FootLinkTextTwo = styled.p`
-  color: var(--Color-Primary-Grey, #b6b6b6);
+  color: var(--primary-grey-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -259,7 +259,7 @@ export const FootLinkTextTwo = styled.p`
 export const FootLinkTwo = styled(NavLink)`
   text-decoration: none;
   width: 54px;
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;

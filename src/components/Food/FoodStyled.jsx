@@ -17,7 +17,7 @@ export const FoodWrapper = styled.div`
 `;
 
 export const FoodHead = styled.h2`
-  color: #fff;
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 18px;
   font-style: normal;
@@ -34,7 +34,7 @@ export const FoodHead = styled.h2`
 export const GraphWrapper = styled.div`
   width: 300px;
   height: 380;
-  background-color: #0f0f0f;
+  background-color: var(--primary-black-second-color);
   padding: 16px 72px 16px 12px;
   /* padding-top: 16px;
   padding-bottom: 16px;
@@ -81,7 +81,7 @@ export const ItemWrapper = styled.div`
 `;
 
 export const CalorieHead = styled.h3`
-  color: #fff;
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 18px;
   font-style: normal;
@@ -96,7 +96,7 @@ export const NutritionWrapper = styled.div`
 `;
 
 export const GoalWrapper = styled.p`
-  color: #fff;
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -105,7 +105,7 @@ export const GoalWrapper = styled.p`
 `;
 
 export const CrboSpan = styled.span`
-  color: #b6b6b6;
+  color: var(--primary-grey-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -116,7 +116,7 @@ export const CrboSpan = styled.span`
 
 export const LeftWrapper = styled.p`
   margin-left: 12px;
-  color: #b6b6b6;
+  color: var(--primary-grey-color);
 `;
 
 export const ProtWrapper = styled.div`

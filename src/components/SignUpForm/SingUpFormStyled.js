@@ -50,7 +50,7 @@ export const FormWrapper = styled.div`
 `;
 export const FormTitle = styled.h2`
   width: 300px;
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 24px;
   font-style: normal;
@@ -79,7 +79,7 @@ export const FormTitle = styled.h2`
 
 export const FormDescription = styled.p`
   width: 270px;
-  color: var(--Color-Primary-Grey, #b6b6b6);
+  color: var(--primary-grey-color);
   font-family: Poppins;
   font-size: 18px;
   font-style: normal;
@@ -89,7 +89,7 @@ export const FormDescription = styled.p`
 
   @media screen and (min-width: 834px) {
     width: 444px;
-    color: var(--Color-Primary-Grey, #b6b6b6);
+    color: var(--primary-grey-color);
     text-align: center;
     font-family: Poppins;
     font-size: 22px;
@@ -143,8 +143,8 @@ export const Label = styled.label`
   flex-direction: column;
   align-items: flex-start;
   border-radius: 12px;
-  border: 1px solid var(--Color-Primary-Green-Lite, #e3ffa8);
-  background: var(--Color-Primary-Black-2, #0f0f0f);
+  border: 1px solid var(--primary-light-green-color);
+  background: var(--primary-black-second-color);
 
   @media screen and (min-width: 834px) {
     width: 360px;
@@ -153,8 +153,8 @@ export const Label = styled.label`
     flex-direction: column;
     align-items: flex-start;
     border-radius: 12px;
-    border: 1px solid var(--Color-Primary-Green-Lite, #e3ffa8);
-    background: var(--Color-Primary-Black-2, #0f0f0f);
+    border: 1px solid var(--primary-light-green-color);
+    background: var(--primary-black-second-color);
   }
 
   @media screen and (min-width: 1440px) {
@@ -166,20 +166,20 @@ export const Label = styled.label`
     flex-direction: column;
     align-items: flex-start;
     border-radius: 12px;
-    background-color: var(--Color-Primary-Black-2, #0f0f0f);
+    background-color: var(--primary-black-second-color);
   }
 `;
 
 export const Input = styled.input`
   background-color: transparent;
   border: transparent;
-  color: var(--Color-Primary-Grey, #b6b6b6);
+  color: var(--primary-grey-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  color: white;
+  color: var(--primary-white-color);
   outline: none;
   width: 230px;
 
@@ -191,7 +191,7 @@ export const Input = styled.input`
     border: none;
     border-radius: 12px;
     border: transparent;
-    color: white;
+    color: var(--primary-white-color);
     outline: none;
     width: 170px;
   }
@@ -228,8 +228,8 @@ export const ButtonNext = styled.button`
   width: 280px;
   padding: 8px 10px;
   border-radius: 12px;
-  background: var(--Color-Primary-Green-Lite, #e3ffa8);
-  color: var(--Color-Primary-Black-2, #0f0f0f);
+  background: var(--primary-light-green-color);
+  color: var(--primary-black-second-color);
   text-align: center;
   font-family: Poppins;
   font-size: 14px;
@@ -248,8 +248,8 @@ export const ButtonNext = styled.button`
     padding: 8px 10px;
     gap: 10px;
     border-radius: 12px;
-    background-color: var(--Color-Primary-Green-Lite, #e3ffa8);
-    color: var(--Color-Primary-Black-2, #0f0f0f);
+    background-color: var(--primary-light-green-color);
+    color: var(--primary-black-second-color);
     text-align: center;
     font-family: Poppins;
     font-size: 14px;
@@ -261,7 +261,7 @@ export const ButtonNext = styled.button`
 
 export const TextSignIn = styled.p`
   /* width: 238px; */
-  color: var(--Color-Primary-Grey, #b6b6b6);
+  color: var(--primary-grey-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -274,7 +274,7 @@ export const TextSignIn = styled.p`
   }
 
   @media screen and (min-width: 1440px) {
-    color: var(--Color-Primary-Grey, #b6b6b6);
+    color: var(--primary-grey-color);
     font-family: Poppins;
     font-size: 14px;
     font-style: normal;
@@ -304,7 +304,7 @@ export const TextSignInWrapper = styled.div`
 
 export const NavLinkSignIn = styled(NavLink)`
   width: 122px;
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -316,7 +316,7 @@ export const NavLinkSignIn = styled(NavLink)`
 
   @media screen and (min-width: 1440px) {
   }
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
   text-decoration: none;
   font-family: Poppins;
   font-size: 14px;
