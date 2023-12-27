@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { getAuthStatus, getUserInfo } from '../../redux/auth/selectors';
+import {  getUserInfo } from '../../redux/auth/selectors';
 import { getCurrentDate } from '../../utils/currentDate';
-
+import { useAuth } from '../../hooks/useAuth';
 import HeaderModalButton from './HeaderModalButton/HeaderModalButton';
 import MobileMenu from './MobileMenu/MobileMenu';
 import TargetSelectionModal from './TargetSelectionModal/TargetSelectionModal';
@@ -30,8 +30,9 @@ import {
 
 import sprite from './images-for-header/icons.svg';
 
+
 export const Header = () => {
-  const isAuth = useSelector(getAuthStatus);
+  const { isLoggedIn } = useAuth();
   const user = useSelector(getUserInfo);
 
   const avatar = user?.avatarURL;
@@ -103,22 +104,22 @@ export const Header = () => {
 
   return (
     <>
-      {!isAuth && (
-       <div className="container">
+      {!isLoggedIn && (
+        <div className="container">
           <Navigation>
             <Logo to="/">HealthyHub</Logo>
-           <List>
+            <List>
               <StyledLink to="/signin">Sign in</StyledLink>
               <Span>/</Span>
               <StyledLink to="/signup">Sign up</StyledLink>
               <ProfileSvg>
                 <use href={sprite + '#icon-profile-circle'} />
               </ProfileSvg>
-           </List>
+            </List>
           </Navigation>
-       </div>
+        </div>
       )}
-      {isAuth && (
+      {isLoggedIn && (
         <HeaderContainer>
           <Container className="container">
             <LogoNavContainer>
