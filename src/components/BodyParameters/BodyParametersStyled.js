@@ -47,7 +47,7 @@ export const BodyParametersWrapper = styled.div`
 
 export const BodyParametersTitle = styled.h2`
   width: 280px;
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 24px;
   font-style: normal;
@@ -72,7 +72,7 @@ export const BodyParametersTitle = styled.h2`
 
 export const BodyParametersDescr = styled.p`
   width: 280px;
-  color: var(--Color-Primary-Grey, #b6b6b6);
+  color: var(--primary-grey-color);
   font-family: Poppins;
   font-size: 18px;
   font-style: normal;
@@ -130,7 +130,7 @@ export const BodyParametersLabel = styled.label`
   display: flex;
   flex-direction: column;
   margin-bottom: 12px;
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -146,7 +146,7 @@ export const BodyParametersLabel = styled.label`
     width: 192px;
     display: flex;
     flex-direction: column;
-    color: var(--Color-Primary-White, #fff);
+    color: var(--primary-white-color);
     font-family: Poppins;
     font-size: 14px;
     font-style: normal;
@@ -164,10 +164,10 @@ export const BodyParametersInput = styled.input`
   align-items: flex-start;
   gap: 10px;
   border-radius: 12px;
-  border: 1px solid var(--Color-Primary-Green-Lite, #e3ffa8);
+  border: 1px solid var(--primary-light-green-color);
   color: #fff;
   outline: transparent;
-  background: var(--Color-Primary-Black-2, #0f0f0f);
+  background: var(--primary-black-second-color);
 
   @media screen and (min-width: 834px) {
   }
@@ -180,8 +180,8 @@ export const BodyParametersButtonNext = styled.button`
   width: 280px;
   padding: 8px 10px;
   border-radius: 12px;
-  background: var(--Color-Primary-Green-Lite, #e3ffa8);
-  color: var(--Color-Primary-Black-2, #0f0f0f);
+  background: var(--primary-light-green-color);
+  color: var(--primary-black-second-color);
   text-align: center;
   font-family: Poppins;
   font-size: 14px;
@@ -201,7 +201,7 @@ export const BodyParametersButtonNext = styled.button`
 
 export const BodyParametersButtonBack = styled.button`
   width: 280px;
-  color: var(--Color-Primary-Grey, #b6b6b6);
+  color: var(--primary-grey-color);
   text-align: center;
   font-family: Poppins;
   font-size: 14px;

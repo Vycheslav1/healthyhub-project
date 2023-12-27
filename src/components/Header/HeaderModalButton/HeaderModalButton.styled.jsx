@@ -26,7 +26,7 @@ export const ButtonName = styled.p`
   font-size: 14px;
   font-weight: 600;
   line-height: 1.43;
-  color: #fff;
+  color: var(--primary-white-color);
 `;
 
 export const ButtonDescription = styled.p`
@@ -35,7 +35,7 @@ export const ButtonDescription = styled.p`
   font-size: 14px;
   font-weight: 500;
   line-height: 1.43;
-  color: #fff;
+  color: var(--primary-white-color);
   text-transform: capitalize;
 `;
 
@@ -46,19 +46,19 @@ export const EditWeightContainer = styled.div`
 
 export const Kg = styled.span`
   font-weight: 400;
-  color: var(--text-color-secondary-grey);
+  color: var(--primary-grey-color);
   margin-left: 4px;
 `;
 
 export const Svg = styled.svg`
   width: 16px;
   height: 16px;
-  stroke: #E3FFA8;
+  stroke: var(--primary-light-green-color);
 `;
 
 export const SvgGoal = styled.svg`
   width: 14px;
   height: 14px;
-  stroke: #E3FFA8;
+  stroke: var(--primary-light-green-color);
   margin-left: 12px;
 `;

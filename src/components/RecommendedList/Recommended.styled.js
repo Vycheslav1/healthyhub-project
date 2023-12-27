@@ -18,7 +18,7 @@ export const Item = styled.li`
   gap: 20px;
   align-items: center;
   border-radius: 12px;
-  background: var(--color-primary-black-2, #0f0f0f);
+  background: var(var(--primary-black-second-color));
   list-style: none;
   width: 300px;
   height: 86px;
@@ -35,19 +35,19 @@ export const Item = styled.li`
 `;
 
 export const Title = styled.h2`
-  color: var(--color-primary-white, #fff);
+  color: var(--primary-white-color);
   font-size: 18px;
   font-weight: 500;
   line-height: 1.33;
 `;
 
 export const Calories = styled.p`
-  color: var(--color-primary-grey, #b6b6b6);
+  color: var(--primary-grey-color);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.43;
 
   > span {
-    color: var(--color-primary-white, #fff);
+    color: var(--primary-white-color);
   }
 `;

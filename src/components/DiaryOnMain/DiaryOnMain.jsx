@@ -101,7 +101,7 @@ export const DiaryOnMain = () => {
                 </LinkFood>
               ) : (
                 <OpenModal onClick={() => openModal('breakfast')}>
-                  + Record your breakfast
+                  + Record your meal
                 </OpenModal>
               )}
             </div>
@@ -122,7 +122,7 @@ export const DiaryOnMain = () => {
                 </LinkFood>
               ) : (
                 <OpenModal onClick={() => openModal('lunch')}>
-                  + Record your lunch
+                  + Record your meal
                 </OpenModal>
               )}
             </div>
@@ -143,7 +143,7 @@ export const DiaryOnMain = () => {
                 </LinkFood>
               ) : (
                 <OpenModal onClick={() => openModal('dinner')}>
-                  + Record your dinner
+                  + Record your meal
                 </OpenModal>
               )}
             </div>
@@ -164,7 +164,7 @@ export const DiaryOnMain = () => {
                 </LinkFood>
               ) : (
                 <OpenModal onClick={() => openModal('snack')}>
-                  + Record your snack
+                  + Record your meal
                 </OpenModal>
               )}
             </div>

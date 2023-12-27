@@ -14,7 +14,7 @@ export const DailyWindow = styled.div`
   }
 `;
 export const DailyHead = styled.h3`
-  color: #fff;
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 18px;
   font-style: normal;
@@ -34,7 +34,7 @@ export const DailyHead = styled.h3`
 export const DailyWrapper = styled.div`
   width: 300px;
   height: 212px;
-  background-color: #0f0f0f;
+  background-color: var(--primary-black-second-color);
   border-radius: 12px;
   margin-top: 6px;
   padding: 12px 16px;
@@ -60,7 +60,7 @@ export const CaloriesWrapper = styled.div`
 `;
 
 export const CaloriesHead = styled.h3`
-  color: #b6b6b6;
+  color: var(--primary-grey-color);
   font-family: Poppins;
   font-size: 18px;
   font-style: normal;
@@ -69,7 +69,7 @@ export const CaloriesHead = styled.h3`
 `;
 
 export const Calories = styled.p`
-  color: #fff;
+  color: var(--primary-white-color);
   margin-top: 4px;
   font-family: Poppins;
   font-size: 34px;
@@ -82,7 +82,7 @@ export const WaterWrapper = styled.div`
   margin-left: 20px;
 `;
 export const WaterHead = styled.h3`
-  color: #b6b6b6;
+  color: var(--primary-grey-color);
   font-family: Poppins;
   font-size: 18px;
   font-style: normal;
@@ -93,7 +93,7 @@ export const WaterHead = styled.h3`
 export const Water = styled.p`
   display: flex;
   align-items: center;
-  color: #fff;
+  color: var(--primary-white-color);
   margin-top: 4px;
   font-family: Poppins;
   font-size: 34px;
@@ -104,7 +104,7 @@ export const Water = styled.p`
 
 export const WaterSpan = styled.span`
   margin-left: 4px;
-  color: #b6b6b6;
+  color: var(--primary-grey-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;

@@ -41,7 +41,7 @@ export const GraphicsFrame = styled('div')`
 export const GraficFrame = styled('div')`
   display: flex;
   flex-direction: column;
-  bacground-color: #0f0f0f;
+  background-color: var(--primary-black-second-color);
 `;
 
 export const WeigthFrame = styled('div')`
@@ -54,7 +54,7 @@ export const WeigthFrame = styled('div')`
   justify-content: space-between;
   padding: 24px 24px 36px 24px;
   border-radius: 12px;
-  background-color: var(--bg-secondary);
+  background-color: var(--primary-black-color);
 
   @media screen and (min-width: 1440px) {
     width: 1372px;
@@ -63,18 +63,18 @@ export const WeigthFrame = styled('div')`
 export const CaloriesFrame = styled('div')`
   width: 620px;
   border-radius: 12px;
-  background-color: #0f0f0f;
+  background-color: var(--primary-black-second-color);
 `;
 
 export const WaterFrame = styled('div')`
   width: 620px;
   border-radius: 12px;
-  background-color: #0f0f0f;
+  background-color: var(--primary-black-second-color);
 `;
 
 export const WeightFrame = styled('div')`
   width: 1372px;
   padding-left: 34px;
   border-radius: 12px;
-  background-color: #0f0f0f;
+  background-color: var(--primary-black-second-color);
 `;

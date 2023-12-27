@@ -16,7 +16,7 @@ export const WaterWindow = styled.div`
 `;
 
 export const Head = styled.h2`
-  color: var(--color-primary-white, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 18px;
   font-style: normal;
@@ -37,7 +37,7 @@ export const WaterWrapper = styled.div`
   display: flex;
   width: 100%;
   height: 224px;
-  background-color: #0f0f0f;
+  background-color: var(--primary-black-second-color);
   border-radius: 12px;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -62,7 +62,7 @@ export const WaterProgressBar = styled.div`
   width: 80px;
   height: 192px;
   /* padding: 8px; */
-  background-color: black;
+  background-color: var(--primary-black-second-color);
   border-radius: 20px;
   margin-right: 20px;
 
@@ -73,7 +73,7 @@ export const WaterProgressBar = styled.div`
 
 export const Consumption = styled.h3`
   margin-top: 38px;
-  color: var(--color-primary-white, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 16px;
   font-style: normal;
@@ -97,7 +97,7 @@ export const WaterGoal = styled.div`
   display: flex;
   align-items: baseline;
   margin-top: 12px;
-  color: #fff;
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 28px;
   font-style: normal;
@@ -107,7 +107,7 @@ export const WaterGoal = styled.div`
 
 export const WaterSpan = styled.span`
   margin-left: 8px;
-  color: #b6b6b6;
+  color: var(--primary-grey-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -120,7 +120,7 @@ export const WaterSpan = styled.span`
 `;
 export const LeftSpan = styled.span`
   margin-left: 4px;
-  color: #b6b6b6;
+  color: var(--primary-grey-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -130,7 +130,7 @@ export const LeftSpan = styled.span`
 
 export const Left = styled.div`
   margin-top: 8px;
-  color: var(--color-primary-white, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -151,8 +151,8 @@ export const WaterButton = styled.button`
   padding: 8px 10px;
   align-items: center;
   border-radius: 12px;
-  background: #e3ffa8;
-  color: #0f0f0f;
+  background: var(--primary-light-green-color);
+  color: var(--primary-black-second-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -167,7 +167,7 @@ export const WaterImg = styled.img`
 export const SrOnly = styled.span`
   position: relative;
   z-index: 20;
-  color: #fff;
+  color: var(--primary-white-color);
   font-size: 18px;
   line-height: 22px;
   font-weight: 600;

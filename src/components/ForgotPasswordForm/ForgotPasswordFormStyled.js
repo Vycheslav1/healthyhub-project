@@ -48,7 +48,7 @@ export const ForgotPasswordWrapper = styled.div`
 
 export const ForgotPasswordTitle = styled.h2`
   width: 300px;
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 24px;
   font-style: normal;
@@ -78,7 +78,7 @@ export const ForgotPasswordTitle = styled.h2`
 export const ForgotPasswordDescrip = styled.p`
   /* width: 300px; */
   width: 290px;
-  color: var(--Color-Primary-Grey, #b6b6b6);
+  color: var(--primary-grey-color);
   font-family: Poppins;
   font-size: 18px;
   font-style: normal;
@@ -121,10 +121,10 @@ export const ForgotPasswordLabel = styled.label`
   position: relative;
   width: 300px;
   border-radius: 12px;
-  border: 1px solid var(--Color-Primary-Green-Lite, #e3ffa8);
-  background: var(--Color-Primary-Black-2, #0f0f0f);
+  border: 1px solid var(--primary-light-green-color);
+  background: var(--primary-black-second-color);
   padding: 8px 10px;
-  color: var(--Color-Primary-Grey, #b6b6b6);
+  color: var(--primary-grey-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -148,7 +148,7 @@ export const ForgotPasswordLabel = styled.label`
 export const ForgotPasswordInput = styled.input`
   width: 255px;
   border: transparent;
-  color: white;
+  color: var(--primary-white-color);
   outline: none;
   background-color: transparent;
   border: none;
@@ -167,8 +167,8 @@ export const ForgotPasswordButton = styled.button`
   width: 300px;
   padding: 8px 10px;
   border-radius: 12px;
-  background: var(--Color-Primary-Green-Lite, #e3ffa8);
-  color: var(--Color-Primary-Black-2, #0f0f0f);
+  background: var(--primary-light-green-color);
+  color: var(--primary-black-second-color);
   text-align: center;
   font-family: Poppins;
   font-size: 14px;
@@ -207,7 +207,7 @@ export const ForgotPasswordTextWrapper = styled.div`
   }
 `;
 export const ForgotPasswordText = styled.p`
-  color: var(--Color-Primary-Grey, #b6b6b6);
+  color: var(--primary-grey-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -224,7 +224,7 @@ export const ForgotPasswordText = styled.p`
 export const ForgotPasswordLink = styled(NavLink)`
   text-decoration: none;
   width: 122px;
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;

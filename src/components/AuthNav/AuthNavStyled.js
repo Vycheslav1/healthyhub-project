@@ -47,7 +47,7 @@ export const TextWrapper = styled.div`
 
 export const TitleOne = styled.h1`
   width: 300px;
-  color: #fff;
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 24px;
   font-style: normal;
@@ -79,7 +79,7 @@ export const TitleOne = styled.h1`
 
 export const Description = styled.p`
   width: 300px;
-  color: var(--Color-Primary-Grey, #b6b6b6);
+  color: var(--primary-grey-color);
   font-family: Poppins;
   text-align: start;
   font-size: 18px;
@@ -129,9 +129,9 @@ export const SignIn = styled(NavLink)`
   flex-direction: column;
   gap: 10px;
   border-radius: 12px;
-  background: var(--Color-Primary-Green-Lite, #e3ffa8);
+  background: var(--primary-light-green-color);
   text-decoration: none;
-  color: var(--Color-Primary-Black-2, #0f0f0f);
+  color: var(--primary-black-second-color);
   text-align: center;
   font-family: Poppins;
   font-size: 14px;
@@ -149,7 +149,7 @@ export const SignIn = styled(NavLink)`
 
 export const SignUp = styled(NavLink)`
   width: 122px;
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
   text-align: center;
   font-family: Poppins;
   font-size: 14px;
@@ -172,7 +172,7 @@ export const ListItems = styled.ul`
   padding: 0;
   margin: 0;
   width: 234px;
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -192,7 +192,7 @@ export const ListItems = styled.ul`
     margin-right: 8px;
     display: flex;
     align-self: center;
-    background-color: #e3ffa8;
+    background-color: var(--primary-light-green-color);
   }
 
   @media screen and (min-width: 834px) {
