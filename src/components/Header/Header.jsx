@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { getAuthStatus, getUserInfo } from '../../redux/auth/selectors';
+import {  getUserInfo } from '../../redux/auth/selectors';
 import { getCurrentDate } from '../../utils/currentDate';
-
+import { useAuth } from '../../hooks/useAuth';
 import HeaderModalButton from './HeaderModalButton/HeaderModalButton';
 import MobileMenu from './MobileMenu/MobileMenu';
 import TargetSelectionModal from './TargetSelectionModal/TargetSelectionModal';
@@ -30,8 +30,9 @@ import {
 
 import sprite from './images-for-header/icons.svg';
 
+
 export const Header = () => {
-  const isAuth = useSelector(getAuthStatus);
+  const { isLoggedIn } = useAuth();
   const user = useSelector(getUserInfo);
 
   const avatar = user?.avatarURL;
@@ -103,7 +104,7 @@ export const Header = () => {
 
   return (
     <>
-      {!isAuth && (
+      {!isLoggedIn && (
         <div className="container">
           <Navigation>
             <Logo to="/">HealthyHub</Logo>
@@ -122,7 +123,7 @@ export const Header = () => {
           </Navigation>
         </div>
       )}
-      {isAuth && (
+      {isLoggedIn && (
         <HeaderContainer>
           <Container className="container">
             <LogoNavContainer>
