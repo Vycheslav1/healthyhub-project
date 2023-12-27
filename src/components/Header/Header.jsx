@@ -14,7 +14,7 @@ import {
   Logo,
   Container,
   Navigation,
-  StyledLink,
+  StyledNavLink,
   ProfileSvg,
   AuthContainer,
   MenuButton,
@@ -109,9 +109,13 @@ export const Header = () => {
           <Navigation>
             <Logo to="/">HealthyHub</Logo>
             <List>
-              <StyledLink to="/signin">Sign in</StyledLink>
+              <StyledNavLink exact to="/signin">
+                Sign in
+              </StyledNavLink>
               <Span>/</Span>
-              <StyledLink to="/signup">Sign up</StyledLink>
+              <StyledNavLink exact to="/signup">
+                Sign up
+              </StyledNavLink>
               <ProfileSvg>
                 <use href={sprite + '#icon-profile-circle'} />
               </ProfileSvg>
