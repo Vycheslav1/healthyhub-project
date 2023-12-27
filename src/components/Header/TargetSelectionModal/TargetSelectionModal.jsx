@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import Notiflix from 'notiflix';
 
-import { updateGoalThunk } from '../../../redux/auth/operations';
+import { refreshUser, updateGoalThunk } from '../../../redux/auth/operations';
 
 import CloseModalButton from '../CloseModalButton/CloseModalButton';
 import {
@@ -58,6 +59,8 @@ export default function TargetSelectionModal({ gender, onClose, target }) {
   const onSubmit = (event) => {
     event.preventDefault();
     dispatch(updateGoalThunk({ goal: goal }));
+    Notiflix.Notify.success('Your data has been successfully updated!');
+    dispatch(refreshUser());
     onClose();
   };
 
