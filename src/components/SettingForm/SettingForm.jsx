@@ -37,6 +37,7 @@ import { updateUser } from '../../redux/auth/operations';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectUser } from '../../redux/auth/selectors';
 import { useNavigate } from 'react-router-dom';
+import Notiflix from 'notiflix';
 
 export const SettingForm = () => {
   const user = useSelector(selectUser);
@@ -47,19 +48,26 @@ export const SettingForm = () => {
 
   const formik = useFormik({
     initialValues: {
-      // username: '',
-      gender: '',
-      age: '',
-      height: '',
-      weight: '',
-      activity: '',
+      username: user.username || '',
+      gender: user.gender || '',
+      age: user.age || '',
+      height: user.height || '',
+      weight: user.weight || '',
+      // activity: user.activity || '',
+      activity: parseFloat(user.activity) || 0,
     },
     validationSchema: Yup.object().shape({
       // username: Yup.string().min(2, 'Too short').required('Name is required'),
       gender: Yup.string().required('Please select your gender'),
       age: Yup.number().required('Required'),
-      height: Yup.number().required('Required'),
-      weight: Yup.number().required('Required'),
+      height: Yup.number().min(
+        130,
+        'Height must be greater than or equal to 130'
+      ),
+      weight: Yup.number().min(
+        40,
+        'Weight must be greater than or equal to 40'
+      ),
       activity: Yup.number().required('Please select your activity'),
     }),
 
@@ -75,10 +83,15 @@ export const SettingForm = () => {
           weight: values.weight,
           activity: values.activity,
         }),
-        navigate('/main')
+        Notiflix.Notify.success('Your data has been successfully updated!')
+        // navigate('/main')
       );
     },
   });
+
+  const handleCancel = () => {
+    formik.resetForm();
+  };
 
   return (
     <SettingsFormWrapper>
@@ -136,6 +149,7 @@ export const SettingForm = () => {
                   name="gender"
                   value="Male"
                   onChange={formik.handleChange}
+                  checked={formik.values.gender === 'Male'}
                 />
                 Male
               </LabelSettingsGender>
@@ -145,6 +159,7 @@ export const SettingForm = () => {
                   name="gender"
                   value="Female"
                   onChange={formik.handleChange}
+                  checked={formik.values.gender === 'Female'}
                 />
                 Female
               </LabelSettingsGender>
@@ -187,8 +202,10 @@ export const SettingForm = () => {
                 type="radio"
                 name="activity"
                 value="1.2"
+                // value={1.2}
                 onChange={formik.handleChange}
-                // checked={user.activity === '1.2'}
+                checked={formik.values.activity === '1.2'}
+                // checked={formik.values.activity === 1.2}
               />
               1.2 - if you do not have physical activity and sedentary work
             </LabelSettingsRadio>
@@ -197,8 +214,9 @@ export const SettingForm = () => {
                 type="radio"
                 name="activity"
                 value="1.375"
+                // value={1.375}
                 onChange={formik.handleChange}
-                // checked={user.activity === '1.375'}
+                checked={formik.values.activity === '1.375'}
               />
               1.375 - if you do short runs or light gymnastics 1-3 times a week
             </LabelSettingsRadio>
@@ -207,8 +225,9 @@ export const SettingForm = () => {
                 type="radio"
                 name="activity"
                 value="1.55 "
+                // value={1.55}
                 onChange={formik.handleChange}
-                // checked={user.activity === '1.55'}
+                checked={formik.values.activity === '1.55'}
               />
               1.55 - if you play sports with average loads 3-5 times a week
             </LabelSettingsRadio>
@@ -217,8 +236,9 @@ export const SettingForm = () => {
                 type="radio"
                 name="activity"
                 value="1.725"
+                // value={1.725}
                 onChange={formik.handleChange}
-                // checked={user.activity === '1.725'}
+                checked={formik.values.activity === '1.725'}
               />
               1.725 - if you train fully 6-7 times a week
             </LabelSettingsRadio>
@@ -227,8 +247,9 @@ export const SettingForm = () => {
                 type="radio"
                 name="activity"
                 value="1.9"
+                // value={1.9}
                 onChange={formik.handleChange}
-                // checked={user.activity === '1.9'}
+                checked={formik.values.activity === '1.9'}
               />
               1.9 - if your work is related to physical labor, you train 2 times
               a day and include strength exercises in your training program
@@ -237,7 +258,9 @@ export const SettingForm = () => {
         </div>
         <ButtonWrapper>
           <ButtonSave type="submit">Save</ButtonSave>
-          <ButtonCancel to={'/'}>Cancel</ButtonCancel>
+          <ButtonCancel onClick={handleCancel} type="button">
+            Cancel
+          </ButtonCancel>
         </ButtonWrapper>
       </FormWrapper>
     </SettingsFormWrapper>

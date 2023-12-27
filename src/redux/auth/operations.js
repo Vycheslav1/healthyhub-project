@@ -148,14 +148,18 @@ export const forgotPassword = createAsyncThunk(
 
 export const updateUser = createAsyncThunk(
   'user/update',
-  async (body, thunkAPI) => {
+  async (credentials, thunkAPI) => {
     try {
-      const { data } = await axios.put('/user/update', body);
-      setAuthHeader(data.token);
+      const { data } = await axios.put('/user/update', credentials);
+      setHeadersToken(thunkAPI.getState().auth.token);
+      // setAuthHeader(data.token);
+
+      // Notiflix.Notify.success('Your data has been successfully updated!');
 
       console.log(data);
       return data;
     } catch (error) {
+      // Notiflix.Notify.failure(`Sorry, there was an error, please try again!`);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
