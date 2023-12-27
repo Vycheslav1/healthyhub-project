@@ -66,24 +66,15 @@ export const logOut = createAsyncThunk('/auth/logout', async (_, thunkAPI) => {
   }
 });
 
-export const logOutThunk = createAsyncThunk(
-  'auth/logOut',
-  async (_, thunkAPI) => {
-    try {
-      await instance.post('api/users/logout');
-      delAuthHeader();
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
-  }
-);
-
 // PUT /api/user/goal
 export const updateGoalThunk = createAsyncThunk(
   'auth/updateGoal',
   async (credentials, thunkAPI) => {
     try {
-      const response = await instance.put('api/user/goal', credentials);
+      const response = await axios.put('/user/goal', credentials);
+      setHeadersToken(thunkAPI.getState().auth.token);
+
+      console.log(response.data);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -96,7 +87,7 @@ export const updateWeightThunk = createAsyncThunk(
   'auth/updateWeight',
   async (credentials, thunkAPI) => {
     try {
-      const response = await instance.put('api/user/weight', credentials);
+      const response = await axios.post('/user/weight', credentials);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

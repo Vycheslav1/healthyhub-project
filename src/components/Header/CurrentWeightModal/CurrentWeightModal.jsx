@@ -2,9 +2,10 @@ import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Notiflix from 'notiflix';
 
 import { getDateLastWeight } from '../../../redux/auth/selectors';
-import { updateWeightThunk } from '../../../redux/auth/operations';
+import { refreshUser, updateWeightThunk } from '../../../redux/auth/operations';
 import { fetchCaloriesIntake } from '../../../redux/dialyGoalCalories/operations';
 
 import CloseModalButton from '../CloseModalButton/CloseModalButton';
@@ -57,6 +58,8 @@ export default function CurrentWeightModal({ onClose, date }) {
 
   const handleSubmit = ({ weight }, actions) => {
     dispatch(updateWeightThunk({ weight }));
+    Notiflix.Notify.success('Your data has been successfully updated!');
+    dispatch(refreshUser());
     setTimeout(() => {
       dispatch(fetchCaloriesIntake());
     }, 200);
