@@ -30,7 +30,6 @@ import {
 
 import sprite from './images-for-header/icons.svg';
 
-
 export const Header = () => {
   const { isLoggedIn } = useAuth();
   const user = useSelector(getUserInfo);
