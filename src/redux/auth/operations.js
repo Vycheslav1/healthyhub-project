@@ -38,7 +38,7 @@ export const logIn = createAsyncThunk(
       Notiflix.Notify.success(`You have successfully logged in!`);
 
       setAuthHeader(data.token);
-      console.log(data);
+      // console.log(data);
       return data;
     } catch (error) {
       Notiflix.Notify.failure(`Oops! The email or password is incorrect`);

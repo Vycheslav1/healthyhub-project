@@ -18,7 +18,8 @@ import {
 import { selectUser } from '../../redux/auth/selectors';
 
 export const DailyGoal = () => {
-  // const { bmr, waterRate } = useSelector(selectUser);
+  const user = useSelector(selectUser);
+  console.log(user);
 
   return (
     <DailyWindow>
@@ -29,7 +30,7 @@ export const DailyGoal = () => {
           <img src={bubble} alt="illustration" />
           <CaloriesWrapper>
             <CaloriesHead>Calories</CaloriesHead>
-            <Calories>{/* {bmr} */}2000</Calories>
+            <Calories>{user.bmr}</Calories>
           </CaloriesWrapper>
         </BubbleWrapper>
         <BubbleWrapper>
@@ -37,7 +38,7 @@ export const DailyGoal = () => {
           <WaterWrapper>
             <WaterHead>Water</WaterHead>
             <Water>
-              {/* {waterRate} */}2000
+              {user.waterRate}
               <WaterSpan>ml</WaterSpan>
             </Water>
           </WaterWrapper>

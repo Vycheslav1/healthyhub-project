@@ -23,10 +23,9 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const Food = () => {
   const user = useSelector(getUserInfo);
-  // console.log(ratio);
 
-  // const defaultNumber = user.bmr;
-  const defaultNumber = 2500;
+  const defaultNumber = user.bmr;
+  // const defaultNumber = 2500;
   const filledValue = 1900;
 
   const emptyValue = defaultNumber - filledValue;
@@ -81,8 +80,8 @@ export const Food = () => {
     },
   };
 
-  // const defaultCarbonohidrates = user.ratio.carbonohidrates;
-  const defaultCarbonohidrates = 700;
+  const defaultCarbonohidrates = user.ratio.carbonohidrates;
+  // const defaultCarbonohidrates = 700;
   const newCarbonohidratesValue = 100;
 
   const carbonohidratesValue = Math.floor(
