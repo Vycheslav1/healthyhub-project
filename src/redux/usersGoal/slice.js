@@ -53,7 +53,8 @@ const handleFetchGoalsConfirmFulfilled = (state, action) => {
 const handleAddWaterFulfilled = (state, action) => {
   state.isLoading = false;
   state.error = null;
-  state.items.total.water.used = action.payload.totalWater;
+  // state.items.total.water.used = action.payload.totalWater;
+  state.items.water = action.payload;
 };
 const handleUpdateFoodFulfilled = (state, action) => {
   state.isLoading = false;

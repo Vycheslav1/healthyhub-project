@@ -57,7 +57,7 @@ export const SettingForm = () => {
       activity: parseFloat(user.activity) || 0,
     },
     validationSchema: Yup.object().shape({
-      // username: Yup.string().min(2, 'Too short').required('Name is required'),
+      username: Yup.string().min(2, 'Too short').required('Name is required'),
       gender: Yup.string().required('Please select your gender'),
       age: Yup.number().required('Required'),
       height: Yup.number().min(
@@ -76,7 +76,7 @@ export const SettingForm = () => {
       console.log(values);
       dispatch(
         updateUser({
-          // username: values.username,
+          username: values.username,
           gender: values.gender,
           age: values.age,
           height: values.height,
@@ -109,6 +109,7 @@ export const SettingForm = () => {
               type="text"
               placeholder="Name"
               onChange={formik.handleChange}
+              value={formik.values.username}
             />
             {formik.errors.username && (
               <ErrorsMessage>{formik.errors.username}</ErrorsMessage>

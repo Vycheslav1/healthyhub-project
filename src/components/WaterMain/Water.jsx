@@ -49,8 +49,8 @@ export const Water = () => {
     setConsumedWater();
   };
 
-  const closeModalHendler = (e) => {
-    e.preventDefault();
+  const closeModalHendler = () => {
+    // e.preventDefault();
     setOpenModal(false);
     scrollLock.clearQueueScrollLocks();
     scrollLock.enablePageScroll();

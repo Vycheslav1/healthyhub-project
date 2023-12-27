@@ -14,6 +14,7 @@ export const fetchGoals = createAsyncThunk(
       setHeadersToken(thunkAPI.getState().auth.token);
 
       const response = await axios.get('/user/statistics');
+
       console.log(response.data);
 
       return response.data;
@@ -45,7 +46,12 @@ export const fetchGoalsConfirm = createAsyncThunk(
   async (body, thunkAPI) => {
     try {
       setHeadersToken(thunkAPI.getState().auth.token);
-      const { data } = await axios.post('/user/food-intake');
+      const { data } = await axios.post('/user/food-intake', {
+        products: body,
+        type: body,
+      });
+      console.log(body);
+      console.log(data);
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);
