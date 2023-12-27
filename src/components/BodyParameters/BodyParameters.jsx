@@ -67,14 +67,6 @@ export const BodyParameters = ({ formik, next, prev }) => {
             </BodyParametersLabel>
           </BodyParametersWrapperLabel>
           <BodyParametersButtonNext
-            style={{
-              boxShadow:
-                !formik.isValid ||
-                !formik.values.height ||
-                !formik.values.weight
-                  ? 'none'
-                  : '0px 0px 5px #e3ffa8',
-            }}
             type="button"
             onClick={validateAndMoveNext}
             disabled={
