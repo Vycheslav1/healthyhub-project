@@ -22,6 +22,7 @@ export const WeightItem = styled('div')`
 `;
 export const Weight = styled('div')`
   display: flex;
+  padding-left: 34px;
 `;
 export const Date = styled('div')`
   font-size: 10px;
