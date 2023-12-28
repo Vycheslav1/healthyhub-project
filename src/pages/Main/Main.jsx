@@ -21,7 +21,8 @@ import {
 import { useEffect, useState } from 'react';
 import { getRecommendedImage } from '../../redux/getRequest/getRecommendedImg';
 import arrow from 'src/images/svg/arrow.svg';
-import { addWater, fetchGoalsConfirm } from '../../redux/usersGoal/operations';
+import { fetchGoals } from '../../redux/usersGoal/operations';
+// import { fetchStatistics } from '../../redux/statistic/operations';
 
 export const Main = () => {
   const [foodRecommended, setFoodRecommended] = useState([]);
@@ -29,9 +30,9 @@ export const Main = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchGoalsConfirm());
-    dispatch(addWater());
-  });
+    dispatch(fetchGoals());
+    // dispatch(fetchStatistics());
+  }, [dispatch]);
 
   useEffect(() => {
     getRecommendedImage(10)

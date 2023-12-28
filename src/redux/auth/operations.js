@@ -2,10 +2,6 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import Notiflix from 'notiflix';
 
-// export const instance = axios.create({
-//   baseURL: 'https://github.com/Alex1Go/back-healthy-hub',
-// });
-
 axios.defaults.baseURL = 'https://healthy-hub-2d3x.onrender.com/api';
 
 const setAuthHeader = (token) => {
@@ -14,10 +10,6 @@ const setAuthHeader = (token) => {
 
 const clearAuthHeader = () => {
   axios.defaults.headers.common.Authorization = '';
-};
-
-export const delAuthHeader = () => {
-  instance.defaults.headers.common.Authorization = '';
 };
 
 //signup
@@ -46,7 +38,7 @@ export const logIn = createAsyncThunk(
       Notiflix.Notify.success(`You have successfully logged in!`);
 
       setAuthHeader(data.token);
-      console.log(data);
+      // console.log(data);
       return data;
     } catch (error) {
       Notiflix.Notify.failure(`Oops! The email or password is incorrect`);
@@ -66,24 +58,15 @@ export const logOut = createAsyncThunk('/auth/logout', async (_, thunkAPI) => {
   }
 });
 
-export const logOutThunk = createAsyncThunk(
-  'auth/logOut',
-  async (_, thunkAPI) => {
-    try {
-      await instance.post('api/users/logout');
-      delAuthHeader();
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
-  }
-);
-
 // PUT /api/user/goal
 export const updateGoalThunk = createAsyncThunk(
   'auth/updateGoal',
   async (credentials, thunkAPI) => {
     try {
-      const response = await instance.put('api/user/goal', credentials);
+      const response = await axios.put('/user/goal', credentials);
+      setHeadersToken(thunkAPI.getState().auth.token);
+
+      console.log(response.data);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -96,7 +79,7 @@ export const updateWeightThunk = createAsyncThunk(
   'auth/updateWeight',
   async (credentials, thunkAPI) => {
     try {
-      const response = await instance.put('api/user/weight', credentials);
+      const response = await axios.post('/user/weight', credentials);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -141,6 +124,25 @@ export const forgotPassword = createAsyncThunk(
       return data;
     } catch (error) {
       Notiflix.Notify.failure(`Sorry, there was an error, please try again.`);
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const updateUser = createAsyncThunk(
+  'user/update',
+  async (credentials, thunkAPI) => {
+    try {
+      const { data } = await axios.put('/user/update', credentials);
+      setHeadersToken(thunkAPI.getState().auth.token);
+      // setAuthHeader(data.token);
+
+      // Notiflix.Notify.success('Your data has been successfully updated!');
+
+      console.log(data);
+      return data;
+    } catch (error) {
+      // Notiflix.Notify.failure(`Sorry, there was an error, please try again!`);
       return thunkAPI.rejectWithValue(error.message);
     }
   }

@@ -41,7 +41,7 @@ export const TargetContainer = styled.div`
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(5, 5, 5, 1);
+  background: var(--primary-black-color);
   padding: 24px 10px;
 
   @media (min-width: 834px) {
@@ -50,7 +50,7 @@ export const TargetContainer = styled.div`
     width: 392px;
     height: 352px;
     border-radius: 12px;
-    background: rgba(15, 15, 15, 1);
+    background: var(--primary-black-second-color);
     box-shadow: 0px 4px 14px 0px rgba(227, 255, 168, 0.2);
     padding: 20px 24px 40px;
     margin-left: 294px;
@@ -79,7 +79,7 @@ export const MobileTargetContainer = styled.div`
 `;
 
 export const Title = styled.h3`
-  color: #ffffff;
+  color: var(--primary-white-color);
   margin-bottom: 8px;
   font-size: 18px;
   font-weight: 500;
@@ -87,7 +87,7 @@ export const Title = styled.h3`
 `;
 
 export const Subtitle = styled.p`
-  color: rgba(182, 182, 182, 1);
+  color: var(--primary-grey-color);
   margin-bottom: 16px;
   font-size: 14px;
   line-height: 1.43;
@@ -108,13 +108,13 @@ export const SubmitButton = styled.button`
   justify-content: center;
   width: 100%;
   padding: 8px 10px;
-  color: rgba(15, 15, 15, 1);
+  color: var(--primary-black-second-color);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.43;
   border-radius: 12px;
-  background: rgba(227, 255, 168, 1);
-  border: 1px solid rgba(227, 255, 168, 1);
+  background: var(--primary-light-green-color);
+  border: 1px solid var(--primary-light-green-color);
 
   @media (min-width: 834px) {
     width: 166px;
@@ -135,7 +135,7 @@ export const RadioContainer = styled.div`
 `;
 
 export const RadioLabel = styled.label`
-  color: #ffffff;
+  color: var(--primary-white-color);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.43;
@@ -147,7 +147,7 @@ export const RadioLabel = styled.label`
 `;
 
 export const CheckedRadioLabel = styled.label`
-  color: rgba(182, 195, 255, 1);
+  color: var(--primary-violet-color);
   font-size: 14px;
   line-height: 1.43;
   cursor: pointer;
@@ -156,14 +156,14 @@ export const CheckedRadioLabel = styled.label`
 export const ImageContainer = styled.div`
   padding: 10px;
   border-radius: 12px;
-  border: 1px solid #b6b6b6;
+  border: 1px solid var(--primary-grey-color);
   background: rgba(255, 255, 255, 0.01);
 `;
 
 export const CheckedImageContainer = styled.div`
   padding: 10px;
   border-radius: 12px;
-  border: 1px solid rgba(182, 195, 255, 1);
+  border: 1px solid var(--primary-violet-color);
   background: rgba(255, 255, 255, 0.01);
 `;
 
@@ -171,7 +171,7 @@ export const CancelButton = styled.button`
   display: flex;
   justify-content: center;
   width: 100%;
-  color: #b6b6b6;
+  color: var(--primary-grey-color);
   font-size: 14px;
   line-height: 1.43;
   background: transparent;

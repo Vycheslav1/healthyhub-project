@@ -3,7 +3,7 @@ import {
   // UpdateFood,
   fetchGoalsConfirm,
   addWater,
-  // fetchGoals,
+  fetchGoals,
   // fetchGoalsConfirm,
   // updateGoal,
   // weightGoalUpdate,
@@ -53,7 +53,8 @@ const handleFetchGoalsConfirmFulfilled = (state, action) => {
 const handleAddWaterFulfilled = (state, action) => {
   state.isLoading = false;
   state.error = null;
-  state.items.total.water.used = action.payload.totalWater;
+  // state.items.total.water.used = action.payload.totalWater;
+  state.items.water = action.payload;
 };
 const handleUpdateFoodFulfilled = (state, action) => {
   state.isLoading = false;
@@ -93,9 +94,9 @@ const goalSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      // .addCase(fetchGoals.pending, handlePending)
-      // .addCase(fetchGoals.fulfilled, handleFetchGoalsFulfilled)
-      // .addCase(fetchGoals.rejected, handleRejected)
+      .addCase(fetchGoals.pending, handlePending)
+      .addCase(fetchGoals.fulfilled, handleFetchGoalsFulfilled)
+      .addCase(fetchGoals.rejected, handleRejected)
       //addWater
       .addCase(addWater.pending, handlePending)
       .addCase(addWater.fulfilled, handleAddWaterFulfilled)

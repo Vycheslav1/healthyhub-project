@@ -46,7 +46,7 @@ export const Diary = styled.h2`
   font-weight: 400;
   font-size: 22px;
   line-height: 32px;
-  color: rgba(255, 255, 255, 1);
+  color: var(--primary-white-color);
 `;
 
 export const SeeMore = styled(NavLink)`
@@ -56,7 +56,7 @@ export const SeeMore = styled(NavLink)`
   font-size: 16px;
   line-height: 22px;
   white-space: nowrap;
-  color: #b6b6b6;
+  color: var(--primary-grey-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -96,7 +96,7 @@ export const DiaryBreakfast = styled.h2`
   font-size: 18px;
   font-weight: 500;
   line-height: 24px;
-  color: rgba(255, 255, 255, 1);
+  color: var(--primary-white-color);
   margin: 0 10px 0 20px;
 
   @media screen and (min-width: 834px) {
@@ -107,7 +107,7 @@ export const DiaryBreakfast = styled.h2`
 export const Carbonohidrates = styled.p`
   width: 124px;
 
-  color: white;
+  color: var(--primary-white-color);
   margin: 0 25px 0 0px;
   /* margin-right: 25px;
   margin-left: 43px; */
@@ -129,7 +129,7 @@ export const BreakfastProtein = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  color: #fff;
+  color: var(--primary-white-color);
   margin: 0;
   display: flex;
   gap: 4px;
@@ -140,7 +140,7 @@ export const BreakfastFet = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  color: #fff;
+  color: var(--primary-white-color);
   margin: 0;
   display: flex;
   gap: 4px;
@@ -156,8 +156,8 @@ export const OpenModal = styled.button`
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  color: rgba(227, 255, 168, 1);
-  background-color: black;
+  color: var(--primary-light-green-color);
+  background-color: var(--primary-black-second-color);
   border: 1px solid transparent;
   /* padding: 5px 10px; */
   cursor: pointer;

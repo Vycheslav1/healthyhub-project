@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { updateGoalThunk } from '../../../redux/auth/operations';
+import { refreshUser, updateGoalThunk } from '../../../redux/auth/operations';
 
 import CloseModalButton from '../CloseModalButton/CloseModalButton';
 import {
@@ -58,6 +58,7 @@ export default function TargetSelectionModal({ gender, onClose, target }) {
   const onSubmit = (event) => {
     event.preventDefault();
     dispatch(updateGoalThunk({ goal: goal }));
+    dispatch(refreshUser());
     onClose();
   };
 

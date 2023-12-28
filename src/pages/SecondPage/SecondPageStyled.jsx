@@ -11,7 +11,7 @@ export const Block = styled.div`
   text-align: center;
 `;
 export const Title = styled.h1`
-  color: #ffffff;
+  color: var(--primary-white-color);
   text-shadow:
     0 0 5px #00baff,
     0 0 10px #00baff,
@@ -22,7 +22,7 @@ export const Title = styled.h1`
 
 export const StyledLink = styled(Link)`
   padding: 8px 16px;
-  color: #ffffff; /* White text color */
+  color: var(--primary-white-color);
   text-shadow:
     0 0 5px #00baff,
     0 0 10px #00baff,

@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://github.com/Alex1Go/back-healthy-hub',
+  baseURL: 'https://healthy-hub-2d3x.onrender.com/api',
 });
 
 export const setAuthHeader = (token) => {
@@ -19,7 +19,7 @@ export const fetchWaterIntake = createAsyncThunk(
         return thunkAPI.rejectWithValue('No token');
       }
       setAuthHeader(persistToken);
-      const response = await instance('api/user/water-intake');
+      const response = await instance('/user/water-intake');
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

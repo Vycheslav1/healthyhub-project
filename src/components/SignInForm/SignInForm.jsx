@@ -47,10 +47,7 @@ export const SignInForm = () => {
     validationSchema: Yup.object().shape({
       email: Yup.string().email('Invalid email').required('Email is required'),
       password: Yup.string()
-        .matches(
-          /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
-          'Enter a valid Password (min 6 characters, 1 upper case, 1 lower case, 1 number)'
-        )
+        .min(6, 'Enter a valid Password')
         .required('Password is required'),
     }),
 
@@ -159,10 +156,6 @@ export const SignInForm = () => {
             ) : null}
             <SignInButton
               style={{
-                boxShadow:
-                  !formik.isValid || !formik.dirty || !formik.touched
-                    ? 'none'
-                    : '0px 0px 5px #e3ffa8',
                 backgroundColor:
                   !formik.isValid || !formik.dirty || !formik.touched
                     ? 'lightgray'

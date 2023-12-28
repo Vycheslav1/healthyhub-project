@@ -4,8 +4,8 @@ export const SettingContainer = styled.section`
   position: relative;
   padding-top: 16px;
   padding-bottom: 40px;
-  background-color: rgba(5, 5, 5, 1);
-  color: rgba(255, 255, 255, 1);
+  background-color: var(--primary-black-color);
+  color: var(--primary-white-color);
   font-family: Poppins;
 
   @media (min-width: 834px) {

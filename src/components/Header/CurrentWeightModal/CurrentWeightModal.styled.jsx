@@ -43,7 +43,7 @@ export const WeightContainer = styled.div`
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(5, 5, 5, 1);
+  background: var(--primary-black-color);
   padding: 24px 10px;
 
   @media (min-width: 834px) {
@@ -52,7 +52,7 @@ export const WeightContainer = styled.div`
     width: 392px;
     height: 200px;
     border-radius: 12px;
-    background: rgba(15, 15, 15, 1);
+    background: var(--primary-black-second-color);
     box-shadow: 0px 4px 14px 0px rgba(227, 255, 168, 0.2);
     padding: 20px 24px 40px;
     margin-left: 294px;
@@ -81,7 +81,7 @@ export const MobileWeightContainer = styled.div`
 `;
 
 export const Title = styled.h3`
-  color: #ffffff;
+  color: var(--primary-white-color);
   margin-bottom: 8px;
   font-size: 18px;
   font-weight: 500;
@@ -89,7 +89,7 @@ export const Title = styled.h3`
 `;
 
 export const Subtitle = styled.p`
-  color: #b6b6b6;
+  color: var(--primary-grey-color);
   margin-bottom: 16px;
   font-size: 14px;
   line-height: 1.43;
@@ -104,13 +104,13 @@ export const DateContainer = styled.div`
 export const Text = styled.p`
   font-size: 14px;
   line-height: 1.43;
-  color: #ffffff;
+  color: var(--primary-white-color);
 `;
 
 export const Date = styled.p`
   font-size: 14px;
   line-height: 1.43;
-  color: #b6b6b6;
+  color: var(--primary-grey-color);
   font-weight: 500;
 `;
 
@@ -148,13 +148,13 @@ export const SubmitButton = styled.button`
   justify-content: center;
   width: 100%;
   padding: 8px 10px;
-  color: rgba(15, 15, 15, 1);
+  color: var(--primary-black-second-color);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.43;
   border-radius: 12px;
-  background: rgba(227, 255, 168, 1);
-  border: 1px solid rgba(227, 255, 168, 1);
+  background: var(--primary-light-green-color);
+  border: 1px solid var(--primary-light-green-color);
 
   @media (min-width: 834px) {
     width: 166px;
@@ -166,12 +166,12 @@ export const WeightInput = styled(Field)`
   justify-content: center;
   width: 100%;
   padding: 8px 10px;
-  color: #ffffff;
+  color: var(--primary-white-color);
   font-size: 14px;
   line-height: 1.43;
   border-radius: 12px;
-  background: rgba(5, 5, 5, 1);
-  border: 1px solid rgba(227, 255, 168, 1);
+  background: var(--primary-black-color);
+  border: 1px solid var(--primary-light-green-color);
   outline: none;
   border: ${({ borderstyle }) => borderstyle};
   font-family: Poppins;
@@ -181,11 +181,11 @@ export const WeightInput = styled(Field)`
   }
 
   &::placeholder {
-    color: #b6b6b6;
+    color: var(--primary-grey-color);
   }
 
   @media (min-width: 834px) {
-    background: rgba(15, 15, 15, 1);
+    background: var(--primary-black-second-color);
     width: 166px;
   }
 `;
@@ -201,7 +201,7 @@ export const CancelButton = styled.button`
   display: flex;
   justify-content: center;
   width: 100%;
-  color: #b6b6b6;
+  color: var(--primary-grey-color);
   font-size: 14px;
   line-height: 1.43;
   background: transparent;

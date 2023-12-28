@@ -7,8 +7,8 @@ export const DropdownContainer = styled('div')`
 
 export const Select = styled('select')`
   width: 214px;
-  color: #ffffff;
-  background-color: black;
+  color: var(--primary-white-color);
+  background-color: var(--primary-black-second-color);
   font-size: 30px;
   font-weight: 500;
 `;

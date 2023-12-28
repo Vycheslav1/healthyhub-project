@@ -2,12 +2,15 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://healthy-hub-2d3x.onrender.com',
+  baseURL: 'https://github.com/Alex1Go/back-healthy-hub',
 });
 
-export const setAuthHeader = (token) => {
-  instance.defaults.headers.common.Authorization = `Bearer ${token}`;
-};
+//       return response.data;
+//     } catch (error) {
+//       return thunkAPI.rejectWithValue(error.message);
+//     }
+//   }
+// );
 
 export const fetchStatistics = createAsyncThunk(
   'statistics/get',
@@ -19,7 +22,6 @@ export const fetchStatistics = createAsyncThunk(
         return thunkAPI.rejectWithValue('No token');
       }
       setAuthHeader(persistToken);
-
       const response = await instance('api/user/statistics');
 
       return response.data;

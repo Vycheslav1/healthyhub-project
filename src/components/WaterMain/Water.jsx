@@ -18,7 +18,6 @@ import {
   // SrOnly
 } from './WaterStyled';
 import { AddWaterModal } from '../ModalAddWater/ModalAddWater';
-import { selectGoals } from '../../redux/usersGoal/selectors';
 
 import {
   Chart as ChartJS,
@@ -32,28 +31,26 @@ import {
 import { Bar } from 'react-chartjs-2';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
+import { selectUser } from '../../redux/auth/selectors';
 
 export const Water = () => {
+  // const { waterRate } = useSelector(selectUser);
   const [openModal, setOpenModal] = useState(false);
   const [targetWater, setTargetWater] = useState(2000);
-  const [consumedWater, setConsumedWater] = useState(1200);
+  const [consumedWater, setConsumedWater] = useState(1800);
   const [leftWater, setLeftWater] = useState(targetWater - consumedWater);
   const [percentageConsumed, setPercentageConsumed] = useState(
     (consumedWater / targetWater) * 100
   );
 
-  // const { items } = useSelector(selectGoals);
-
-  // console.log(items);
-
   const openModalHendler = () => {
     setOpenModal(true);
     scrollLock.disablePageScroll(document.body);
-    setConsumedWater(e);
+    setConsumedWater();
   };
 
-  const closeModalHendler = (e) => {
-    e.preventDefault();
+  const closeModalHendler = () => {
+    // e.preventDefault();
     setOpenModal(false);
     scrollLock.clearQueueScrollLocks();
     scrollLock.enablePageScroll();
