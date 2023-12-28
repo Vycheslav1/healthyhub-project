@@ -69,7 +69,10 @@ export const BodyParameters = ({ formik, next, prev }) => {
           <BodyParametersButtonNext
             style={{
               backgroundColor:
-                !formik.isValid || !formik.dirty || !formik.touched
+                !formik.isValid ||
+                !formik.values.height ||
+                !formik.values.weight ||
+                !formik.dirty
                   ? 'lightgray'
                   : '#e3ffa8',
             }}
