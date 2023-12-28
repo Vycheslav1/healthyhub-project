@@ -14,7 +14,6 @@ export const selectMonthOptions = createSelector(
     return [];
   }
 );
-
 const SelectorPage = createSelector(
   [selectCaloriesData, selectWaterData, selectWeightData],
   (caloriesData, waterData, weightData) => ({
