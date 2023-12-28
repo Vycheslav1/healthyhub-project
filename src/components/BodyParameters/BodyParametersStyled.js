@@ -168,6 +168,19 @@ export const BodyParametersInput = styled.input`
   color: #fff;
   outline: transparent;
   background: var(--primary-black-second-color);
+  &[type='number'] {
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      appearance: none;
+      margin: 0;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -moz-appearance: textfield;
+    }
+  }
 
   @media screen and (min-width: 834px) {
   }
@@ -180,7 +193,7 @@ export const BodyParametersButtonNext = styled.button`
   width: 280px;
   padding: 8px 10px;
   border-radius: 12px;
-  background: var(--primary-light-green-color);
+  /* background: var(--primary-light-green-color); */
   color: var(--primary-black-second-color);
   text-align: center;
   font-family: Poppins;
