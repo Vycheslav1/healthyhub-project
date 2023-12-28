@@ -202,6 +202,19 @@ export const AgeInput = styled.input`
   border: 1px solid var(--Color-Primary-Green-Lite, #e3ffa8);
   color: #fff;
   outline: transparent;
+  &[type='number'] {
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      appearance: none;
+      margin: 0;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -moz-appearance: textfield;
+    }
+  }
 
   @media screen and (min-width: 834px) {
     width: 360px;

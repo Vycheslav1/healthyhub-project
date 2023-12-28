@@ -22,6 +22,7 @@ import { useEffect, useState } from 'react';
 import { getRecommendedImage } from '../../redux/getRequest/getRecommendedImg';
 import arrow from 'src/images/svg/arrow.svg';
 import { fetchGoals } from '../../redux/usersGoal/operations';
+import { fetchUserStatistics } from '../../redux/auth/operations';
 // import { fetchStatistics } from '../../redux/statistic/operations';
 
 export const Main = () => {
@@ -31,6 +32,7 @@ export const Main = () => {
 
   useEffect(() => {
     dispatch(fetchGoals());
+    // dispatch(fetchUserStatistics());
     // dispatch(fetchStatistics());
   }, [dispatch]);
 

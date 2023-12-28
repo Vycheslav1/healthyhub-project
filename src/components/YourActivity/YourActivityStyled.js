@@ -160,7 +160,7 @@ export const ActivityButtonSignUp = styled.button`
   padding: 8px 10px;
   border-radius: 12px;
   background: var(--primary-light-green-color);
-  color: var(--primary-blacl-second-color);
+  color: var(--primary-black-second-color);
   text-align: center;
   font-family: Poppins;
   font-size: 14px;

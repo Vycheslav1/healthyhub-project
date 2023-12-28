@@ -29,6 +29,7 @@ export const register = createAsyncThunk(
     }
   }
 );
+
 //signin
 export const logIn = createAsyncThunk(
   'auth/login',
