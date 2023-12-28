@@ -135,14 +135,25 @@ export const updateUser = createAsyncThunk(
     try {
       const { data } = await axios.put('/user/update', credentials);
       setHeadersToken(thunkAPI.getState().auth.token);
-      // setAuthHeader(data.token);
-
-      // Notiflix.Notify.success('Your data has been successfully updated!');
 
       console.log(data);
       return data;
     } catch (error) {
-      // Notiflix.Notify.failure(`Sorry, there was an error, please try again!`);
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const fetchUserStatistics = createAsyncThunk(
+  'user/fetchStatistics',
+  async (_, thunkAPI) => {
+    try {
+      // Отримання статистики користувача з ендпоінту `/user/statistics`
+      const response = await axios.get('/user/statistics');
+      setHeadersToken(thunkAPI.getState().auth.token);
+      console.log(response.data);
+      return response.data;
+    } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
   }
