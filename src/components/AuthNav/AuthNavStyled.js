@@ -6,12 +6,12 @@ export const AuthContainer = styled.div`
   padding: 24px 10px 40px 10px;
   margin: auto;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 834px;
     padding: 40px 195px 286px 195px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 1440px;
     display: flex;
     padding: 40px 150px 72px 150px;
@@ -22,23 +22,23 @@ export const ImageOne = styled.img`
   width: 300px;
   height: 296px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 380px;
     height: 376px;
     margin: auto;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 592px;
     height: 588px;
   }
 `;
 
 export const TextWrapper = styled.div`
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     margin-top: 80px;
     margin-left: 104px;
     width: 50%;
@@ -47,7 +47,7 @@ export const TextWrapper = styled.div`
 
 export const TitleOne = styled.h1`
   width: 300px;
-  color: #fff;
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 24px;
   font-style: normal;
@@ -57,7 +57,7 @@ export const TitleOne = styled.h1`
   margin-top: 24px;
   margin-bottom: 16px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 424px;
     text-align: center;
     font-size: 30px;
@@ -67,16 +67,19 @@ export const TitleOne = styled.h1`
     margin-right: auto;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 444px;
     margin-top: 0;
     margin-bottom: 16px;
     text-align: start;
+    margin-left: 0;
+    margin-right: 0;
   }
 `;
+
 export const Description = styled.p`
   width: 300px;
-  color: var(--Color-Primary-Grey, #b6b6b6);
+  color: var(--primary-grey-color);
   font-family: Poppins;
   text-align: start;
   font-size: 18px;
@@ -86,7 +89,7 @@ export const Description = styled.p`
   margin-top: 0;
   margin-bottom: 24px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 320px;
     text-align: center;
     font-size: 22px;
@@ -95,8 +98,10 @@ export const Description = styled.p`
     margin-right: auto;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     text-align: start;
+    margin-left: 0;
+    margin-right: 0;
   }
 `;
 
@@ -105,14 +110,15 @@ export const ButtonWrapper = styled.div`
   gap: 0 16px;
   margin-bottom: 40px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 444px;
     justify-content: center;
     margin-bottom: 80px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     margin-bottom: 80px;
+    justify-content: flex-start;
   }
 `;
 
@@ -123,9 +129,9 @@ export const SignIn = styled(NavLink)`
   flex-direction: column;
   gap: 10px;
   border-radius: 12px;
-  background: var(--Color-Primary-Green-Lite, #e3ffa8);
+  background: var(--primary-light-green-color);
   text-decoration: none;
-  color: var(--Color-Primary-Black-2, #0f0f0f);
+  color: var(--primary-black-second-color);
   text-align: center;
   font-family: Poppins;
   font-size: 14px;
@@ -133,17 +139,17 @@ export const SignIn = styled(NavLink)`
   font-weight: 500;
   line-height: 20px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
     width: 192px;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
   }
 `;
 
 export const SignUp = styled(NavLink)`
   width: 122px;
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
   text-align: center;
   font-family: Poppins;
   font-size: 14px;
@@ -156,17 +162,17 @@ export const SignUp = styled(NavLink)`
   justify-content: center;
   padding: 8px 10px;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
   }
 `;
 export const ListItems = styled.ul`
   padding: 0;
   margin: 0;
   width: 234px;
-  color: var(--Color-Primary-White, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -186,11 +192,11 @@ export const ListItems = styled.ul`
     margin-right: 8px;
     display: flex;
     align-self: center;
-    background-color: #e3ffa8;
+    background-color: var(--primary-light-green-color);
   }
 
-  @media (min-width: 768px) {
-    width: 360px;
+  @media screen and (min-width: 834px) {
+    width: 444px;
     height: 56px;
     flex-wrap: wrap;
     flex-direction: row;
@@ -198,20 +204,21 @@ export const ListItems = styled.ul`
     margin: auto;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     width: 234px;
     flex-direction: column;
     flex-wrap: nowrap;
+    margin: 0;
   }
 `;
 
 export const Item = styled.li`
   margin: 0;
   display: flex;
-  @media (min-width: 768px) {
+  @media screen and (min-width: 834px) {
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     margin-bottom: 16px;
   }
 `;

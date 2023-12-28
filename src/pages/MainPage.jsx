@@ -1,32 +1,24 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { selectUser } from '../redux/auth/selectors';
-import { logOut } from '../redux/auth/operations';
+// import { useDispatch } from 'react-redux';
+// import { selectUser } from '../redux/auth/selectors';
+// import { logOut } from '../redux/auth/operations';
+import { DiaryOnMain } from '../components/DiaryOnMain/DiaryOnMain';
+// import { AddWaterModal } from '../components/ModalAddWater/ModalAddWater';
 
 export const MainPage = () => {
-  const { name } = useSelector(selectUser);
+  // const { name } = useSelector(selectUser);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  const handleLogOut = () => {
-    dispatch(logOut());
-  };
+  // const handleLogOut = () => {
+  //   dispatch(logOut());
+  // };
 
   return (
     <>
-      <h1>WELCOM TO YOUR DAIRY</h1>
-      {name ? (
-        <>
-          <p> Your dairy: {name}</p>
-          <button type="button" onClick={handleLogOut}>
-            LogOut
-          </button>
-        </>
-      ) : (
-        <>
-          <p>Email: tanya20@gmail.com</p>
-          <p>Password: tanya2020</p>
-        </>
-      )}
+      {/* <button type="button" onClick={handleLogOut}>
+        LogOut
+      </button> */}
+      <DiaryOnMain />
     </>
   );
 };

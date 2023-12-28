@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const WaterWindow = styled.div`
-     width: 300px;
+  width: 300px;
   height: 254px;
-  background-color: #050505;
+  /* background: #050505; */
 
   @media screen and (min-width: 834px) {
     width: 380px;
@@ -16,7 +16,7 @@ export const WaterWindow = styled.div`
 `;
 
 export const Head = styled.h2`
-    color: var(--color-primary-white, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 18px;
   font-style: normal;
@@ -27,14 +27,17 @@ export const Head = styled.h2`
     line-height: 32px;
     font-size: 22px;
   }
-`
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 6px;
+  }
+`;
 
 export const WaterWrapper = styled.div`
- margin-top: 6px;
+  margin-top: 6px;
   display: flex;
   width: 100%;
   height: 224px;
-  background-color: #0f0f0f;
+  background-color: var(--primary-black-second-color);
   border-radius: 12px;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -48,92 +51,63 @@ export const WaterWrapper = styled.div`
   }
 
   @media screen and (min-width: 1440px) {
-     width: 444px;
+    width: 444px;
     padding: 24px 40px;
   }
-`
+`;
 
 export const WaterProgressBar = styled.div`
-      font-family: sans-serif;
+  font-family: sans-serif;
   text-align: center;
   width: 80px;
   height: 192px;
-  padding: 8px;
-  background-color: black;
+  /* padding: 8px; */
+  background-color: var(--primary-black-second-color);
   border-radius: 20px;
   margin-right: 20px;
 
   @media screen and (min-width: 834px) {
- margin-right: 40px;
+    margin-right: 40px;
   }
-`
-
-export const Progress = styled.div`
-  position: relative;
-  width: 64px;
-  height: 176px;
-  margin-bottom: 20px;
-  overflow: hidden;
-  background-color: black;
-  border-radius: 20px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-`
-
-export const ProgressBar = styled.div`
- width: 0;
-  border-radius: 20px;
-  text-align: center;
-  background-color: #b6c3ff;
-  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  -webkit-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
-
-  @media screen and (min-width: 834px) {
-     margin-right: 40px;
-  }
-
-  `
+`;
 
 export const Consumption = styled.h3`
   margin-top: 38px;
-  color: var(--color-primary-white, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 22px;
+  margin-bottom: 12px;
 
   @media screen and (min-width: 834px) {
     font-size: 18px;
     line-height: 24px;
   }
-  `
-  export const Item = styled.div`
-    @media screen and (min-width: 834px) {
-     display: flex;
-    align-items: center;
-    }
-  `
+`;
+export const Item = styled.div`
+  @media screen and (min-width: 834px) {
+    display: flex;
+    align-items: baseline;
+  }
+`;
 
-  export const WaterGoal = styled.p`
-     display: flex;
-  align-items: center;
+export const WaterGoal = styled.div`
+  display: flex;
+  align-items: baseline;
   margin-top: 12px;
-  color: #fff;
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 28px;
   font-style: normal;
   font-weight: 500;
   line-height: 34px;
-
-
-  `
+`;
 
 export const WaterSpan = styled.span`
-      margin-left: 8px;
-  color: #b6b6b6;
+  margin-left: 8px;
+  color: var(--primary-grey-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -141,23 +115,22 @@ export const WaterSpan = styled.span`
   line-height: 20px;
 
   @media screen and (min-width: 834px) {
-     margin-left: 2px;
+    margin-left: 2px;
   }
-`
-export const LeftSpan = styled.p`
+`;
+export const LeftSpan = styled.span`
   margin-left: 4px;
-  color:  #b6b6b6;
+  color: var(--primary-grey-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
+`;
 
-`
-
-export const Left = styled.p`
+export const Left = styled.div`
   margin-top: 8px;
-  color: var(--color-primary-white, #fff);
+  color: var(--primary-white-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -167,35 +140,35 @@ export const Left = styled.p`
   @media screen and (min-width: 834px) {
     margin-left: 40px;
   }
-`
+`;
 
 export const WaterButton = styled.button`
   justify-content: center;
-  width: 166px;
+  width: 170px;
   height: 36px;
   margin-top: 16px;
   display: flex;
   padding: 8px 10px;
   align-items: center;
   border-radius: 12px;
-  background:  #e3ffa8;
-  color:  #0f0f0f;
+  background: var(--primary-light-green-color);
+  color: var(--primary-black-second-color);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
-`
+`;
 
 export const WaterImg = styled.img`
   margin-top: 2px;
   margin-right: 8px;
-`
+`;
 export const SrOnly = styled.span`
   position: relative;
   z-index: 20;
-  color: #fff;
+  color: var(--primary-white-color);
   font-size: 18px;
   line-height: 22px;
   font-weight: 600;
-`
+`;

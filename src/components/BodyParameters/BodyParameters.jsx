@@ -36,7 +36,7 @@ export const BodyParameters = ({ formik, next, prev }) => {
             <BodyParametersLabel>
               Height
               <BodyParametersInput
-                type="text"
+                type="number"
                 name="height"
                 value={formik.values.height}
                 onChange={formik.handleChange}
@@ -52,7 +52,7 @@ export const BodyParameters = ({ formik, next, prev }) => {
             <BodyParametersLabel>
               Weight
               <BodyParametersInput
-                type="text"
+                type="number"
                 name="weight"
                 value={formik.values.weight}
                 onChange={formik.handleChange}
@@ -68,17 +68,22 @@ export const BodyParameters = ({ formik, next, prev }) => {
           </BodyParametersWrapperLabel>
           <BodyParametersButtonNext
             style={{
-              boxShadow:
-                !formik.isValid ||
-                !formik.values.height ||
-                !formik.values.weight
-                  ? 'none'
-                  : '0px 0px 5px #e3ffa8',
+              backgroundColor:
+                !formik.isValid || !formik.dirty || !formik.touched
+                  ? 'lightgray'
+                  : '#e3ffa8',
             }}
             type="button"
             onClick={validateAndMoveNext}
+            // disabled={!formik.isValid || !formik.dirty || !formik.touched}
+            // disabled={
+            //   !formik.isValid || !formik.values.height || !formik.values.weight
+            // }
             disabled={
-              !formik.isValid || !formik.values.height || !formik.values.weight
+              !formik.isValid ||
+              !formik.values.height ||
+              !formik.values.weight ||
+              !formik.dirty
             }
           >
             Next

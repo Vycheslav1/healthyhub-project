@@ -43,7 +43,6 @@ export const YourGoal = ({ formik, next, prev }) => {
               />
               Lose Fat
             </Label>
-            {/* <div>{formik.errors.goal}</div> */}
             <Label>
               <InputGoal
                 type="radio"
@@ -64,14 +63,16 @@ export const YourGoal = ({ formik, next, prev }) => {
               />
               Gain Muscle
             </Label>
-            {/* {formik.errors.goal && <div>{formik.errors.goal}</div>} */}
           </FormRadioWrapper>
           <ButtonNextGoals
             style={{
-              boxShadow:
-                !formik.isValid || !formik.values.goal
-                  ? 'none'
-                  : '0px 0px 5px #e3ffa8',
+              backgroundColor:
+                !formik.isValid ||
+                !formik.dirty ||
+                !formik.touched ||
+                !formik.values.goal
+                  ? 'lightgray'
+                  : '#e3ffa8',
             }}
             type="button"
             onClick={validateAndMoveNext}

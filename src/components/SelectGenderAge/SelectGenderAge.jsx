@@ -60,7 +60,7 @@ export const SelectGenderAge = ({ formik, next, prev }) => {
           <AgeLabel>
             Your age
             <AgeInput
-              type="text"
+              type="number"
               name="age"
               placeholder="Enter your age"
               value={formik.values.age}
@@ -75,10 +75,13 @@ export const SelectGenderAge = ({ formik, next, prev }) => {
           </AgeLabel>
           <ButtonGenderNext
             style={{
-              boxShadow:
-                !formik.isValid || !formik.values.gender
-                  ? 'none'
-                  : '0px 0px 5px #e3ffa8',
+              backgroundColor:
+                !formik.isValid ||
+                !formik.dirty ||
+                !formik.touched ||
+                !formik.values.gender
+                  ? 'lightgray'
+                  : '#e3ffa8',
             }}
             type="button"
             disabled={!formik.isValid || !formik.values.gender}

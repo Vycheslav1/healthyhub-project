@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { BodyParameters } from 'src/components/BodyParameters/BodyParameters';
 import { SelectGenderAge } from 'src/components/SelectGenderAge/SelectGenderAge';
 import { YourActivity } from 'src/components/YourActivity/YourActivity';
@@ -33,23 +34,23 @@ import eyeOff from 'src/images/svg/eye-off.svg';
 export const SignUpForm = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [showPassword, setShowPassword] = useState(false);
-
   const [isPasswordValid, setIsPasswordValid] = useState(true);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const toggleCheckboxChange = () => {
     setShowPassword(!showPassword);
     setIsPasswordValid(false);
   };
 
-  const dispatch = useDispatch();
   const validation = [
     Yup.object().shape({
-      name: Yup.string().min(2, 'Too short').required('Name is required'),
+      username: Yup.string().min(2, 'Too short').required('Name is required'),
       email: Yup.string().email('Invalid email').required('Email is required'),
       password: Yup.string()
         .matches(
           /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
-          'Enter a valid Password.'
+          'Enter a valid Password (min 6 characters, 1 upper case, 1 lower case, 1 number)'
         )
         .required('Password is required'),
     }),
@@ -58,20 +59,20 @@ export const SignUpForm = () => {
     }),
     Yup.object().shape({
       gender: Yup.string().required('Please select your gender'),
-      age: Yup.string().required('Required'),
+      age: Yup.number().required('Required'),
     }),
     Yup.object().shape({
-      height: Yup.string().required('Required'),
-      weight: Yup.string().required('Required'),
+      height: Yup.number().required('Required'),
+      weight: Yup.number().required('Required'),
     }),
     Yup.object().shape({
-      activity: Yup.string().required('Please select your activity'),
+      activity: Yup.number().required('Please select your activity'),
     }),
   ];
 
   const formik = useFormik({
     initialValues: {
-      name: '',
+      username: '',
       email: '',
       password: '',
       goal: '',
@@ -84,14 +85,21 @@ export const SignUpForm = () => {
     validationSchema: validation[currentPage - 1],
 
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      // alert(JSON.stringify(values, null, 2));
       console.log(values);
       dispatch(
         register({
-          name: values.name,
+          username: values.username,
           email: values.email,
           password: values.password,
-        })
+          goal: values.goal,
+          gender: values.gender,
+          age: values.age,
+          height: values.height,
+          weight: values.weight,
+          activity: values.activity,
+        }),
+        navigate('/signin')
       );
     },
   });
@@ -122,35 +130,33 @@ export const SignUpForm = () => {
                 <Label
                   style={{
                     border:
-                      formik.values.name === '' && !formik.touched.name
+                      formik.values.username === '' && !formik.touched.username
                         ? '1px solid #e3ffa8'
-                        : formik.errors.name
+                        : formik.errors.username
                         ? '1px solid red'
                         : '1px solid #3CBC81',
                   }}
                 >
                   <Input
-                    id="name"
-                    name="name"
+                    id="username"
+                    name="username"
                     type="text"
                     placeholder="Name"
                     onChange={formik.handleChange}
-                    value={formik.values.name}
+                    value={formik.values.username}
                     onBlur={formik.handleBlur}
                   />
 
-                  {formik.values.name === '' ? null : formik.errors.name ? (
+                  {formik.values.username === '' ? null : formik.errors
+                      .username ? (
                     <IconSpan src={error} alt="Error icon" />
                   ) : (
                     <IconSpan src={correct} alt="Correct icon" />
                   )}
                 </Label>
-                {formik.errors.name &&
-                  formik.touched.name &&
-                  // formik.values.name !== ''
-                  formik.touched.name && (
-                    <ErrorsMessage>{formik.errors.name}</ErrorsMessage>
-                  )}
+                {formik.errors.username && formik.touched.username && (
+                  <ErrorsMessage>{formik.errors.username}</ErrorsMessage>
+                )}
               </div>
               <div>
                 <Label
@@ -178,13 +184,9 @@ export const SignUpForm = () => {
                     <IconSpan src={correct} alt="Correct icon" />
                   )}
                 </Label>
-
-                {formik.errors.email &&
-                  formik.touched.email &&
-                  // formik.values.email !== ''
-                  formik.touched.email && (
-                    <ErrorsMessage>{formik.errors.email}</ErrorsMessage>
-                  )}
+                {formik.errors.email && formik.touched.email && (
+                  <ErrorsMessage>{formik.errors.email}</ErrorsMessage>
+                )}
               </div>
               <div>
                 <Label
@@ -227,26 +229,24 @@ export const SignUpForm = () => {
                     </>
                   )}
                 </Label>
-                {formik.errors.password && formik.values.password !== '' ? (
+                {formik.errors.password &&
+                formik.touched.password &&
+                formik.values.password === '' ? (
                   <ErrorsMessage>{formik.errors.password}</ErrorsMessage>
-                ) : (
-                  formik.values.password !== '' && (
-                    <ErrorsMessage
-                      style={{
-                        color: '#3CBC81',
-                      }}
-                    >
-                      Correct
-                    </ErrorsMessage>
-                  )
-                )}
+                ) : formik.values.password !== '' && formik.errors.password ? (
+                  <ErrorsMessage>{formik.errors.password}</ErrorsMessage>
+                ) : formik.values.password !== '' && !formik.errors.password ? (
+                  <ErrorsMessage style={{ color: '#3CBC81' }}>
+                    Correct
+                  </ErrorsMessage>
+                ) : null}
               </div>
               <ButtonNext
                 style={{
-                  boxShadow:
+                  backgroundColor:
                     !formik.isValid || !formik.dirty || !formik.touched
-                      ? 'none'
-                      : '0px 0px 5px #e3ffa8',
+                      ? 'lightgray'
+                      : '#e3ffa8',
                 }}
                 type="button"
                 disabled={!formik.isValid || !formik.dirty || !formik.touched}
