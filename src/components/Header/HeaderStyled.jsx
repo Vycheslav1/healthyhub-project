@@ -145,7 +145,7 @@ export const UserName = styled.p`
   font-size: 12px;
   line-height: 1.43;
   color: var(--primary-white-color);
-  margin-right: 6px;
+  margin: 0 6px 0 0;
 
   @media (min-width: 834px) {
     font-size: 14px;

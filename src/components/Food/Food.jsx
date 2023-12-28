@@ -81,7 +81,7 @@ export const Food = () => {
     },
   };
 
-  const defaultCarbonohidrates = ratio.carbonohidrates;
+  const defaultCarbonohidrates = ratio['carbonohidrates'];
   // const defaultCarbonohidrates = 700;
   const newCarbonohidratesValue = 100;
 
@@ -129,7 +129,7 @@ export const Food = () => {
   };
 
   // const defaultProtein = 500;
-  const defaultProtein = ratio.protein;
+  const defaultProtein = ratio['protein'];
   const newProteinValue = 150;
 
   const proteinValue = Math.floor(
@@ -172,7 +172,7 @@ export const Food = () => {
     },
   };
 
-  const defaultFat = ratio.fat;
+  const defaultFat = ratio['fat'];
   const newFatValue = 25;
   // const defaultFat = 100;
 

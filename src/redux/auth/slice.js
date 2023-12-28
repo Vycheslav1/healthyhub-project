@@ -9,7 +9,7 @@ import {
 } from './operations';
 
 const initialState = {
-  user: { username: null, email: null, ratio: [] },
+  user: { username: null, email: null },
   token: null,
   isLoggedIn: false,
   isRefreshing: false,

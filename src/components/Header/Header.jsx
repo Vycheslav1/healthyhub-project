@@ -38,7 +38,7 @@ export const Header = () => {
   const gender = user?.gender?.toLowerCase() || '';
   const goal = user?.goal?.toLowerCase() || '';
   const weight = user?.weight !== undefined ? user.weight : '';
-  const name = user?.name || '';
+  const name = user?.username || '';
 
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showTargetModal, setShowTargetModal] = useState(false);
