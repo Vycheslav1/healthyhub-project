@@ -1,18 +1,19 @@
 import { Line } from 'react-chartjs-2';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { registerables, Chart } from 'chart.js';
 import {
   ChartType,
   ChartWrapper,
   AverageText,
   Container,
-  // ChartCanvas,
 } from './Chart.styled';
 Chart.register(...registerables);
 import { useMemo } from 'react';
 const options = {
   scales: {
     x: {
+      type: 'category',
+
       grid: {
         color: 'rgba(255, 255, 255, 0.1)',
         borderWidth: 1,
@@ -22,12 +23,18 @@ const options = {
       },
     },
     y: {
+      min: 0,
+      max: 3,
       grid: {
         color: 'rgba(255, 255, 255, 0.1)',
         borderWidth: 1,
       },
       ticks: {
         color: 'white',
+        stepSize: 1,
+        callback: function (value) {
+          return value === 0 ? '0' : value + 'K';
+        },
       },
     },
   },
@@ -41,10 +48,10 @@ const options = {
   },
 };
 
-const CustomChart = ({ chartType, averageValue, data, labels }) => {
+const CustomChart = ({ chartType, averageValue, data, period }) => {
   const chartData = useMemo(() => {
     return {
-      labels: labels,
+      labels: Array.from({ length: period }, (_, index) => index + 1),
       datasets: [
         {
           label: chartType,
@@ -53,21 +60,9 @@ const CustomChart = ({ chartType, averageValue, data, labels }) => {
         },
       ],
     };
-  }, [chartType, averageValue, data, labels]);
+  }, [chartType, averageValue, data, period]);
 
   const chartRef = useRef(null);
-
-  useEffect(() => {
-    if (chartRef.current) {
-      chartRef.current.destroy();
-    }
-    return () => {
-      if (chartRef.current) {
-        chartRef.current.destroy();
-      }
-    };
-  }, [chartData]);
-
   return (
     <ChartWrapper>
       <Container>

@@ -12,7 +12,7 @@ import { useAuth } from 'src/hooks/useAuth';
 import { PrivateRoute } from './components/PrivateRoute';
 import { SettingPage } from './pages/SettingPage/SettingPage';
 import { DiaryPage } from './pages/DiaryPage/DiaryPage';
-import { Dashboard } from './components/Dashboard/Dashboard';
+import { DashboardPage } from './pages/DashboardPage/DashboardPage';
 import { RestrictedRoute } from './components/RestrictedRoute';
 import { Loader } from './components/Loader/Loader';
 import { Main } from './pages/Main/Main';
@@ -62,10 +62,9 @@ function App() {
         <Route
           path="dashboard"
           element={
-            <PrivateRoute redirectTo="/signin" component={<Dashboard />} />
+            <PrivateRoute redirectTo="/signin" component={<DashboardPage />} />
           }
         />
-
         <Route
           path="diary"
           element={
