@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import {  getUserInfo } from '../../redux/auth/selectors';
+import { getUserInfo } from '../../redux/auth/selectors';
 import { getCurrentDate } from '../../utils/currentDate';
 import { useAuth } from '../../hooks/useAuth';
 import HeaderModalButton from './HeaderModalButton/HeaderModalButton';
@@ -108,11 +108,11 @@ export const Header = () => {
           <Navigation>
             <Logo to="/">HealthyHub</Logo>
             <List>
-              <StyledNavLink exact to="/signin">
+              <StyledNavLink exact="true" to="/signin">
                 Sign in
               </StyledNavLink>
               <Span>/</Span>
-              <StyledNavLink exact to="/signup">
+              <StyledNavLink exact="true" to="/signup">
                 Sign up
               </StyledNavLink>
               <ProfileSvg>

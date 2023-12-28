@@ -79,6 +79,19 @@ export const ModalInput = styled.input`
   border-radius: 12px;
   border: 1px solid var(--primary-light-green-color);
   background: var(--primary-black-second-color);
+  &[type='number'] {
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      appearance: none;
+      margin: 0;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -moz-appearance: textfield;
+    }
+  }
 `;
 
 export const ModalBtnSubmit = styled.button`

@@ -80,9 +80,23 @@ export const YourActivity = ({ formik, prev }) => {
               1.9 - if your work is related to physical labor, you train 2 times
               a day and include strength exercises in your training program
             </ActivityLabel>
-            {formik.errors.goal && <div>{formik.errors.goal}</div>}
+            {formik.errors.activity && <div>{formik.errors.activity}</div>}
           </ActivityLabelWrapper>
-          <ActivityButtonSignUp type="submit">Sing up</ActivityButtonSignUp>
+          <ActivityButtonSignUp
+            style={{
+              backgroundColor:
+                !formik.isValid ||
+                !formik.dirty ||
+                !formik.touched ||
+                !formik.values.activity
+                  ? 'lightgray'
+                  : '#e3ffa8',
+            }}
+            type="submit"
+            disabled={!formik.isValid || !formik.values.activity}
+          >
+            Sing up
+          </ActivityButtonSignUp>
           <ActivityButtonBack type="button" onClick={prev}>
             Back
           </ActivityButtonBack>
