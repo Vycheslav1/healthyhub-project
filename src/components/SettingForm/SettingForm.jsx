@@ -225,7 +225,7 @@ export const SettingForm = () => {
               <InputActivity
                 type="radio"
                 name="activity"
-                value="1.55 "
+                value="1.55"
                 // value={1.55}
                 onChange={formik.handleChange}
                 checked={formik.values.activity === '1.55'}

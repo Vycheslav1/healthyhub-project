@@ -19,7 +19,6 @@ import { selectUser } from '../../redux/auth/selectors';
 
 export const DailyGoal = () => {
   const user = useSelector(selectUser);
-  console.log(user);
 
   return (
     <DailyWindow>
