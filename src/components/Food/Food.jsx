@@ -22,9 +22,10 @@ import { getUserInfo } from '../../redux/auth/selectors';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const Food = () => {
-  const user = useSelector(getUserInfo);
+  const { ratio, bmr } = useSelector(getUserInfo);
+  console.log(ratio);
 
-  const defaultNumber = user.bmr;
+  const defaultNumber = bmr;
   // const defaultNumber = 2500;
   const filledValue = 1900;
 
@@ -80,7 +81,7 @@ export const Food = () => {
     },
   };
 
-  const defaultCarbonohidrates = user.ratio.carbonohidrates;
+  const defaultCarbonohidrates = ratio.carbonohidrates;
   // const defaultCarbonohidrates = 700;
   const newCarbonohidratesValue = 100;
 
@@ -127,8 +128,8 @@ export const Food = () => {
     },
   };
 
-  const defaultProtein = 500;
-  // const defaultProtein = user.ratio.protein;
+  // const defaultProtein = 500;
+  const defaultProtein = ratio.protein;
   const newProteinValue = 150;
 
   const proteinValue = Math.floor(
@@ -171,9 +172,9 @@ export const Food = () => {
     },
   };
 
-  // const defaultFat = user.ratio.fat;
+  const defaultFat = ratio.fat;
   const newFatValue = 25;
-  const defaultFat = 100;
+  // const defaultFat = 100;
 
   const fatValue = Math.floor(((defaultFat - newFatValue) / defaultFat) * 100);
 
