@@ -78,10 +78,6 @@ export const BodyParameters = ({ formik, next, prev }) => {
             }}
             type="button"
             onClick={validateAndMoveNext}
-            // disabled={!formik.isValid || !formik.dirty || !formik.touched}
-            // disabled={
-            //   !formik.isValid || !formik.values.height || !formik.values.weight
-            // }
             disabled={
               !formik.isValid ||
               !formik.values.height ||
